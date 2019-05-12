@@ -2,6 +2,7 @@ import React from 'react';
 import Chapter from 'components/Chapter';
 import Link from 'components/Link';
 import Trans from 'components/Trans';
+import { asset } from 'constants/paths';
 import Skills from './Skills';
 import Timeline from './Timeline';
 
@@ -51,7 +52,7 @@ export default function About() {
         </Chapter>
         <Chapter title="Resume" background>
             <Trans tag="p">
-                For more information, download my <Link href="/assets/Emre-Koc-Resume.pdf">resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
+                For more information, download my <Link href={asset('Emre-Koc-Resume.pdf')}>resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
             </Trans>
         </Chapter>
     </div>;
