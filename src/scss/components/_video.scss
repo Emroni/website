@@ -1,0 +1,82 @@
+@mixin videoBackground($name, $imageWidth, $imageHeight, $screenLeft, $screenTop, $screenBottom) {
+    $width: ($imageWidth / 962) * 100%;
+    $height: ($imageHeight / 542) * 100%;
+
+    &.#{$name} :first-child {
+        margin-top: ($screenTop / $imageHeight) * 100%;
+        margin-bottom: ($screenBottom / $imageHeight) * 100%;
+
+        &:before {
+            background-image: asset('video-' + $name + '.png');
+            left: -($screenLeft / $imageWidth) * $width;
+            top: -($screenTop / $imageHeight) * $height;
+            width: $width;
+            height: $height;
+        }
+    }
+}
+
+.video {
+    position: relative;
+
+    > :first-child {
+        display: block;
+        position: relative;
+        z-index: 1;
+        transition: opacity 0.5s $ease;
+
+        &:before {
+            content: "";
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "";
+            box-shadow: inset 0 0 1em rgba($black, 0.1);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+
+    &.trans:not(.active) :first-child, .page.exit & > :first-child {
+        opacity: 0;
+    }
+
+    @include videoBackground('tablet', 1138, 638, 91, 33, 65);
+    @include videoBackground('laptop', 1276, 710, 158, 45, 125);
+
+    video {
+        display: block;
+        width: 100%;
+        transition: filter 0.5s $ease, opacity 0.5s $ease;
+
+        &:not(.active) {
+            filter: grayscale(100%);
+        }
+
+        &:not(.visible) {
+            opacity: 0;
+        }
+    }
+
+    .background {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+
+        &:before {
+            background-color: inherit;
+        }
+    }
+}

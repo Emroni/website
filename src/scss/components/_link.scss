@@ -1,0 +1,98 @@
+.link {
+    &, span {
+        display: inline-block;
+        position: relative;
+    }
+
+    &, &:active, &:focus, &:hover, &:visited {
+        text-decoration: none;
+    }
+
+    &:before, &:after, span:after {
+        content: "";
+        background-color: $black;
+        position: absolute;
+    }
+
+    .background & {
+        &:before, &:after, span:after {
+            background-color: $white;
+        }
+    }
+
+    &:before {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        transition: 0.25s $easeOut 0.25s;
+    }
+
+    @media (hover) {
+        &:after {
+            right: -0.1875em;
+            width: 1px;
+            animation: link-out 0.5s $easeIn 1 forwards;
+        }
+
+        span:after {
+            top: 0.125em;
+            right: -0.1875em;
+            height: 1px;
+            width: 0;
+            transition: width 0.1875s $easeIn;
+        }
+
+        &:active, &:focus, &:hover {
+            &:before {
+                right: -0.1875em;
+                width: 0;
+                transition: 0.25s $easeIn;
+            }
+
+            &:after {
+                animation-name: link-in;
+                animation-timing-function: $easeOut;
+            }
+
+            span:after {
+                width: 0.5em;
+                transition: width 0.1875s $easeOut 0.3125s;
+            }
+        }
+    }
+}
+
+@keyframes link-in {
+    0%, 50% {
+        top: 100%;
+        height: 0;
+    }
+
+    75% {
+        top: 0.125em;
+        height: calc(100% - 0.125em);
+    }
+
+    100% {
+        top: 0.125em;
+        height: 0.5em;
+    }
+}
+
+@keyframes link-out {
+    0% {
+        top: 0.125em;
+        height: 0.5em;
+    }
+
+    25% {
+        top: 0.125em;
+        height: calc(100% - 0.125em);
+    }
+
+    50%, 100% {
+        top: 100%;
+        height: 0;
+    }
+}

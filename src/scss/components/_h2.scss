@@ -1,0 +1,86 @@
+h2.code {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    transition: opacity 0.5s $ease;
+
+    &:not(.active), .page.exit & {
+        opacity: 0;
+    }
+
+    &:before, &:after {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.5s $ease, transform 0.5s $ease;
+    }
+
+    &:before {
+        background-image: asset('code-before-black.png');
+        width: 0.4375em;
+        height: 0.8em;
+        left: -0.75em;
+
+        .background & {
+            background-image: asset('code-before-white.png');
+        }
+    }
+
+    &:after {
+        background-image: asset('code-after-black.png');
+        width: 0.875em;
+        height: 1.125em;
+        right: -1.125em;
+
+        .background & {
+            background-image: asset('code-after-white.png');
+        }
+    }
+
+    > span {
+        overflow: hidden;
+        display: inline-block;
+
+        > span {
+            display: inline-block;
+            transition: opacity 0.5s $ease 0.25s, transform 0.5s $ease 0.25s;
+        }
+    }
+
+    &:not(.active) {
+        &:before {
+            opacity: 0;
+            transform: translate(200%, -50%);
+        }
+
+        &:after {
+            opacity: 0;
+            transform: translate(-200%, -50%);
+        }
+
+        > span > span {
+            opacity: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    .page.exit & {
+        opacity: 0;
+    }
+}
+
+h2.icon {
+    transition: opacity 0.5s $ease;
+
+    &:not(.active), .page.exit & {
+        opacity: 0;
+    }
+
+    i {
+        width: 1.5em;
+    }
+}

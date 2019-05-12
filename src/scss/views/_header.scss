@@ -1,0 +1,77 @@
+header {
+    font-size: 2em;
+    padding: 3rem 0;
+
+    @media (min-width: $sm) {
+        font-size: 2.5em;
+        padding: 4rem 0;
+    }
+
+    @media (min-width: $md) {
+        font-size: 3em;
+        padding: 5rem 0;
+    }
+
+    @media (min-width: $lg) {
+        padding: 6rem 0;
+    }
+
+    @media (min-width: $xl) {
+        padding: 7rem 0;
+    }
+
+    svg {
+        width: 100%;
+        height: 2em;
+
+        text {
+            fill: none;
+            font-weight: 100;
+            line-height: 1;
+            letter-spacing: 0.125em;
+            text-anchor: middle;
+            text-transform: uppercase;
+            dominant-baseline: central;
+            stroke: $white;
+            stroke-width: 1px;
+            stroke-dasharray: 0, 100;
+            opacity: 0;
+            transition: font-size 0.5s $ease, stroke 0.5s $ease, stroke-dasharray 1s $ease, opacity 0s 1s;
+
+            &.sub {
+                stroke-width: 2px;
+            }
+        }
+    }
+
+    &.home text:last-child, &.about text:first-child, &.work text:first-child {
+        font-size: 0.5em;
+    }
+
+    &.active {
+        g:first-child text:first-child, &.home g:nth-child(1) text, &.about g:nth-child(2) text, &.work g:nth-child(3) text {
+            stroke-dasharray: 100, 0;
+            opacity: 1;
+            transition: font-size 0.5s $ease, stroke 0.5s $ease, stroke-dasharray 1s $ease;
+        }
+
+
+    }
+
+    &.background:before {
+        height: calc(100% + 2em);
+        top: calc(50% - 1em);
+        transition-duration: 0.75s;
+    }
+
+    &.home.background {
+        &:before {
+            height: 0;
+            top: -1em;
+        }
+
+        text {
+            stroke: $black;
+        }
+    }
+}

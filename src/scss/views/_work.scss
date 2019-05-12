@@ -1,0 +1,12 @@
+.work li {
+    overflow: hidden;
+}
+
+.work-summary {
+    font-weight: bold;
+    transition: opacity 0.5s $ease;
+
+    &.trans:not(.active), .page.exit & {
+        opacity: 0;
+    }
+}

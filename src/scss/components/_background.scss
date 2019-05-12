@@ -1,0 +1,66 @@
+.background {
+    position: relative;
+
+    &:before {
+        content: "";
+        background-color: $blue;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100vw;
+        height: 100%;
+        transform: translate(-50%, -50%) skewY(-2deg);
+        z-index: -1;
+        transition: height 0.5s $ease, top 0.5s $ease;
+    }
+
+    &, .link {
+        color: $white;
+    }
+
+    &.trans:not(.active):before {
+        height: 0;
+        top: -1rem;
+
+        @media (min-width: $sm) {
+            top: -1.5rem;
+        }
+
+        @media (min-width: $md) {
+            top: -2rem;
+        }
+
+        @media (min-width: $lg) {
+            top: -2.5rem;
+        }
+
+        @media (min-width: $xl) {
+            top: -3rem;
+        }
+    }
+
+    .page.exit &:before {
+        height: 0;
+        top: calc(100% + 1rem);
+
+        @media (min-width: $sm) {
+            top: calc(100% + 1.5rem);
+        }
+
+        @media (min-width: $md) {
+            top: calc(100% + 2rem);
+        }
+
+        @media (min-width: $lg) {
+            top: calc(100% + 2.5rem);
+        }
+
+        @media (min-width: $xl) {
+            top: calc(100% + 3rem);
+        }
+    }
+
+    &.container:last-child {
+        margin-bottom: 3rem;
+    }
+}
