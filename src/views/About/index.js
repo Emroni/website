@@ -1,6 +1,5 @@
 import React from 'react';
 import * as ROUTES from 'constants/routes';
-import { asset } from 'constants/paths';
 import Button from 'components/Button';
 import Chapter from 'components/Chapter';
 import Link from 'components/Link';
@@ -62,7 +61,7 @@ export default function About() {
         </Chapter>
         <Chapter title="Resume">
             <Trans tag="p">
-                For more information, download my <Link href={asset('Emre-Koc-Resume.pdf')}>resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
+                For more information, download my <Link href={ROUTES.RESUME}>resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
             </Trans>
         </Chapter>
     </div>;

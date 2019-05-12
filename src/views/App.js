@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { asset } from 'constants/paths';
 import * as ROUTES from 'constants/routes';
 import Header from './Header';
 import Home from './Home';
@@ -20,6 +21,9 @@ export default function App() {
                             <Route exact path={ROUTES.HOME} component={Home}/>
                             <Route path={ROUTES.ABOUT} component={About}/>
                             <Route path={ROUTES.WORK} component={Work}/>
+                            <Route exact path={ROUTES.RESUME} render={() => {
+                                window.location.href = asset('Emre-Koc-Resume.pdf');
+                            }}/>
                         </Switch>
                     </CSSTransition>
                 </TransitionGroup>
