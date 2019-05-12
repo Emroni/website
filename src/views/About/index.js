@@ -1,8 +1,10 @@
 import React from 'react';
+import * as ROUTES from 'constants/routes';
+import { asset } from 'constants/paths';
+import Button from 'components/Button';
 import Chapter from 'components/Chapter';
 import Link from 'components/Link';
 import Trans from 'components/Trans';
-import { asset } from 'constants/paths';
 import Skills from './Skills';
 import Timeline from './Timeline';
 
@@ -50,7 +52,15 @@ export default function About() {
                 A decade of accumulating knowledge later I decided to go to freelancing once again. Since I became location independent and could work remotely from anywhere, am now able to roam the world as a digital nomad.
             </Trans>
         </Chapter>
-        <Chapter title="Resume" background>
+        <Chapter title="Recent work" background>
+            <Trans tag="p">
+                Want to see some examples of what I can do?
+            </Trans>
+            <Trans tag="p">
+                <Button to={ROUTES.WORK}>Check out my recent work</Button>
+            </Trans>
+        </Chapter>
+        <Chapter title="Resume">
             <Trans tag="p">
                 For more information, download my <Link href={asset('Emre-Koc-Resume.pdf')}>resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
             </Trans>
