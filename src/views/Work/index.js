@@ -1,5 +1,9 @@
 import React from 'react';
+import * as ROUTES from 'constants/routes';
 import Link from 'components/Link';
+import Chapter from 'components/Chapter';
+import Trans from 'components/Trans';
+import Button from 'components/Button';
 import Item from './Item';
 
 export default function Work() {
@@ -92,6 +96,14 @@ export default function Work() {
             {items.map((item, key) =>
                 <Item key={key} {...item}/>)}
         </ul>
+        <Chapter title="About me" background>
+            <Trans tag="p">
+                Want to know more about my background and career?
+            </Trans>
+            <Trans tag="p">
+                <Button to={ROUTES.ABOUT}>Read my story</Button>
+            </Trans>
+        </Chapter>
     </div>;
 
 }

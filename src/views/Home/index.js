@@ -18,7 +18,7 @@ export default function Home() {
                 <Button to={ROUTES.ABOUT}>Read more</Button>
             </Trans>
         </Chapter>
-        <Chapter title="Recent work" track="/home/work">
+        <Chapter title="Recent work">
             <Video slug="de-kindertelefoon" type="video" background="tablet" to={ROUTES.WORK}/>
             <Trans tag="p">
                 <Button to={ROUTES.WORK}>See what I've been doing</Button>
