@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
-import * as PATHS from 'constants/paths';
+import { asset } from 'constants/paths';
 import Trans from './Trans';
 
 export default class Video extends React.Component {
@@ -40,7 +40,7 @@ export default class Video extends React.Component {
 
         if (current) {
             if (this.state.size !== nextState.size) {
-                current.src = `${PATHS.ASSETS}${this.props.slug}-${nextState.size}.mp4?alt=media`;
+                current.src = asset(`${this.props.slug}-${nextState.size}.mp4`);
 
             } else if (nextState.visible) {
                 if (nextState.active) {
