@@ -15,11 +15,11 @@ function Header({location}) {
     });
 
     return <Trans tag="header" stall="1" className={className}>
-        <div className="header-photo">
+        <Trans className="header-photo">
             <div>
                 <img src={asset('emre-koc.png')} alt="Emre Koc"/>
             </div>
-        </div>
+        </Trans>
         <svg>
             <g>
                 <text y="30%">Emre Koc</text>

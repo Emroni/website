@@ -90,10 +90,14 @@ header {
     overflow: hidden;
     width: 3em;
     margin-right: 1em;
-    transition: border-color 0.5s $ease;
+    transition: 0.5s $ease !important;
 
     .home.background & {
         border-color: $blue;
+    }
+
+    &.trans:not(.active) {
+        transform: scale(0.9);
     }
 
     div {
