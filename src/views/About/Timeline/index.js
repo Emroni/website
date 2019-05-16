@@ -1,5 +1,5 @@
 import React from 'react';
-import Trans from 'components/Trans';
+import Trans from '../../../components/Trans';
 import Row from './Row';
 import Years from './Years';
 import Lines from './Lines';

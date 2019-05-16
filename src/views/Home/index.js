@@ -1,10 +1,10 @@
 import React from 'react';
-import * as ROUTES from 'constants/routes';
-import Button from 'components/Button';
-import Chapter from 'components/Chapter';
-import Link from 'components/Link';
-import Video from 'components/Video';
-import Trans from 'components/Trans';
+import * as ROUTES from '../../constants/routes';
+import Button from '../../components/Button';
+import Chapter from '../../components/Chapter';
+import Link from '../../components/Link';
+import Video from '../../components/Video';
+import Trans from '../../components/Trans';
 import Connect from './Connect';
 
 export default function Home() {

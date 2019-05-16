@@ -1,9 +1,9 @@
 import React from 'react';
-import * as ROUTES from 'constants/routes';
-import Link from 'components/Link';
-import Chapter from 'components/Chapter';
-import Trans from 'components/Trans';
-import Button from 'components/Button';
+import * as ROUTES from '../../constants/routes';
+import Link from '../../components/Link';
+import Chapter from '../../components/Chapter';
+import Trans from '../../components/Trans';
+import Button from '../../components/Button';
 import Item from './Item';
 
 export default function Work() {

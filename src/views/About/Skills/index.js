@@ -1,5 +1,5 @@
 import React from 'react';
-import Trans from 'components/Trans';
+import Trans from '../../../components/Trans';
 import List from './List';
 
 export default function Skills() {

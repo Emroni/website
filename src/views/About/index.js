@@ -1,9 +1,9 @@
 import React from 'react';
-import * as ROUTES from 'constants/routes';
-import Button from 'components/Button';
-import Chapter from 'components/Chapter';
-import Link from 'components/Link';
-import Trans from 'components/Trans';
+import * as ROUTES from '../../constants/routes';
+import Button from '../../components/Button';
+import Chapter from '../../components/Chapter';
+import Link from '../../components/Link';
+import Trans from '../../components/Trans';
 import Skills from './Skills';
 import Timeline from './Timeline';
 

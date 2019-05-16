@@ -1,6 +1,6 @@
 import React from 'react';
-import Trans from 'components/Trans';
-import Video from 'components/Video';
+import Trans from '../../components/Trans';
+import Video from '../../components/Video';
 import Link from '../../components/Link';
 
 export default function Item({title, type, design, client, link, background, color, video, tags, description}) {
