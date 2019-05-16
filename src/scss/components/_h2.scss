@@ -1,7 +1,10 @@
+h2 {
+    margin-bottom: 0;
+}
+
 h2.code {
     display: inline-block;
     position: relative;
-    margin-bottom: 0;
     transition: opacity 0.5s $ease;
 
     &:not(.active), .page.exit & {
