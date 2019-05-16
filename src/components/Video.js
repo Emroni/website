@@ -16,22 +16,21 @@ export default class Video extends React.Component {
             visible: false,
         };
 
+        this.resizeDelayed = this.resizeDelayed.bind(this);
         this.resize = this.resize.bind(this);
         this.scroll = this.scroll.bind(this);
         this.show = this.show.bind(this);
     }
 
     componentDidMount() {
-        this.timeout = setTimeout(() => {
-            window.addEventListener('resize', this.resize);
-            window.addEventListener('scroll', this.scroll);
-            this.resize();
-        }, 1000);
+        window.addEventListener('resize', this.resizeDelayed);
+        window.addEventListener('scroll', this.scroll);
+        this.resizeDelayed();
     }
 
     componentWillUnmount() {
         clearTimeout(this.timeout);
-        window.removeEventListener('resize', this.resize);
+        window.removeEventListener('resize', this.resizeDelayed);
         window.removeEventListener('scroll', this.scroll);
     }
 
@@ -57,6 +56,11 @@ export default class Video extends React.Component {
             ...prevState,
             visible: true,
         }));
+    }
+
+    resizeDelayed() {
+        clearTimeout(this.timeout);
+        this.timeout = setTimeout(this.resize, 1000);
     }
 
     resize() {
