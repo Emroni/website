@@ -12,7 +12,7 @@ install:
     - yarn install
 
 script:
-    - yarn build
+    - REACT_APP_ASSETS_URL=$ASSETS_URL yarn build
 
 after_success:
     - firebase deploy --project $FIREBASE_PROJECT --token $FIREBASE_TOKEN
