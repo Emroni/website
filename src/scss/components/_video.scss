@@ -1,12 +1,12 @@
-@mixin videoBackground($name, $imageWidth, $imageHeight, $screenLeft, $screenTop, $screenBottom) {
+@mixin videoBackground($name, $imageWidth, $imageHeight, $screenLeft, $screenTop, $screenBottom, $offsetTop: 0, $offsetBottom: 0) {
     $width: ($imageWidth / 962) * 100%;
     $height: ($imageHeight / 542) * 100%;
 
-    &.#{$name} > :first-child {
-        margin-top: ($screenTop / $imageHeight) * 100%;
-        margin-bottom: ($screenBottom / $imageHeight) * 100%;
+    &.#{$name} {
+        padding-top: (($screenTop + $offsetTop) / $imageHeight) * 100%;
+        padding-bottom: (($screenBottom + $offsetBottom) / $imageHeight) * 100%;
 
-        &:before {
+        > :first-child:before {
             background-image: asset('video-' + $name + '.png');
             left: -($screenLeft / $imageWidth) * $width;
             top: -($screenTop / $imageHeight) * $height;
@@ -51,8 +51,8 @@
         opacity: 0;
     }
 
-    @include videoBackground('tablet', 1138, 638, 91, 33, 65);
-    @include videoBackground('laptop', 1276, 710, 158, 45, 125);
+    @include videoBackground('tablet', 1138, 638, 91, 33, 65, -16, -50);
+    @include videoBackground('laptop', 1276, 710, 158, 45, 125, -16, -64);
 
     video {
         display: block;
@@ -76,9 +76,9 @@
     .background {
         position: absolute;
         left: 50%;
-        top: 0;
+        top: 10%;
         width: 0;
-        height: 100%;
+        height: 80%;
         z-index: -1;
 
         &:before {

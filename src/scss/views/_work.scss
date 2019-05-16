@@ -4,6 +4,7 @@
 
 .work-summary {
     font-weight: bold;
+    margin: 2em 0 1em;
     transition: opacity 0.5s $ease;
 
     &.trans:not(.active), .page.exit & {
