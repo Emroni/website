@@ -8,7 +8,6 @@ export default class Trans extends React.Component {
     constructor(props) {
         super(props);
 
-        this.offset = 0;
         this.top = Number.MAX_VALUE;
         this.element = React.createRef();
 
@@ -26,13 +25,15 @@ export default class Trans extends React.Component {
     }
 
     render() {
-        const Tag = this.props.tag || 'div';
+        const {children, className, tag, ...props} = this.props;
 
-        const className = classnames(`${this.props.className || ''} trans`, {
+        const Tag = tag || 'div';
+
+        const classNames = classnames(className, 'trans', {
             active: this.state.active,
         });
 
-        return <Tag {...this.props} ref={this.element} className={className}>{this.props.children}</Tag>;
+        return <Tag {...props} ref={this.element} className={classNames}>{children}</Tag>;
     }
 }
 
