@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import * as ROUTES from 'constants/routes';
 import { asset } from 'constants/paths';
 import Close from 'components/Close';
+import Image from 'components/Image';
 import Trans from 'components/Trans';
 
 function Header({location}) {
@@ -17,7 +18,7 @@ function Header({location}) {
     return <Trans tag="header" className={className}>
         <Trans className="header-photo" stall="1">
             <div>
-                <img src={asset('emre-koc.png')} alt="Emre Koc"/>
+                <Image src={asset('emre-koc.png')} alt="Emre Koc"/>
             </div>
         </Trans>
         <svg>
