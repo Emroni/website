@@ -1,47 +1,57 @@
 header {
-    font-size: 2em;
+    font-size: 1em;
     padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: $sm) {
-        font-size: 2.5em;
+        font-size: 1.5em;
         padding: 4rem 0;
     }
 
     @media (min-width: $md) {
-        font-size: 3em;
+        font-size: 2em;
         padding: 5rem 0;
     }
 
     @media (min-width: $lg) {
+        font-size: 2.5em;
         padding: 6rem 0;
     }
 
     @media (min-width: $xl) {
+        font-size: 3em;
         padding: 7rem 0;
     }
 
     svg {
-        width: 100%;
+        font-size: 1.5em;
+        width: 8em;
         height: 2em;
+        overflow: visible;
 
         text {
             fill: none;
             font-weight: 100;
             line-height: 1;
             letter-spacing: 0.125em;
-            text-anchor: middle;
             text-transform: uppercase;
             dominant-baseline: central;
             stroke: $white;
             stroke-width: 1px;
             stroke-dasharray: 0, 100;
             opacity: 0;
-            transition: font-size 0.5s $ease, stroke 0.5s $ease, stroke-dasharray 1s $ease, opacity 0s 1s;
+            transition: font-size 0.5s $ease, stroke 0.5s $ease, transform 0.5s $ease, stroke-dasharray 1s $ease, opacity 0s 1s;
 
             &.sub {
                 stroke-width: 2px;
             }
         }
+    }
+
+    &.home text:first-child {
+        transform: translateX(-0.125rem);
     }
 
     &.home text:last-child, &.about text:first-child, &.work text:first-child {
@@ -52,10 +62,8 @@ header {
         g:first-child text:first-child, &.home g:nth-child(1) text, &.about g:nth-child(2) text, &.work g:nth-child(3) text {
             stroke-dasharray: 100, 0;
             opacity: 1;
-            transition: font-size 0.5s $ease, stroke 0.5s $ease, stroke-dasharray 1s $ease;
+            transition: font-size 0.5s $ease, stroke 0.5s $ease, stroke-dasharray 1s $ease, transform 0.5s $ease;
         }
-
-
     }
 
     &.background:before {
@@ -73,5 +81,31 @@ header {
         text {
             stroke: $black;
         }
+    }
+}
+
+.header-photo {
+    border: 0.125em solid $white;
+    border-radius: 100%;
+    overflow: hidden;
+    width: 3em;
+    margin-right: 1em;
+    transition: border-color 0.5s $ease;
+
+    .home.background & {
+        border-color: $blue;
+    }
+
+    div {
+        padding-bottom: 100%;
+        position: relative;
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
     }
 }
