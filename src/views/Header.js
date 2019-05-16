@@ -14,8 +14,8 @@ function Header({location}) {
         work: location.pathname === ROUTES.WORK,
     });
 
-    return <Trans tag="header" stall="1" className={className}>
-        <Trans className="header-photo">
+    return <Trans tag="header" className={className}>
+        <Trans className="header-photo" stall="1">
             <div>
                 <img src={asset('emre-koc.png')} alt="Emre Koc"/>
             </div>
