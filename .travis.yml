@@ -13,6 +13,4 @@ install:
 
 script:
     - yarn build
-
-after_success:
     - firebase deploy --project $FIREBASE_PROJECT --token $FIREBASE_TOKEN
