@@ -22,16 +22,16 @@ function Header({location}) {
         </Trans>
         <svg>
             <g>
-                <text y="30%">Emre Koc</text>
-                <text y="70%" className="sub">Full Stack Developer</text>
+                <text y="14%">Emre Koc</text>
+                <text y="83%" className="sub">Full Stack Developer</text>
             </g>
             <g>
-                <text y="30%" className="sub">Emre Koc</text>
-                <text y="70%">About me</text>
+                <text y="14%" className="sub">Emre Koc</text>
+                <text y="83%">About me</text>
             </g>
             <g>
-                <text y="30%" className="sub">Emre Koc</text>
-                <text y="70%">Recent work</text>
+                <text y="14%" className="sub">Emre Koc</text>
+                <text y="83%">Recent work</text>
             </g>
         </svg>
         <Close to={ROUTES.HOME} active={location.pathname !== ROUTES.HOME}/>
