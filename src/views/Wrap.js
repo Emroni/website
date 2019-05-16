@@ -25,7 +25,7 @@ class Wrap extends React.Component {
             this.index = 0;
             this.steps = [];
 
-            const steps = Math.min(1, this.top / 300) * 60;
+            const steps = Math.min(0.5, this.top / 200) * 60;
             for (let i = steps; i >= 0; i--) {
                 const t = i * (1 / steps);
                 const n = t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
