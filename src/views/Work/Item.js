@@ -40,7 +40,8 @@ export default function Item({title, type, design, client, link, background, col
                         </li>)}
                 </Trans>
             </Trans>
-            <Trans tag="p">{description}</Trans>
+            {description.map((p, key) =>
+                <Trans tag="p" key={key}>{p}</Trans>)}
         </div>
     </li>;
 
