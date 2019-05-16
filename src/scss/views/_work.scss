@@ -1,12 +1,56 @@
-.work li {
+.work > li {
     overflow: hidden;
+}
+
+.work-info {
+    @media (min-width: $md) {
+        display: flex;
+        margin: 1.5em 0;
+    }
 }
 
 .work-summary {
     font-weight: bold;
-    transition: opacity 0.5s $ease;
+    margin: 0;
 
-    &.trans:not(.active), .page.exit & {
-        opacity: 0;
+    @media (min-width: $md) {
+        flex: 1;
+        margin-right: 3em;
+        white-space: nowrap;
+    }
+
+    > span {
+        display: inline-block;
+    }
+}
+
+.work-tags {
+    margin: 0 -0.25rem;
+
+    @media (max-width: #{$md - 1px}) {
+        margin-top: 1em;
+    }
+
+    @media (min-width: $md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        max-width: 45%;
+    }
+
+    @media (min-width: $lg) {
+        max-width: 35%;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0.125rem;
+
+        span {
+            display: inline-block;
+            background-color: $black-transparent;
+            font-size: 0.75em;
+            padding: 0.125rem;
+        }
     }
 }
