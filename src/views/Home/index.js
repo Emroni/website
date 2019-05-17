@@ -12,7 +12,7 @@ export default function Home() {
     return <div className="page">
         <Chapter title="Hi" background>
             <Trans tag="p">
-                I'm Emre, a Full Stack Developer from the Netherlands. With over 12 years of experience, my work includes anything from animated videos to complete websites.
+                I'm Emre, a Full Stack Developer from the Netherlands. With over 12 years of experience in web development, my work includes anything from animated videos to complete websites.
             </Trans>
             <Trans tag="p">
                 <Button to={ROUTES.ABOUT}>Read more</Button>
