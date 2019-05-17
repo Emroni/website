@@ -120,24 +120,6 @@ export default function Work() {
                 'Users could upload their photo and position it over an animated avatar using my custom built tool in JavaScript. After writing a short message, it was stored in the database and sent as an email to the receiver, who could view the card back on the site.',
             ],
         },
-        {
-            title: 'ReelMetrics',
-            background: 'tablet',
-            color: '#a6262b',
-            video: 'reelmetrics',
-            design:
-                <Link href="https://wearejust.com/">Just</Link>,
-            client:
-                <Link href="https://www.reelmetrics.com/">ReelMetrics</Link>,
-            link: 'https://vimeo.com/316697815',
-            tags: [
-                'After Effects',
-                'Illustrator',
-            ],
-            description: [
-                'ReelMetrics gives subscribers access to the world\'s largest repository of slot design and performance data. This introduction animation explains exactly why they are the best in the business.',
-            ],
-        },
     ];
 
     return <div className="page">
