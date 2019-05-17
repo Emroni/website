@@ -31,26 +31,25 @@
         margin-top: 1em;
     }
 
-    @media (min-width: $md) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        max-width: 45%;
-    }
-
-    @media (min-width: $lg) {
-        max-width: 35%;
-    }
-
-    li {
-        display: inline-block;
-        margin: 0.125rem;
-
-        span {
+    .row {
+        @media (max-width: #{$md - 1px}) {
             display: inline-block;
-            background-color: $black-transparent;
-            font-size: 0.75em;
-            padding: 0.125rem;
+        }
+
+        @media (min-width: $md) {
+            text-align: right;
+        }
+        
+        div {
+            display: inline-block;
+            margin: 0.125rem;
+
+            span {
+                display: inline-block;
+                background-color: $black-transparent;
+                font-size: 0.75em;
+                padding: 0.125rem;
+            }
         }
     }
 }
