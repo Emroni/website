@@ -2,6 +2,7 @@ import React from 'react';
 import Trans from '../../components/Trans';
 import Video from '../../components/Video';
 import Link from '../../components/Link';
+import Tags from './Tags';
 
 export default function Item({title, type, design, client, link, background, color, video, tags, description}) {
 
@@ -33,12 +34,7 @@ export default function Item({title, type, design, client, link, background, col
                         </span>
                     </React.Fragment>}
                 </Trans>
-                <Trans tag="ul" className="work-tags">
-                    {tags.map(tag =>
-                        <li key={tag}>
-                            <span>{tag}</span>
-                        </li>)}
-                </Trans>
+                <Tags items={tags}/>
             </Trans>
             {description.map((p, key) =>
                 <Trans tag="p" key={key}>{p}</Trans>)}
