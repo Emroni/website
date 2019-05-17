@@ -1,9 +1,6 @@
-export const ASSETS = process.env.NODE_ENV === 'development' ? '/assets/' : 'https://firebasestorage.googleapis.com/v0/b/emroni-website.appspot.com/o/';
+export const ASSETS = process.env.REACT_APP_ASSETS_URL || '/assets/';
+export const ASSETS_POSTFIX = process.env.REACT_APP_ASSETS_URL_POSTFIX || '';
 
 export function asset(file) {
-    let url = `${ASSETS}${file}`;
-    if (process.env.NODE_ENV !== 'development') {
-        url += '?alt=media';
-    }
-    return url;
+    return ASSETS + file + ASSETS_POSTFIX;
 }

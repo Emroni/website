@@ -1,9 +1,9 @@
 import React from 'react';
-import * as ROUTES from 'constants/routes';
-import Link from 'components/Link';
-import Chapter from 'components/Chapter';
-import Trans from 'components/Trans';
-import Button from 'components/Button';
+import * as ROUTES from '../../constants/routes';
+import Link from '../../components/Link';
+import Chapter from '../../components/Chapter';
+import Trans from '../../components/Trans';
+import Button from '../../components/Button';
 import Item from './Item';
 
 export default function Work() {
@@ -118,24 +118,6 @@ export default function Work() {
             description: [
                 'V&VN is the professional organisation of Nurse Practitioners in the Netherlands. During the International Nurses Day 2018, this microsite allowed nurses to thank one another for their wonderful work by sending a personalised e-card. Over 6,000 cards were shared in less than a week.',
                 'Users could upload their photo and position it over an animated avatar using my custom built tool in JavaScript. After writing a short message, it was stored in the database and sent as an email to the receiver, who could view the card back on the site.',
-            ],
-        },
-        {
-            title: 'ReelMetrics',
-            background: 'tablet',
-            color: '#a6262b',
-            video: 'reelmetrics',
-            design:
-                <Link href="https://wearejust.com/">Just</Link>,
-            client:
-                <Link href="https://www.reelmetrics.com/">ReelMetrics</Link>,
-            link: 'https://vimeo.com/316697815',
-            tags: [
-                'After Effects',
-                'Illustrator',
-            ],
-            description: [
-                'ReelMetrics gives subscribers access to the world\'s largest repository of slot design and performance data. This introduction animation explains exactly why they are the best in the business.',
             ],
         },
     ];

@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { asset } from 'constants/paths';
-import * as ROUTES from 'constants/routes';
+import { asset } from '../constants/paths';
+import * as ROUTES from '../constants/routes';
 import Header from './Header';
 import Home from './Home';
 import About from './About';

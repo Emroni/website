@@ -1,11 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import classnames from 'classnames';
-import * as ROUTES from 'constants/routes';
-import { asset } from 'constants/paths';
-import Close from 'components/Close';
-import Image from 'components/Image';
-import Trans from 'components/Trans';
+import * as ROUTES from '../constants/routes';
+import { asset } from '../constants/paths';
+import Close from '../components/Close';
+import Image from '../components/Image';
+import Trans from '../components/Trans';
 
 function Header({location}) {
 
