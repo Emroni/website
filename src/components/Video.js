@@ -34,15 +34,15 @@ export default class Video extends React.Component {
         window.removeEventListener('scroll', this.scroll);
     }
 
-    componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate(prevProps, prevState) {
         const {current} = this.element;
 
         if (current) {
-            if (this.state.size !== nextState.size) {
-                current.src = asset(`${this.props.slug}-${nextState.size}.mp4`);
+            if (prevState.size !== this.state.size) {
+                current.src = asset(`${this.props.slug}-${this.state.size}.mp4`);
 
-            } else if (nextState.visible) {
-                if (nextState.active) {
+            } else if (this.state.visible) {
+                if (this.state.active) {
                     current.play();
                 } else {
                     current.pause();
