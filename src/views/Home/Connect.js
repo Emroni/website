@@ -22,7 +22,7 @@ export default function Connect() {
         {
             icon: 'far fa-envelope',
             title: 'Email',
-            url: 'mailto:hi@emrekoc.io',
+            url: `mailto:hi@${window.location.host}`,
         },
         {
             icon: 'fab fa-twitter',
