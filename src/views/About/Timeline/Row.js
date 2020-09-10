@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Row({title, ranges}) {
+
     ranges = ranges.split(';')
         .map(range => {
             range = range.split('-');
@@ -8,12 +9,12 @@ export default function Row({title, ranges}) {
                 range.push(range[0]);
             }
 
-            const start = parseInt(range[0]) - 2008;
-            const end = parseInt(range[1]) - 2008;
+            const start = parseFloat(range[0]) - 2006;
+            const end = parseFloat(range[1]) - 2006;
 
             return {
-                left: (start / 12) * 100 + '%',
-                width: ((end - start) / 12) * 100 + '%',
+                left: (start / 16) * 100 + '%',
+                width: ((end - start) / 16) * 100 + '%',
             };
         });
 
@@ -24,4 +25,5 @@ export default function Row({title, ranges}) {
                 <span key={key} style={range}/>)}
         </div>
     </div>;
+
 }
