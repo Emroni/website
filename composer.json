@@ -1,0 +1,6 @@
+{
+    "require": {
+        "deployer/deployer": "^6.8",
+        "emroni/deployer": "^1.0"
+    }
+}
