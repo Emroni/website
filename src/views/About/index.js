@@ -9,10 +9,12 @@ import Timeline from './Timeline';
 
 export default function About() {
 
+    const years = new Date().getFullYear() - 2007;
+
     return <div className="page">
         <Chapter title="Full Stack Developer">
             <Trans tag="p">
-                I've been a web developer for over 12 years now. My passion lies in creating things and being a web developer allows me to create anything I set my mind to. In the ever expanding digital world, the possibilities are endless.
+                I've been a web developer for over {years} years now. My passion lies in creating things and being a web developer allows me to create anything I set my mind to. In the ever expanding digital world, the possibilities are endless.
             </Trans>
             <Trans tag="p">
                 My main focus is short term microsites for ad campaigns, but I also enjoy working on larger systems for services that involve complex logic and mathematics.
