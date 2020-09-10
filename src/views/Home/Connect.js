@@ -5,9 +5,9 @@ export default function Connect() {
 
     const links = [
         {
-            icon: 'fab fa-codepen',
-            title: 'CodePen',
-            url: 'https://codepen.io/Emroni',
+            icon: 'fab fa-stack-overflow',
+            title: 'Stack Overflow',
+            url: 'https://stackoverflow.com/users/6933004',
         },
         {
             icon: 'fab fa-github',
@@ -15,14 +15,24 @@ export default function Connect() {
             url: 'https://github.com/Emroni',
         },
         {
-            icon: 'fab fa-linkedin-in',
-            title: 'LinkedIn',
-            url: 'https://linkedin.com/in/emroni',
+            icon: 'fab fa-codepen',
+            title: 'CodePen',
+            url: 'https://codepen.io/Emroni',
         },
         {
             icon: 'far fa-envelope',
             title: 'Email',
-            url: 'mailto:hi@emroni.com',
+            url: 'mailto:hi@emrekoc.io',
+        },
+        {
+            icon: 'fab fa-twitter',
+            title: 'Twitter',
+            url: 'https://twitter.com/emroni',
+        },
+        {
+            icon: 'fab fa-linkedin-in',
+            title: 'LinkedIn',
+            url: 'https://linkedin.com/in/emroni',
         },
         {
             icon: 'fab fa-instagram',
@@ -33,16 +43,6 @@ export default function Connect() {
             icon: 'fab fa-facebook-f',
             title: 'Facebook',
             url: 'https://www.facebook.com/emroni',
-        },
-        {
-            icon: 'fab fa-twitter',
-            title: 'Twitter',
-            url: 'https://twitter.com/emroni',
-        },
-        {
-            icon: 'fab fa-medium-m',
-            title: 'Medium',
-            url: 'https://medium.com/@Emroni',
         },
     ];
 
