@@ -9,10 +9,12 @@ import Connect from './Connect';
 
 export default function Home() {
 
+    const years = new Date().getFullYear() - 2007;
+
     return <div className="page">
         <Chapter title="Hi" background>
             <Trans tag="p">
-                I'm Emre, a Full Stack Developer from the Netherlands. With over 12 years of experience in web development, my work includes anything from animated videos to complete websites.
+                I'm Emre, a Full Stack Developer from the Netherlands. With over {years} years of experience in web development, my work includes anything from animated videos to complete websites.
             </Trans>
             <Trans tag="p">
                 <Button to={ROUTES.ABOUT}>Read more</Button>
@@ -26,7 +28,7 @@ export default function Home() {
         </Chapter>
         <Chapter title="For hire" background>
             <Trans tag="p">
-                As I'm currently located in Chiang Mai, Thailand, I work remotely and at a fixed hourly rate. For questions or inquiries, feel free to contact me by <Link href="mailto:hi@emroni.com">email</Link> or through <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
+                As I'm currently located in Chiang Mai, Thailand, I work remotely and at a fixed hourly rate. For questions or inquiries, feel free to contact me by <Link href="mailto:hi@emrekoc.io">email</Link> or through <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
             </Trans>
         </Chapter>
         <Chapter title="Connect">
