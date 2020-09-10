@@ -1,13 +1,7 @@
 .DS_Store
-.env.development.local
-.env.local
-.env.production.local
-.env.test.local
-.firebase
-.pnp.js
-/.pnp
 /build
 /node_modules
+/vendor
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
