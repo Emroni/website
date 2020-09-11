@@ -170,7 +170,7 @@
     }
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through 16 {
     $stagger: $i * 0.05s;
 
     .timeline-lines span:nth-child(#{$i}):before {
