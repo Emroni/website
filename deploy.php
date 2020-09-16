@@ -27,27 +27,6 @@ host('emrekoc.io')
         'build/assets',
     ]);
 
-host('emroni.com')
-    ->stage('production')
-    ->hostname('159.65.6.231')
-    ->user('root')
-    ->port(22)
-    ->identityFile('~/.ssh/id_rsa')
-    ->addSshOption('UserKnownHostsFile', '/dev/null')
-    ->addSshOption('StrictHostKeyChecking', 'no')
-    ->forwardAgent(true)
-    ->multiplexing(true)
-    ->set('deploy_path', '/var/www/emroni.com')
-    ->set('branch', 'master')
-    ->set('http-check', false)
-    ->set('keep_releases', 2)
-    ->set('repository', 'git@gitlab.com:emroni/website.git')
-    ->set('timezone', 'Europe/Amsterdam')
-    ->set('public_webroot', 'public')
-    ->set('shared_dirs', [
-        'build/assets',
-    ]);
-
 task('deploy:build', function () {
     runLocally('rm -rf build');
     runLocally('yarn build');
