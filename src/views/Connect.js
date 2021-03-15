@@ -1,5 +1,5 @@
 import React from 'react';
-import Trans from '../../components/Trans';
+import { Chapter, Trans } from '../components';
 
 export default function Connect() {
 
@@ -46,16 +46,21 @@ export default function Connect() {
         },
     ];
 
-    return <Trans tag="ul" className="connect">
-        {links.map((item, key) =>
-            <li key={key}>
-                <Trans tag="a" href={item.url} target="_blank" rel="noopener noreferrer">
-                    <span>
-                        <i className={item.icon}/>
-                        {item.title}
-                    </span>
-                </Trans>
-            </li>)}
-    </Trans>;
+    return <Chapter title="Connect">
+        <Trans tag="p">
+            Looking for more? Connect with me through any of the channels below.
+        </Trans>
+        <Trans tag="ul" className="connect">
+            {links.map((item, key) =>
+                <li key={key}>
+                    <Trans tag="a" href={item.url} target="_blank" rel="noopener noreferrer">
+                        <span>
+                            <i className={item.icon}/>
+                            {item.title}
+                        </span>
+                    </Trans>
+                </li>)}
+        </Trans>
+    </Chapter>;
 
 }
