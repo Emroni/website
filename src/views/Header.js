@@ -1,7 +1,6 @@
 import React from 'react';
-import { asset } from '../constants/paths';
-import Image from '../components/Image';
-import Trans from '../components/Trans';
+import { asset } from '../helpers';
+import { Image, Trans } from '../components';
 
 export default function Header() {
 
