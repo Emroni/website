@@ -1,4 +1,3 @@
-import React from 'react';
 import Trans from './Trans';
 
 export default function H2({children, icon}) {

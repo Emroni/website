@@ -1,4 +1,3 @@
-import React from 'react';
 import * as classnames from 'classnames';
 import H2 from './H2';
 import Trans from './Trans';
