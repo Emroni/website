@@ -1,4 +1,3 @@
-import React from 'react';
 import { asset } from '../helpers';
 import { Chapter, Link, List, Trans } from '../components';
 

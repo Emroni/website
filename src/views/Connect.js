@@ -1,4 +1,3 @@
-import React from 'react';
 import { Chapter, Trans } from '../components';
 
 export default function Connect() {
