@@ -20,7 +20,7 @@ host('emrekoc.io')
     ->set('branch', 'master')
     ->set('http-check', false)
     ->set('keep_releases', 2)
-    ->set('repository', 'git@gitlab.com:emroni/website.git')
+    ->set('repository', 'git@github.com:Emroni/website.git')
     ->set('timezone', 'Europe/Amsterdam')
     ->set('public_webroot', 'public')
     ->set('shared_dirs', [
@@ -28,10 +28,10 @@ host('emrekoc.io')
     ]);
 
 task('deploy:build', function () {
-    runLocally('rm -rf build');
-    runLocally('yarn build');
-    runLocally('rm -rf build/assets');
-    upload('build', '{{release_path}}');
+    within('{{release_path}}', function () {
+        run('yarn install');
+        run('yarn build');
+    });
 });
 
 task('deploy', [
@@ -47,3 +47,6 @@ task('deploy', [
     'deploy:unlock',
     'cleanup',
 ]);
+
+
+after('deploy:failed', 'deploy:unlock');
