@@ -4,11 +4,6 @@ export default function Connect() {
 
     const links = [
         {
-            icon: 'fab fa-stack-overflow',
-            title: 'Stack Overflow',
-            url: 'https://stackoverflow.com/users/6933004',
-        },
-        {
             icon: 'fab fa-github',
             title: 'GitHub',
             url: 'https://github.com/Emroni',
@@ -17,6 +12,11 @@ export default function Connect() {
             icon: 'fab fa-codepen',
             title: 'CodePen',
             url: 'https://codepen.io/Emroni',
+        },
+        {
+            icon: 'fab fa-stack-overflow',
+            title: 'Stack Overflow',
+            url: 'https://stackoverflow.com/users/6933004',
         },
         {
             icon: 'far fa-envelope',
