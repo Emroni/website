@@ -2,11 +2,10 @@ import * as classnames from 'classnames';
 import H2 from './H2';
 import Trans from './Trans';
 
-export default function Chapter({children, title, background, light}) {
+export default function Chapter({background, children, title}) {
 
     const className = classnames('container', {
         background,
-        light,
     });
 
     const slug = title.toLowerCase().replace(/\s/g, '-');
