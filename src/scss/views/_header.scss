@@ -37,7 +37,7 @@ header {
             line-height: 1;
             letter-spacing: 0.125em;
             text-transform: uppercase;
-            stroke: $white;
+            stroke: $black;
             stroke-width: 1px;
             stroke-dasharray: 0, 100;
             opacity: 0;
@@ -56,50 +56,29 @@ header {
         }
     }
 
-    &.home text:first-child {
+    text:first-child {
         transform: translateX(-0.125rem);
     }
 
-    &.home text:last-child, &.about text:first-child, &.work text:first-child {
+    text:last-child {
         font-size: 0.5em;
     }
 
     &.active {
-        g:first-child text:first-child, &.home g:nth-child(1) text, &.about g:nth-child(2) text, &.work g:nth-child(3) text {
+        g:first-child text:first-child, & g:nth-child(1) text {
             stroke-dasharray: 100, 0;
             opacity: 1;
             transition: font-size 0.5s $ease, stroke 0.5s $ease, stroke-dasharray 1s $ease, transform 0.5s $ease;
         }
     }
-
-    &.background:before {
-        height: calc(100% + 2em);
-        top: calc(50% - 1em);
-        transition-duration: 0.75s;
-    }
-
-    &.home.background {
-        &:before {
-            height: 0;
-            top: -1em;
-        }
-
-        text {
-            stroke: $black;
-        }
-    }
 }
 
 .header-photo {
-    border: 0.125em solid $white;
+    border: 0.125em solid $blue;
     border-radius: 100%;
     overflow: hidden;
     width: 3em;
     margin-right: 1em;
-
-    .home.background & {
-        border-color: $blue;
-    }
 
     div {
         padding-bottom: 100%;

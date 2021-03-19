@@ -3,7 +3,7 @@ import { Image, Trans } from '../components';
 
 export default function Header() {
 
-    return <Trans tag="header" className="background home">
+    return <Trans tag="header">
         <Trans className="header-photo" stall="1">
             <div>
                 <Image src={asset('emre-koc.png')} alt="Emre Koc"/>
