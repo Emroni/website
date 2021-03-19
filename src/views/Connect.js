@@ -1,45 +1,48 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faGithub, faCodepen, faStackOverflow, faTwitter, faLinkedinIn, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { Chapter, Trans } from '../components';
 
 export default function Connect() {
 
     const links = [
         {
-            icon: 'fab fa-github',
+            icon: faGithub,
             title: 'GitHub',
             url: 'https://github.com/Emroni',
         },
         {
-            icon: 'fab fa-codepen',
+            icon: faCodepen,
             title: 'CodePen',
             url: 'https://codepen.io/Emroni',
         },
         {
-            icon: 'fab fa-stack-overflow',
+            icon: faStackOverflow,
             title: 'Stack Overflow',
             url: 'https://stackoverflow.com/users/6933004',
         },
         {
-            icon: 'far fa-envelope',
+            icon: faEnvelope,
             title: 'Email',
             url: `mailto:hi@${window.location.host}`,
         },
         {
-            icon: 'fab fa-twitter',
+            icon: faTwitter,
             title: 'Twitter',
             url: 'https://twitter.com/emroni',
         },
         {
-            icon: 'fab fa-linkedin-in',
+            icon: faLinkedinIn,
             title: 'LinkedIn',
             url: 'https://linkedin.com/in/emroni',
         },
         {
-            icon: 'fab fa-instagram',
+            icon: faInstagram,
             title: 'Instagram',
             url: 'https://www.instagram.com/emronic/',
         },
         {
-            icon: 'fab fa-facebook-f',
+            icon: faFacebookF,
             title: 'Facebook',
             url: 'https://www.facebook.com/emroni',
         },
@@ -54,7 +57,7 @@ export default function Connect() {
                 <li key={key}>
                     <Trans tag="a" href={item.url} target="_blank" rel="noopener noreferrer">
                         <span>
-                            <i className={item.icon}/>
+                            <FontAwesomeIcon icon={item.icon}/>
                             {item.title}
                         </span>
                     </Trans>
