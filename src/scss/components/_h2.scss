@@ -75,15 +75,3 @@ h2.code {
         opacity: 0;
     }
 }
-
-h2.icon {
-    transition: opacity 0.5s $ease;
-
-    &:not(.active), .page.exit & {
-        opacity: 0;
-    }
-
-    i {
-        width: 1.5em;
-    }
-}
