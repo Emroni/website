@@ -1,38 +1,22 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import classnames from 'classnames';
 
-export default class Img extends React.Component {
+export default function Image({ alt, src }) {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            loading: true,
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        const image = new window.Image();
+        image.onload = () => {
+            setLoading(false);
         };
+        image.src = src;
+    }, [src]);
 
-        this.image = new Image();
-        this.image.onload = this.loaded.bind(this);
-    }
+    const className = classnames('image', {
+        loading,
+    });
 
-    componentDidMount() {
-        this.image.src = this.props.src;
-    }
-
-    loaded() {
-        this.setState({
-            loading: false,
-        });
-    }
-
-    render() {
-        const {alt, src} = this.props;
-        const {loading} = this.state;
-
-        const className = classnames('image', {
-            loading,
-        });
-
-        return <img alt={alt} className={className} src={loading ? '' : src}/>;
-    }
+    return <img alt={alt} className={className} src={loading ? '' : src}/>;
 
 }
