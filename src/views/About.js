@@ -1,4 +1,3 @@
-import { asset } from '../helpers';
 import { Chapter, Link, List, Trans } from '../components';
 
 export default function About() {
@@ -13,7 +12,7 @@ export default function About() {
             <List title="Teach" items="Development,Animation,Automation"/>
         </Trans>
         <Trans tag="p">
-            For more information, download my <Link href={asset('Emre-Koc-Resume.pdf')}>resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
+            For more information, download my <Link href="/assets/Emre-Koc-Resume.pdf">resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
         </Trans>
     </Chapter>;
 
