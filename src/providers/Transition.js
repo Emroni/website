@@ -2,7 +2,7 @@ import React, { createContext, useContext } from 'react';
 
 const DEBUG = process.env.NODE_ENV === 'development';
 
-export const TransitionContext = createContext(null);
+const TransitionContext = createContext({});
 
 export const useTransition = () => useContext(TransitionContext);
 
