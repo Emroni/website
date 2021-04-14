@@ -7,6 +7,7 @@ const useStyles = createUseStyles(theme => ({
             position: 'relative',
         },
         '&, &:active, &:focus, &:hover, &:visited': {
+            color: 'var(--color-black)',
             textDecoration: 'none',
         },
         '&:before, &:after, & > span:after': {
@@ -15,6 +16,9 @@ const useStyles = createUseStyles(theme => ({
             position: 'absolute',
         },
         '.background &': {
+            '&, &:active, &:focus, &:hover, &:visited': {
+                color: 'var(--color-white)',
+            },
             '&:before, &:after, & > span:after': {
                 backgroundColor: 'var(--color-white)',
             },

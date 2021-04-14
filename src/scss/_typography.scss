@@ -26,11 +26,3 @@ p {
         font-size: 1.125em;
     }
 }
-
-a, a:active, a:focus, a:hover, a:visited {
-    color: var(--color-black);
-
-    .background & {
-        color: var(--color-white);
-    }
-}
