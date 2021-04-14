@@ -154,7 +154,8 @@
 
         &:before {
             content: "";
-            background-color: $blue-transparent;
+            background-color: $blue;
+            opacity: 0.05;
             position: absolute;
             left: 0;
             top: 0;
@@ -163,7 +164,7 @@
             transition: width 0.25s $ease;
 
             .background & {
-                background-color: $white-transparent;
+                background-color: $white;
             }
 
             .trans:not(.active) & {
