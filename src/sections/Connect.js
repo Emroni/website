@@ -1,11 +1,27 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faCodepen, faFacebookF, faGithub, faInstagram, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { Section, Trans } from '../components';
+import { Section, Social, Trans } from '../components';
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles(theme => ({
+    socials: {
+        margin: '1em -0.625em',
+        listStyleType: 'none',
+        padding: 0,
+        [theme.media.sm]: {
+            margin: '1.5em -0.875em',
+        },
+        [theme.media.md]: {
+            margin: '2em -1em',
+        },
+    },
+}));
 
 export default function Connect() {
 
-    const links = [
+    const classes = useStyles();
+
+    const socials = [
         {
             icon: faGithub,
             title: 'GitHub',
@@ -52,16 +68,9 @@ export default function Connect() {
         <Trans tag="p">
             Looking for more? Connect with me through any of the channels below.
         </Trans>
-        <Trans tag="ul" className="connect">
-            {links.map((item, key) =>
-                <li key={key}>
-                    <Trans tag="a" href={item.url} target="_blank" rel="noopener noreferrer">
-                        <span>
-                            <FontAwesomeIcon icon={item.icon}/>
-                            {item.title}
-                        </span>
-                    </Trans>
-                </li>)}
+        <Trans tag="ul" className={classes.socials}>
+            {socials.map((social, index) =>
+                <Social key={index} {...social}/>)}
         </Trans>
     </Section>;
 
