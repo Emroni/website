@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import { useTransition } from '../providers';
 
-export default function Trans({children, className, stall = 0, tag = 'div', ...props}) {
+export default function Trans({children, className, fade = true, stall = 0, tag = 'div', ...props}) {
 
     const [active, setActive] = useState(false);
     const [ready, setReady] = useState(false);
@@ -22,6 +22,7 @@ export default function Trans({children, className, stall = 0, tag = 'div', ...p
 
     const classNames = classnames(className, 'trans', {
         active,
+        fade,
     });
 
     const Tag = tag;

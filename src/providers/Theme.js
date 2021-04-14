@@ -17,9 +17,9 @@ export function ThemeProvider({children}) {
             white: '#fffcf9',
         },
         eases: {
-            ease: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
-            easeIn: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)',
-            easeOut: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)',
+            in: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)',
+            inOut: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+            out: 'cubic-bezier(0.215, 0.610, 0.355, 1.000)',
         },
         media: {
             sm: `@media (min-width: ${sizes.sm})`,
