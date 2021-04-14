@@ -118,6 +118,8 @@
     ul {
         position: relative;
         padding: 0.5rem;
+        margin: 0;
+        list-style-type: none;
 
         @media (min-width: $md) {
             padding: 1rem;
