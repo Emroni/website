@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './views/App';
+import { TransitionProvider } from './providers';
+import App from './views';
 import './scss/index.scss';
 
 ReactDOM.render(
-    <App/>, document.getElementById('root'));
+    <TransitionProvider>
+        <App/>
+    </TransitionProvider>, document.getElementById('root'));

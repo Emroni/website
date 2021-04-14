@@ -1,4 +1,3 @@
-import React from 'react';
 import { Chapter, Link, Trans } from '../components';
 
 export default function App() {
