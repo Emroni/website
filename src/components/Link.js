@@ -51,7 +51,7 @@ const useStyles = createUseStyles(theme => ({
                 },
                 '&:after': {
                     animationName: '$link-in',
-                    animationTimingFunction: theme.eases.out,
+                    animationTimingFunction: 'var(--ease-out)',
                 },
                 '& > span:after': {
                     width: '0.5em',
