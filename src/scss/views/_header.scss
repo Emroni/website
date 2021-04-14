@@ -37,7 +37,7 @@ header {
             line-height: 1;
             letter-spacing: 0.125em;
             text-transform: uppercase;
-            stroke: $black;
+            stroke: var(--color-black);
             stroke-width: 1px;
             stroke-dasharray: 0, 100;
             opacity: 0;

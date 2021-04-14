@@ -5,7 +5,7 @@ import { Trans } from './index';
 // TODO: Replace title chevrons with SVG icons
 const useStyles = createUseStyles(theme => ({
     background: {
-        backgroundColor: theme.colors.blue,
+        backgroundColor: 'var(--color-blue)',
         height: 0,
         left: '50%',
         position: 'absolute',
@@ -52,7 +52,7 @@ const useStyles = createUseStyles(theme => ({
             padding: '7rem',
         },
         '&.background': {
-            color: theme.colors.white,
+            color: 'var(--color-white)',
         },
     },
     title: {

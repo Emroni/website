@@ -11,12 +11,12 @@ const useStyles = createUseStyles(theme => ({
         },
         '&:before, &:after, & > span:after': {
             content: '""',
-            backgroundColor: theme.colors.black,
+            backgroundColor: 'var(--color-black)',
             position: 'absolute',
         },
         '.background &': {
             '&:before, &:after, & > span:after': {
-                backgroundColor: theme.colors.white,
+                backgroundColor: 'var(--color-white)',
             },
         },
         '&:before': {

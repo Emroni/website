@@ -69,7 +69,7 @@
     @media (hover) {
         a {
             &:before, &:after, span:before, span:after {
-                background-color: $black;
+                background-color: var(--color-black);
                 content: "";
                 position: absolute;
             }

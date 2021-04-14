@@ -2,7 +2,7 @@ html, body {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     line-height: 1;
-    color: $black;
+    color: var(--color-black);
 }
 
 h2, h3, p {
@@ -28,9 +28,9 @@ p {
 }
 
 a, a:active, a:focus, a:hover, a:visited {
-    color: $black;
+    color: var(--color-black);
 
     .background & {
-        color: $white;
+        color: var(--color-white);
     }
 }

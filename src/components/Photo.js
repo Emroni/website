@@ -5,7 +5,7 @@ import { Trans } from './index';
 
 const useStyles = createUseStyles(theme => ({
     container: {
-        border: `0.125em solid ${theme.colors.blue}`,
+        border: '0.125em solid var(--color-blue)',
         borderRadius: '100%',
         marginRight: '1em',
         overflow: 'hidden',

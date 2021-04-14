@@ -11,11 +11,6 @@ export function ThemeProvider({children}) {
     };
 
     const theme = {
-        colors: {
-            black: '#0a090c',
-            blue: '#193c56',
-            white: '#fffcf9',
-        },
         eases: {
             in: 'cubic-bezier(0.550, 0.055, 0.675, 0.190)',
             inOut: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
