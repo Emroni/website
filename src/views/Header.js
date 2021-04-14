@@ -5,7 +5,7 @@ export default function Header() {
     return <Trans tag="header">
         <Trans className="header-photo" stall={1}>
             <div>
-                <Image alt="Emre Koc" src="/assets/emre-koc.png"/>
+                <Image alt="Emre Koc" src="/images/emre-koc.png"/>
             </div>
         </Trans>
         <svg>

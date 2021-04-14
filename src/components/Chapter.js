@@ -78,21 +78,21 @@ const useStyles = createUseStyles(theme => ({
             transition: `opacity 0.5s ${theme.eases.inOut}, transform 0.5s ${theme.eases.inOut}`,
         },
         '&:before': {
-            backgroundImage: 'url(/assets/code-before-black.png)',
+            backgroundImage: 'url(/images/code-before-black.png)',
             height: '0.8em',
             left: '-0.75em',
             width: '0.4375em',
             '.background &': {
-                backgroundImage: 'url(/assets/code-before-white.png)',
+                backgroundImage: 'url(/images/code-before-white.png)',
             }
         },
         '&:after': {
-            backgroundImage: 'url(/assets/code-after-black.png)',
+            backgroundImage: 'url(/images/code-after-black.png)',
             height: '1.125em',
             right: '-1.125em',
             width: '0.875em',
             '.background &': {
-                backgroundImage: 'url(/assets/code-after-white.png)',
+                backgroundImage: 'url(/images/code-after-white.png)',
             }
         },
         '&:not(.active)': {
