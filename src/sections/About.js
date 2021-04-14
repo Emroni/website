@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { Chapter, Link, List, Trans } from '../components';
+import { Link, List, Section, Trans } from '../components';
 
 const useStyles = createUseStyles(theme => ({
     skills: {
@@ -18,7 +18,7 @@ export default function About() {
 
     const classes = useStyles();
 
-    return <Chapter title="Full Stack Developer">
+    return <Section title="Full Stack Developer">
         <Trans tag="p">
             I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in those fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
         </Trans>
@@ -30,6 +30,6 @@ export default function About() {
         <Trans tag="p">
             For more information, download my <Link href="/assets/Emre-Koc-Resume.pdf">resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
         </Trans>
-    </Chapter>;
+    </Section>;
 
 }

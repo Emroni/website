@@ -4,7 +4,7 @@ import Header from './Header';
 import Hire from './Hire';
 import Intro from './Intro';
 
-export default function App() {
+export default function Sections() {
 
     return <>
         <Header/>

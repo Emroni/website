@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faGithub, faCodepen, faStackOverflow, faTwitter, faLinkedinIn, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { Chapter, Trans } from '../components';
+import { faCodepen, faFacebookF, faGithub, faInstagram, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { Section, Trans } from '../components';
 
 export default function Connect() {
 
@@ -48,7 +48,7 @@ export default function Connect() {
         },
     ];
 
-    return <Chapter title="Connect">
+    return <Section title="Connect">
         <Trans tag="p">
             Looking for more? Connect with me through any of the channels below.
         </Trans>
@@ -63,6 +63,6 @@ export default function Connect() {
                     </Trans>
                 </li>)}
         </Trans>
-    </Chapter>;
+    </Section>;
 
 }

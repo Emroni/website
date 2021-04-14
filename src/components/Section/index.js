@@ -30,7 +30,7 @@ const useStyles = createUseStyles(theme => ({
     },
 }));
 
-export default function Chapter({
+export default function Section({
                                     background,
                                     children,
                                     title,
@@ -45,11 +45,11 @@ export default function Chapter({
     const slug = title.toLowerCase()
         .replace(/\s/g, '-');
 
-    return <div className={containerClasses} id={slug}>
+    return <section className={containerClasses} id={slug}>
         <Title>{title}</Title>
         {children}
         {background && (
             <Background/>)}
-    </div>;
+    </section>;
 
 }

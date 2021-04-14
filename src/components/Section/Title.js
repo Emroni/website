@@ -60,7 +60,7 @@ const useStyles = createUseStyles({
     },
 });
 
-export default function Chapter({children}) {
+export default function Section({children}) {
 
     const classes = useStyles();
 
