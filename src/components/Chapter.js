@@ -11,7 +11,7 @@ const useStyles = createUseStyles(theme => ({
         position: 'absolute',
         top: '-1rem',
         transform: 'translate(-50%, -50%) skewY(-2deg)',
-        transition: `height 0.5s ${theme.eases.inOut}, top 0.5s ${theme.eases.inOut}`,
+        transition: 'height 0.5s var(--ease), top 0.5s var(--ease)',
         width: '100vw',
         zIndex: -1,
         [theme.media.sm]: {
@@ -64,7 +64,7 @@ const useStyles = createUseStyles(theme => ({
             overflow: 'hidden',
             '& > span': {
                 display: 'inline-block',
-                transition: `opacity 0.5s ${theme.eases.inOut} 0.25s, transform 0.5s ${theme.eases.inOut} 0.25s`,
+                transition: 'opacity 0.5s var(--ease) 0.25s, transform 0.5s var(--ease) 0.25s',
             },
         },
         '&:before, &:after': {
@@ -75,7 +75,7 @@ const useStyles = createUseStyles(theme => ({
             position: 'absolute',
             top: '50%',
             transform: 'translateY(-50%)',
-            transition: `opacity 0.5s ${theme.eases.inOut}, transform 0.5s ${theme.eases.inOut}`,
+            transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
         },
         '&:before': {
             backgroundImage: 'url(/images/code-before-black.png)',

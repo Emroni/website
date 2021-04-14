@@ -81,13 +81,13 @@
             &:before, &:after {
                 height: 1px;
                 width: 0;
-                transition: 0.25s $easeIn;
+                transition: 0.25s var(--ease-in);
             }
 
             span:before, span:after {
                 height: 0;
                 width: 1px;
-                transition: 0.25s $easeOut 0.25s;
+                transition: 0.25s var(--ease-out) 0.25s;
             }
 
             &:before {

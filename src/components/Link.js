@@ -28,26 +28,26 @@ const useStyles = createUseStyles(theme => ({
             bottom: 0,
             width: '100%',
             height: '1px',
-            transition: `0.25s ${theme.eases.out} 0.25s`,
+            transition: '0.25s var(--ease-out) 0.25s',
         },
         '@media(hover)': {
             '&:after': {
                 right: '-0.1875em',
                 width: '1px',
-                animation: `$link-out 0.5s ${theme.eases.in} 1 forwards`,
+                animation: '$link-out 0.5s var(--ease-in) 1 forwards',
             },
             '& > span:after': {
                 top: '0.125em',
                 right: '-0.1875em',
                 height: '1px',
                 width: 0,
-                transition: `width 0.1875s ${theme.eases.in}`,
+                transition: 'width 0.1875s var(--ease-in)',
             },
             '&:active, &:focus, &:hover': {
                 '&:before': {
                     right: '-0.1875em',
                     width: 0,
-                    transition: `0.25s ${theme.eases.in}`,
+                    transition: '0.25s var(--ease-in)',
                 },
                 '&:after': {
                     animationName: '$link-in',
@@ -55,7 +55,7 @@ const useStyles = createUseStyles(theme => ({
                 },
                 '& > span:after': {
                     width: '0.5em',
-                    transition: `width 0.1875s ${theme.eases.out} 0.3125s`,
+                    transition: 'width 0.1875s var(--ease-out) 0.3125s',
                 },
             },
         },

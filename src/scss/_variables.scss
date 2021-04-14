@@ -2,6 +2,10 @@
     --color-black: #0A090C;
     --color-white: #FFFCF9;
     --color-blue: #193C56;
+
+    --ease: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    --ease-in: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    --ease-out: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
 $sm: 576px;
@@ -9,7 +13,3 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1440px;
-
-$easeIn: cubic-bezier(0.550, 0.055, 0.675, 0.190);
-$easeOut: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-$ease: cubic-bezier(0.645, 0.045, 0.355, 1.000);

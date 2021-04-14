@@ -3,14 +3,14 @@ import classnames from 'classnames';
 import { createUseStyles } from 'react-jss';
 import { useTransition } from '../providers';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles({
     fade: {
-        transition: `opacity 0.5s ${theme.eases.inOut}`,
+        transition: 'opacity 0.5s var(--ease)',
         '&:not(.active)': {
             opacity: 0,
         },
     },
-}));
+});
 
 export default function Trans({
                                   children,

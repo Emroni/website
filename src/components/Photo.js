@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { createUseStyles } from 'react-jss';
 import { Trans } from './index';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles({
     container: {
         border: '0.125em solid var(--color-blue)',
         borderRadius: '100%',
@@ -21,12 +21,12 @@ const useStyles = createUseStyles(theme => ({
         top: 0,
         width: '100%',
         height: '100%',
-        transition: `opacity 0.5s ${theme.eases.inOut}`,
+        transition: 'opacity 0.5s var(--ease)',
         '&.loading': {
             opacity: 0,
         },
     },
-}));
+});
 
 export default function Photo() {
 

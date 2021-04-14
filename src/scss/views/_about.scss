@@ -9,7 +9,7 @@
 
     span {
         display: inline-block;
-        transition: opacity 0.25s $ease, transform 0.25s $ease;
+        transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
 
         .trans:not(.active) & {
             opacity: 0;
@@ -40,12 +40,12 @@
 
         &:before {
             left: 0;
-            transition-timing-function: $easeIn;
+            transition-timing-function: var(--ease-in);
         }
 
         &:after {
             right: 0;
-            transition-timing-function: $easeOut;
+            transition-timing-function: var(--ease-out);
         }
     }
 
@@ -66,7 +66,7 @@
             position: absolute;
             left: 0;
             top: 50%;
-            transition: width 0.25s $easeIn;
+            transition: width 0.25s var(--ease-in);
 
             .background & {
                 background-color: var(--color-white);
@@ -120,7 +120,7 @@
             bottom: 0;
             width: 100%;
             height: 1px;
-            transition: width 0.25s $easeOut;
+            transition: width 0.25s var(--ease-out);
 
             .background & {
                 background-color: var(--color-white);
@@ -150,7 +150,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            transition: width 0.25s $ease;
+            transition: width 0.25s var(--ease);
 
             .background & {
                 background-color: var(--color-white);
