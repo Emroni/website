@@ -1,7 +1,8 @@
 import * as classnames from 'classnames';
 import { createUseStyles } from 'react-jss';
-import { H2, Trans } from './index';
+import { Trans } from './index';
 
+// TODO: Replace title chevrons with SVG icons
 const useStyles = createUseStyles(theme => ({
     background: {
         backgroundColor: theme.colors.blue,
@@ -54,6 +55,62 @@ const useStyles = createUseStyles(theme => ({
             color: theme.colors.white,
         },
     },
+    title: {
+        display: 'inline-block',
+        marginBottom: 0,
+        position: 'relative',
+        '& > span': {
+            display: 'inline-block',
+            overflow: 'hidden',
+            '& > span': {
+                display: 'inline-block',
+                transition: `opacity 0.5s ${theme.eases.inOut} 0.25s, transform 0.5s ${theme.eases.inOut} 0.25s`,
+            },
+        },
+        '&:before, &:after': {
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100%',
+            content: '""',
+            position: 'absolute',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            transition: `opacity 0.5s ${theme.eases.inOut}, transform 0.5s ${theme.eases.inOut}`,
+        },
+        '&:before': {
+            backgroundImage: 'url(/assets/code-before-black.png)',
+            height: '0.8em',
+            left: '-0.75em',
+            width: '0.4375em',
+            '.background &': {
+                backgroundImage: 'url(/assets/code-before-white.png)',
+            }
+        },
+        '&:after': {
+            backgroundImage: 'url(/assets/code-after-black.png)',
+            height: '1.125em',
+            right: '-1.125em',
+            width: '0.875em',
+            '.background &': {
+                backgroundImage: 'url(/assets/code-after-white.png)',
+            }
+        },
+        '&:not(.active)': {
+            '& > span > span': {
+                opacity: 0,
+                transform: 'translateY(-50%)',
+            },
+            '&:before': {
+                opacity: 0,
+                transform: 'translate(200%, -50%)',
+            },
+            '&:after': {
+                opacity: 0,
+                transform: 'translate(-200%, -50%)',
+            },
+        },
+    },
+
 }));
 
 export default function Chapter({
@@ -72,7 +129,11 @@ export default function Chapter({
         .replace(/\s/g, '-');
 
     return <div className={containerClasses} id={slug}>
-        <H2>{title}</H2>
+        <Trans className={classes.title} fade={false} stall={0.5} tag="h2">
+            <span>
+                <span>{title}</span>
+            </span>
+        </Trans>
         {children}
         {background && (
             <Trans className={classes.background} fade={false}/>)}
