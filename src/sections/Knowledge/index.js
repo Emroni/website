@@ -13,9 +13,6 @@ const useStyles = createUseStyles(theme => ({
             margin: '2em -2em',
         },
     },
-    list: {
-        maxWidth: '48em',
-    },
 }));
 
 export default function Knowledge() {
@@ -24,14 +21,14 @@ export default function Knowledge() {
 
     return <Section background title="Technical Knowledge">
         <Trans tag="p">
-            I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in those fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
+            I mostly work with React (JavaScript, frontend) and Symfony (PHP, backend) frameworks. Aside from working for clients, I love to experiment with 2D/3D animations and mentoring junior developers.
         </Trans>
         <Trans className={classes.blocks} fade={false} stall={0.5}>
             <Block title="Know" items="JavaScript,PHP,HTML/CSS"/>
             <Block title="Love" items="React,Three.js,D3.js"/>
-            <Block title="Teach" items="Development,Animation,Automation"/>
+            <Block title="Teach" items="Development,Automation,Animation"/>
         </Trans>
-        <List className={classes.list}>
+        <List>
             <li>
                 <strong>Extensive knowledge</strong> of JavaScript, PHP, HTML, CSS, as well as React and Symfony frameworks, and Restful and GraphQL APIs
             </li>

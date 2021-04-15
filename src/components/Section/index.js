@@ -5,6 +5,7 @@ import Title from './Title';
 
 const useStyles = createUseStyles(theme => ({
     container: {
+        boxSizing: 'border-box',
         marginLeft: 'auto',
         marginRight: 'auto',
         padding: '3em 2em',

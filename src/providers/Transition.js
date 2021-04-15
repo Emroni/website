@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 
-const DEBUG = process.env.NODE_ENV === 'development';
+const DEBUG = false;//process.env.NODE_ENV === 'development';
 
 const TransitionContext = createContext({});
 
