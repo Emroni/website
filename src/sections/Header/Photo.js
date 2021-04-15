@@ -5,11 +5,13 @@ import { Trans } from '../../components';
 
 const useStyles = createUseStyles({
     container: {
+        backfaceVisibility: 'hidden',
         borderRadius: '100%',
         height: '3em',
         marginRight: '1em',
         overflow: 'hidden',
         position: 'relative',
+        transform: 'translate3d(0,0,0)',
         width: '3em',
     },
     svg: {
@@ -23,10 +25,10 @@ const useStyles = createUseStyles({
     border: {
         fill: 'none',
         stroke: 'var(--color-blue)',
-        strokeDasharray: '0, 225',
+        strokeDasharray: '0, 157%',
         strokeWidth: '0.25em',
         '$svg.active &': {
-            strokeDasharray: '225, 0',
+            strokeDasharray: '157%, 0',
             transition: 'stroke-dasharray 0.5s var(--ease)',
         },
     },
