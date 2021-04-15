@@ -2,12 +2,14 @@ import { ThemeProvider as JssProvider } from 'react-jss';
 
 export function ThemeProvider({children}) {
 
+    const styles = getComputedStyle(document.body);
+
     const sizes = {
-        sm: '576px',
-        md: '768px',
-        lg: '992px',
-        xl: '1200px',
-        xxl: '1440px',
+        sm: styles.getPropertyValue('--size-sm'),
+        md: styles.getPropertyValue('--size-md'),
+        lg: styles.getPropertyValue('--size-lg'),
+        xl: styles.getPropertyValue('--size-xl'),
+        xxl: styles.getPropertyValue('--size-xxl'),
     };
 
     const theme = {
