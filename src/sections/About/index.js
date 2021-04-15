@@ -1,5 +1,6 @@
 import { createUseStyles } from 'react-jss';
-import { Link, List, Section, Trans } from '../components';
+import { Link, Section, Trans } from '../../components';
+import List from './List';
 
 const useStyles = createUseStyles(theme => ({
     skills: {
