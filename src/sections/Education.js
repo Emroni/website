@@ -3,7 +3,9 @@ import { Section, Trans } from '../components';
 
 const useStyles = createUseStyles({
     container: {
-        marginTop: '1.5em',
+        '&:not(:last-child)': {
+            marginBottom: '2em',
+        },
     },
     period: {
         fontWeight: 700,

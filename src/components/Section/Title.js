@@ -5,7 +5,7 @@ import { Trans } from '../index';
 const useStyles = createUseStyles({
     title: {
         display: 'inline-block',
-        marginBottom: 0,
+        marginBottom: '1em',
         position: 'relative',
         '& > span': {
             display: 'inline-block',
@@ -65,9 +65,9 @@ export default function Section({children}) {
     const classes = useStyles();
 
     return <Trans className={classes.title} fade={false} stall={0.5} tag="h2">
-            <span>
-                <span>{children}</span>
-            </span>
+        <span>
+            <span>{children}</span>
+        </span>
     </Trans>;
 
 }
