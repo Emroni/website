@@ -5,25 +5,41 @@ import { Trans } from './index';
 
 const useStyles = createUseStyles({
     container: {
-        border: '0.125em solid var(--color-blue)',
         borderRadius: '100%',
+        height: '3em',
         marginRight: '1em',
         overflow: 'hidden',
+        position: 'relative',
         width: '3em',
     },
-    content: {
-        paddingBottom: '100%',
-        position: 'relative',
-    },
-    image: {
+    svg: {
         position: 'absolute',
         left: 0,
         top: 0,
         width: '100%',
         height: '100%',
-        transition: 'opacity 0.5s var(--ease)',
-        '&.loading': {
+        zIndex: 1,
+    },
+    border: {
+        fill: 'none',
+        stroke: 'var(--color-blue)',
+        strokeDasharray: '0, 225',
+        strokeWidth: '0.25em',
+        '$svg.active &': {
+            strokeDasharray: '225, 0',
+            transition: 'stroke-dasharray 0.5s var(--ease)',
+        },
+    },
+    image: {
+        height: '100%',
+        left: 0,
+        position: 'absolute',
+        top: 0,
+        transition: 'opacity 0.5s var(--ease) 0.5s, transform 0.5s var(--ease) 0.5s',
+        width: '100%',
+        '$svg:not(.active) + &, &.loading': {
             opacity: 0,
+            transform: 'scale(0.95)',
         },
     },
 });
@@ -44,10 +60,11 @@ export default function Photo() {
         loading,
     });
 
-    return <Trans className={classes.container} stall={1}>
-        <div className={classes.content}>
-            <img alt="Emre Koc" className={imageClasses} src={loading ? '' : src}/>
-        </div>
-    </Trans>;
+    return <div className={classes.container}>
+        <Trans className={classes.svg} fade={false} tag="svg">
+            <circle className={classes.border} cx="50%" cy="50%" r="50%"/>
+        </Trans>
+        <img alt="Emre Koc" className={imageClasses} src={loading ? '' : src}/>
+    </div>;
 
 }
