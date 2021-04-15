@@ -1,6 +1,6 @@
 import { Link, Section, Trans } from '../components';
 
-export default function App() {
+export default function Hire() {
 
     return <Section title="For hire" background>
         <Trans tag="p">
@@ -9,6 +9,9 @@ export default function App() {
         <Trans tag="p">
             For questions or inquiries, feel free to contact me by <Link href="mailto:hi@emrekoc.io">email</Link> or through <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
         </Trans>
-    </Section>
+        <Trans tag="p">
+            <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+        </Trans>
+    </Section>;
 
 }

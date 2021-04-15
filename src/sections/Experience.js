@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { Link, List, Section, Trans } from '../components';
+import { List, Section, Trans } from '../components';
 
 const useStyles = createUseStyles({
     title: {
@@ -17,9 +17,6 @@ const useStyles = createUseStyles({
     },
     subtitle: {
         marginBottom: '0.25em',
-    },
-    resume: {
-        marginTop: '2em',
     },
 });
 
@@ -69,9 +66,6 @@ export default function Experience() {
             </li>
             <li>Built and implemented components and full websites in Flash from designs in Photoshop</li>
         </List>
-        <Trans className={classes.resume} tag="p">
-            <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
-        </Trans>
     </Section>;
 
 }
