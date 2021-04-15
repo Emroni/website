@@ -39,7 +39,7 @@ const useStyles = createUseStyles(theme => ({
     },
 }));
 
-export default function List({
+export default function Block({
                                  title,
                                  items,
                              }) {

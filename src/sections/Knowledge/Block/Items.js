@@ -30,7 +30,7 @@ const useStyles = createUseStyles(theme => ({
         },
         '&:before': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-white)',
             opacity: 0.05,
             position: 'absolute',
             left: 0,
