@@ -1,5 +1,5 @@
-import About from './About';
 import Connect from './Connect';
+import Experience from './Experience';
 import Header from './Header';
 import Hire from './Hire';
 import Intro from './Intro';
@@ -9,7 +9,7 @@ export default function Sections() {
     return <>
         <Header/>
         <Intro/>
-        <About/>
+        <Experience/>
         <Hire/>
         <Connect/>
     </>;
