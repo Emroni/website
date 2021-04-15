@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 
-const DEBUG = false;//process.env.NODE_ENV === 'development';
+const DEBUG = process.env.NODE_ENV === 'development';
 
 const TransitionContext = createContext({});
 
@@ -65,7 +65,7 @@ export class TransitionProvider extends React.Component {
 
     handleScroll = () => {
         const {current} = this.state;
-        if (current && (window.scrollY >= current.top - window.innerHeight * 0.9 || window.scrollY >= document.documentElement.offsetHeight - window.innerHeight - 100 || DEBUG)) {
+        if (!this.nextTimeout && current && (window.scrollY >= current.top - window.innerHeight * 0.9 || window.scrollY >= document.documentElement.offsetHeight - window.innerHeight - 100 || DEBUG)) {
             current.callback();
 
             this.setState(prevState => ({
@@ -95,7 +95,12 @@ export class TransitionProvider extends React.Component {
 
         this.setState({
             current: next,
-        }, () => window.setTimeout(this.handleScroll, DEBUG ? 0 : delay));
+        }, () => {
+            this.nextTimeout = window.setTimeout(() => {
+                delete this.nextTimeout;
+                this.handleScroll();
+            }, DEBUG ? 0 : delay);
+        });
     }
 
     render() {
