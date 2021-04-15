@@ -7,8 +7,6 @@ import Social from './Social';
 const useStyles = createUseStyles(theme => ({
     socials: {
         margin: '1em -0.625em',
-        listStyleType: 'none',
-        padding: 0,
         [theme.media.sm]: {
             margin: '1.5em -0.875em',
         },

@@ -16,7 +16,7 @@ const useStyles = createUseStyles(theme => ({
         position: 'relative',
         '&:before, &:after': {
             content: '""',
-            backgroundColor: 'var(--color-black)',
+            backgroundColor: 'var(--color-white)',
             top: '0.625em',
             height: 'calc(100% - 0.625em)',
             width: '1px',
@@ -39,7 +39,7 @@ const useStyles = createUseStyles(theme => ({
     },
 }));
 
-export default function List({
+export default function Block({
                                  title,
                                  items,
                              }) {

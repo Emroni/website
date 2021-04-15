@@ -5,7 +5,7 @@ html, body {
     color: var(--color-black);
 }
 
-h2, h3, p {
+h2, h3, h4, p {
     &:first-child {
         margin-top: 0;
     }

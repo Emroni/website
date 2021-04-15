@@ -4,14 +4,12 @@ const useStyles = createUseStyles(theme => ({
     list: {
         position: 'relative',
         padding: '0.5rem',
-        margin: 0,
-        listStyleType: 'none',
         [theme.media.md]: {
             padding: '1rem',
         },
         '&:after': {
             content: '""',
-            backgroundColor: 'var(--color-black)',
+            backgroundColor: 'var(--color-white)',
             position: 'absolute',
             left: 0,
             bottom: 0,
@@ -32,7 +30,7 @@ const useStyles = createUseStyles(theme => ({
         },
         '&:before': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-white)',
             opacity: 0.05,
             position: 'absolute',
             left: 0,

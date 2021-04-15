@@ -47,7 +47,7 @@ export default function Section({
 
     return <section className={containerClasses} id={slug}>
         <Title>{title}</Title>
-        {children}
+        <div>{children}</div>
         {background && (
             <Background/>)}
     </section>;

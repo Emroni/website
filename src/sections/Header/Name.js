@@ -40,7 +40,7 @@ export default function Name() {
 
     const classes = useStyles();
 
-    return <Trans className={classes.svg} fade={false} tag="svg">
+    return <Trans className={classes.svg} fade={false} stall={1} tag="svg">
         <text className={classes.text} y="14%">Emre Koc</text>
         <text className={classes.text} y="83%">Full Stack Developer</text>
     </Trans>;
