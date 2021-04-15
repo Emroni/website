@@ -18,7 +18,7 @@ const useStyles = createUseStyles(theme => ({
             width: '100%',
             height: '1px',
             transition: 'width 0.25s var(--ease-out) 0.3s',
-            '$wrap:not(.active) &': {
+            '.wrap:not(.active) &': {
                 width: '0 !important',
             },
         },
@@ -40,14 +40,14 @@ const useStyles = createUseStyles(theme => ({
             width: '100%',
             height: '100%',
             transition: 'width 0.25s var(--ease)',
-            '$wrap:not(.active) &': {
+            '.wrap:not(.active) &': {
                 width: 0,
             },
         },
         '& span': {
             display: 'inline-block',
             transition: 'opacity 0.25s var(--ease), transform 0.25s var(--ease)',
-            '$wrap:not(.active) &': {
+            '.wrap:not(.active) &': {
                 opacity: 0,
                 transform: 'translateX(-0.5em)',
             },

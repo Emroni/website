@@ -18,7 +18,7 @@ const useStyles = createUseStyles(theme => ({
             left: 0,
             top: '50%',
             transition: 'width 0.25s var(--ease-in)',
-            '$wrap:not(.active) &': {
+            '.wrap:not(.active) &': {
                 width: '0 !important',
             },
         },
@@ -35,7 +35,7 @@ const useStyles = createUseStyles(theme => ({
                     width: '100%',
                 },
             },
-            '$wrap:not(.active) &': {
+            '.wrap:not(.active) &': {
                 opacity: 0,
                 transform: 'translateX(-0.5em)',
             },

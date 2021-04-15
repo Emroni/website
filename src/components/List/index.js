@@ -46,7 +46,7 @@ export default function List({
 
     const classes = useStyles();
 
-    return <Trans className={classes.wrap} fade={false} stall={0.1}>
+    return <Trans className={`wrap ${classes.wrap}`} fade={false} stall={0.1}>
         <div className={classes.container}>
             <Title>{title}</Title>
             <Items items={items}/>
