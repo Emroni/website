@@ -1,11 +1,11 @@
 import { createUseStyles } from 'react-jss';
-import { List, Section, Trans } from '../components';
+import { Link, List, Section, Trans } from '../components';
 
 const useStyles = createUseStyles({
     title: {
         color: 'var(--color-blue)',
         fontWeight: 400,
-        marginBottom: 0,
+        margin: '1.5em 0 0',
         transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
         '&:not(.active)': {
             opacity: 0,
@@ -17,6 +17,9 @@ const useStyles = createUseStyles({
     },
     subtitle: {
         marginBottom: '0.25em',
+    },
+    resume: {
+        marginTop: '2em',
     },
 });
 
@@ -66,6 +69,9 @@ export default function Experience() {
             </li>
             <li>Built and implemented components and full websites in Flash from designs in Photoshop</li>
         </List>
+        <Trans className={classes.resume} tag="p">
+            <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+        </Trans>
     </Section>;
 
 }
