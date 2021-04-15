@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './views/App';
-import './scss/index.scss';
+import { ThemeProvider, TransitionProvider } from './providers';
+import Sections from './sections';
+import './styles/index.scss';
 
 ReactDOM.render(
-    <App/>, document.getElementById('root'));
+    <ThemeProvider>
+        <TransitionProvider>
+            <Sections/>
+        </TransitionProvider>
+    </ThemeProvider>, document.getElementById('root'));

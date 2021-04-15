@@ -1,7 +1,0 @@
-.trans:not(header):not(.container):not(.video) {
-    transition: opacity 0.5s $ease;
-
-    &:not(.active), .page.exit & {
-        opacity: 0;
-    }
-}
