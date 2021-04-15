@@ -1,15 +1,17 @@
-import Chapter from './Chapter';
-import H2 from './H2';
-import Image from './Image';
 import Link from './Link';
 import List from './List';
+import Name from './Name';
+import Photo from './Photo';
+import Section from './Section';
+import Social from './Social';
 import Trans from './Trans';
 
 export {
-    Chapter,
-    H2,
-    Image,
     Link,
     List,
+    Name,
+    Photo,
+    Section,
+    Social,
     Trans,
 }

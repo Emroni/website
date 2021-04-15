@@ -1,11 +1,29 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
+import { createUseStyles } from 'react-jss';
 import { useTransition } from '../providers';
 
-export default function Trans({children, className, stall = 0, tag = 'div', ...props}) {
+const useStyles = createUseStyles({
+    fade: {
+        transition: 'opacity 0.5s var(--ease)',
+        '&:not(.active)': {
+            opacity: 0,
+        },
+    },
+});
+
+export default function Trans({
+                                  children,
+                                  className,
+                                  fade = true,
+                                  stall = 0,
+                                  tag = 'div',
+                                  ...props
+                              }) {
 
     const [active, setActive] = useState(false);
     const [ready, setReady] = useState(false);
+    const classes = useStyles();
     const ref = useRef();
     const transition = useTransition();
 
@@ -20,7 +38,8 @@ export default function Trans({children, className, stall = 0, tag = 'div', ...p
         transition,
     ]);
 
-    const classNames = classnames(className, 'trans', {
+    const classNames = classnames(className, {
+        [classes.fade]: fade,
         active,
     });
 

@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { TransitionProvider } from './providers';
-import App from './views';
-import './scss/index.scss';
+import { ThemeProvider, TransitionProvider } from './providers';
+import Sections from './sections';
+import './styles/index.scss';
 
 ReactDOM.render(
-    <TransitionProvider>
-        <App/>
-    </TransitionProvider>, document.getElementById('root'));
+    <ThemeProvider>
+        <TransitionProvider>
+            <Sections/>
+        </TransitionProvider>
+    </ThemeProvider>, document.getElementById('root'));
