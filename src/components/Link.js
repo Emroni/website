@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles({
     link: {
         '&, & > span': {
             display: 'inline-block',
@@ -88,7 +88,7 @@ const useStyles = createUseStyles(theme => ({
             height: 0,
         },
     },
-}));
+});
 
 export default function Link({
                                  children,

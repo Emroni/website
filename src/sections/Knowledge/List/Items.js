@@ -4,8 +4,6 @@ const useStyles = createUseStyles(theme => ({
     list: {
         position: 'relative',
         padding: '0.5rem',
-        margin: 0,
-        listStyleType: 'none',
         [theme.media.md]: {
             padding: '1rem',
         },
