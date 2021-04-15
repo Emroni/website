@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createUseStyles } from 'react-jss';
-import { Trans } from './index';
+import { Trans } from '../../components';
 
 const useStyles = createUseStyles(theme => ({
     li: {

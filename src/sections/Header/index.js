@@ -1,5 +1,6 @@
 import { createUseStyles } from 'react-jss';
-import { Name, Photo } from '../components';
+import Name from './Name';
+import Photo from './Photo';
 
 const useStyles = createUseStyles(theme => ({
     header: {
