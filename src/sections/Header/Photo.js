@@ -27,7 +27,9 @@ const useStyles = createUseStyles({
         stroke: 'var(--color-blue)',
         strokeDasharray: '0, 157%',
         strokeWidth: '0.25em',
+        opacity: 0,
         '$svg.active &': {
+            opacity: 1,
             strokeDasharray: '157%, 0',
             transition: 'stroke-dasharray 0.5s var(--ease)',
         },
