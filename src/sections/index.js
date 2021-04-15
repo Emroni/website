@@ -3,6 +3,7 @@ import Experience from './Experience';
 import Header from './Header';
 import Hire from './Hire';
 import Intro from './Intro';
+import Knowledge from './Knowledge';
 
 export default function Sections() {
 
@@ -10,6 +11,7 @@ export default function Sections() {
         <Header/>
         <Intro/>
         <Experience/>
+        <Knowledge/>
         <Hire/>
         <Connect/>
     </>;

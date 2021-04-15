@@ -15,11 +15,11 @@ const useStyles = createUseStyles(theme => ({
     },
 }));
 
-export default function About() {
+export default function Knowledge() {
 
     const classes = useStyles();
 
-    return <Section title="Full Stack Developer">
+    return <Section background title="Technical Knowledge">
         <Trans tag="p">
             I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in those fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
         </Trans>

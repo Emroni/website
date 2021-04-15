@@ -12,7 +12,7 @@ const useStyles = createUseStyles(theme => ({
         margin: 0,
         '&:before, span:last-child:after': {
             content: '""',
-            backgroundColor: 'var(--color-black)',
+            backgroundColor: 'var(--color-white)',
             height: '1px',
             position: 'absolute',
             left: 0,

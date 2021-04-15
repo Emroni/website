@@ -11,7 +11,7 @@ const useStyles = createUseStyles(theme => ({
         },
         '&:after': {
             content: '""',
-            backgroundColor: 'var(--color-black)',
+            backgroundColor: 'var(--color-white)',
             position: 'absolute',
             left: 0,
             bottom: 0,
