@@ -1,4 +1,5 @@
 import Connect from './Connect';
+import Education from './Education';
 import Experience from './Experience';
 import Header from './Header';
 import Hire from './Hire';
@@ -12,6 +13,7 @@ export default function Sections() {
         <Intro/>
         <Experience/>
         <Knowledge/>
+        <Education/>
         <Hire/>
         <Connect/>
     </>;
