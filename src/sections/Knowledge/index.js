@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { Link, Section, Trans } from '../../components';
+import { List, Section, Trans } from '../../components';
 import Block from './Block';
 
 const useStyles = createUseStyles(theme => ({
@@ -23,14 +23,25 @@ export default function Knowledge() {
         <Trans tag="p">
             I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in those fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
         </Trans>
-        <Trans className={classes.blocks} fade={false} stall={1}>
+        <Trans className={classes.blocks} fade={false} stall={0.5}>
             <Block title="Know" items="JavaScript,PHP,HTML/CSS"/>
             <Block title="Love" items="React,Three.js,D3.js"/>
             <Block title="Teach" items="Development,Animation,Automation"/>
         </Trans>
-        <Trans tag="p">
-            For more information, download my <Link href="/assets/Emre-Koc-Resume.pdf">resume</Link> or connect with me on <Link href="https://linkedin.com/in/emroni">LinkedIn</Link>.
-        </Trans>
+        <List className={classes.list}>
+            <li>
+                <strong>Extensive knowledge</strong> of JavaScript, PHP, HTML, CSS, as well as React and Symfony frameworks, and Restful and GraphQL APIs
+            </li>
+            <li>
+                <strong>Proficient</strong> in Three.js, PixiJS and D3.js for 2D/3D animations, motion design and visualization
+            </li>
+            <li>
+                <strong>Working knowledge</strong> of Sketch, Illustrator, Photoshop and After Effects
+            </li>
+            <li>
+                <strong>Strong sense</strong> for mathematics and automation
+            </li>
+        </List>
     </Section>;
 
 }

@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
         paddingLeft: '1em',
         position: 'relative',
         '&:before': {
-            backgroundColor: 'var(--color-black)',
+            backgroundColor: 'currentColor',
             content: '""',
             height: 0,
             left: 0,
