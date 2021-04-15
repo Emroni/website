@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 const useStyles = createUseStyles({
     list: props => ({
-        lineHeight: 1.5,
+        lineHeight: 1.25,
         marginLeft: '-1em',
         paddingLeft: '1em',
         position: 'relative',
@@ -24,6 +24,7 @@ const useStyles = createUseStyles({
         },
         '& li': {
             ...generateDelays(props.count),
+            marginBottom: '0.5em',
             transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
         },
         '&:not(.active) li': {
