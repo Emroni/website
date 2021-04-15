@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
         },
     },
     list: {
-        marginTop: '1em',
+        margin: '1em 0 0',
     },
     subtitle: {
         marginBottom: '0.25em',

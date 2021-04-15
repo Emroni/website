@@ -6,6 +6,7 @@ import classnames from 'classnames';
 const useStyles = createUseStyles({
     list: props => ({
         lineHeight: 1.5,
+        marginLeft: '-1em',
         paddingLeft: '1em',
         position: 'relative',
         '&:before': {

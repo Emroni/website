@@ -13,6 +13,9 @@ const useStyles = createUseStyles(theme => ({
             margin: '2em -2em',
         },
     },
+    list: {
+        maxWidth: '48em',
+    },
 }));
 
 export default function Knowledge() {
