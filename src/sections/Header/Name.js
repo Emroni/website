@@ -2,47 +2,81 @@ import { createUseStyles } from 'react-jss';
 import { Trans } from '../../components';
 
 const useStyles = createUseStyles({
+    h1: {
+        fontSize: '1em',
+        margin: 0,
+    },
     svg: {
-        fontSize: '1.5em',
-        height: '2em',
-        overflow: 'visible',
-        width: '8em',
+        display: 'block',
+        height: '1.3875em',
+        width: '7em',
     },
     text: {
-        fill: 'none',
-        fontWeight: 100,
-        letterSpacing: '0.125em',
-        lineHeight: 1,
-        opacity: 0,
-        stroke: 'var(--color-black)',
-        strokeDasharray: '0, 100',
-        strokeWidth: '1px',
         textTransform: 'uppercase',
-        transition: 'font-size 0.5s var(--ease), stroke 0.5s var(--ease), transform 0.5s var(--ease), stroke-dasharray 1s var(--ease), opacity 0s 1s',
         '&:first-child': {
-            dominantBaseline: 'hanging',
-            transform: 'translateX(-0.125rem)',
+            fontWeight: 100,
+            letterSpacing: '0.1875em',
         },
         '&:last-child': {
-            dominantBaseline: 'alphabetic',
-            fontSize: '0.5em',
-            strokeWidth: '2px',
+            fontWeight: 600,
+            letterSpacing: '0.1875em',
+            fontSize: '0.375em',
         },
-        '$svg.active &': {
-            strokeDasharray: '100, 0',
-            opacity: 1,
-            transition: 'font-size 0.5s var(--ease), stroke 0.5s var(--ease), stroke-dasharray 1s var(--ease), transform 0.5s var(--ease)',
+    },
+    clip: {
+        ...generateDelays(),
+        transition: 'r 1s var(--ease-out)',
+        '$svg:not(.active) &': {
+            r: 0,
         },
     },
 });
+
+function generateDelays() {
+    const children = {};
+    for (let i = 1; i <= 10; i++) {
+        children[`&:nth-child(${i})`] = {
+            transitionDelay: `${0.05 * (i - 1)}s`,
+        };
+    }
+    return children;
+}
 
 export default function Name() {
 
     const classes = useStyles();
 
-    return <Trans className={classes.svg} fade={false} stall={1} tag="svg">
-        <text className={classes.text} y="14%">Emre Koc</text>
-        <text className={classes.text} y="83%">Full Stack Developer</text>
-    </Trans>;
+    const topClip = new Array(10)
+        .fill(0)
+        .map((item, index) => ({
+            x: (9 * index) + '%',
+            y: (40 * (index % 2)) + '%',
+        }));
+
+    const bottomClip = new Array(10)
+        .fill(0)
+        .map((item, index) => ({
+            x: (9 * index) + '%',
+            y: (10 * (index % 2) + 80) + '%',
+        }));
+
+    return <h1 className={classes.h1}>
+        <Trans className={classes.svg} fade={false} stall={1} tag="svg">
+            <defs>
+                <clipPath id="top-clip">
+                    {topClip.map((item, index) =>
+                        <circle className={classes.clip} cx={item.x} cy={item.y} key={index} r="13%"/>)}
+                 </clipPath>
+                <clipPath id="bottom-clip">
+                    {bottomClip.map((item, index) =>
+                        <circle className={classes.clip} cx={item.x} cy={item.y} key={index} r="8%"/>)}
+                 </clipPath>
+            </defs>
+            <g>
+                <text className={classes.text} clipPath="url(#top-clip)" x="-1%" y="55%">Emre Koc</text>
+                <text className={classes.text} clipPath="url(#bottom-clip)" y="95%">Full Stack Developer</text>
+            </g>
+        </Trans>
+    </h1>;
 
 }

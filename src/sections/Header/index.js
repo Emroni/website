@@ -4,26 +4,30 @@ import Photo from './Photo';
 
 const useStyles = createUseStyles(theme => ({
     header: {
-        fontSize: '1em',
-        padding: '3rem 0',
+        fontSize: '1.6125em',
+        padding: '1em 0',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        [theme.media.xs]: {
+            fontSize: '2em',
+            // padding: '4em 0',
+        },
         [theme.media.sm]: {
-            fontSize: '1.5em',
-            padding: '4rem 0',
+            fontSize: '3em',
+            // padding: '4em 0',
         },
         [theme.media.md]: {
-            fontSize: '2em',
-            padding: '5rem 0',
+            fontSize: '3em',
+            // padding: '5em 0',
         },
         [theme.media.lg]: {
-            fontSize: '2.5em',
-            padding: '6rem 0',
+            fontSize: '3em',
+            // padding: '6em 0',
         },
         [theme.media.xl]: {
-            fontSize: '3em',
-            padding: '7rem 0',
+            fontSize: '4em',
+            // padding: '7em 0',
         },
     },
 }));
