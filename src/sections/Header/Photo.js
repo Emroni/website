@@ -7,12 +7,12 @@ const useStyles = createUseStyles({
     container: {
         backfaceVisibility: 'hidden',
         borderRadius: '100%',
-        height: '3em',
+        height: '2.25em',
         marginRight: '1em',
         overflow: 'hidden',
         position: 'relative',
         transform: 'translate3d(0,0,0)',
-        width: '3em',
+        width: '2.25em',
     },
     svg: {
         position: 'absolute',

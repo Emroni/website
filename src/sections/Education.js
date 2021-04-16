@@ -7,9 +7,6 @@ const useStyles = createUseStyles({
             marginBottom: '2em',
         },
     },
-    period: {
-        fontWeight: 700,
-    },
     title: {
         color: 'var(--color-blue)',
         fontWeight: 400,
@@ -27,12 +24,12 @@ export default function Education() {
 
     return <Section title="Education">
         <Trans className={classes.container}>
-            <span className={classes.period}>2010 - 2013 @ The Hague University of Applied Sciences</span>
+            <strong>2010 - 2013 @ The Hague University of Applied Sciences</strong>
             <h3 className={classes.title}>Communication and Multimedia Design</h3>
             <span className={classes.info}>Bachelor of Information and Communication Technology</span>
         </Trans>
         <Trans className={classes.container}>
-            <span className={classes.period}>2007 - 2009 @ Delft University of Technology</span>
+            <strong>2007 - 2009 @ Delft University of Technology</strong>
             <h3 className={classes.title}>Mechanical Engineering</h3>
             <span className={classes.info}>Attended classes in mathematics and physics</span>
         </Trans>

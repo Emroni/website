@@ -5,6 +5,7 @@ export function ThemeProvider({children}) {
     const styles = getComputedStyle(document.body);
 
     const sizes = {
+        xs: styles.getPropertyValue('--size-xs'),
         sm: styles.getPropertyValue('--size-sm'),
         md: styles.getPropertyValue('--size-md'),
         lg: styles.getPropertyValue('--size-lg'),
@@ -14,6 +15,7 @@ export function ThemeProvider({children}) {
 
     const theme = {
         media: {
+            xs: `@media (min-width: ${sizes.xs})`,
             sm: `@media (min-width: ${sizes.sm})`,
             md: `@media (min-width: ${sizes.md})`,
             lg: `@media (min-width: ${sizes.lg})`,

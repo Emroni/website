@@ -5,6 +5,10 @@ html, body {
     color: var(--color-black);
 }
 
+h1, h2, h3, h4, strong {
+    font-weight: 600;
+}
+
 h2, h3, h4, p {
     &:first-child {
         margin-top: 0;
