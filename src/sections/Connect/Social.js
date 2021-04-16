@@ -7,9 +7,9 @@ const useStyles = createUseStyles(theme => ({
         display: 'inline-block',
         width: '50%',
         [theme.media.sm]: {
-            width: '(1/3) * 100%',
+            width: (100/3) + '%',
         },
-        [theme.media.md]: {
+        [theme.media.lg]: {
             width: '25%',
         },
     },
@@ -18,6 +18,7 @@ const useStyles = createUseStyles(theme => ({
         display: 'inline-block',
         position: 'relative',
         margin: '0.125em',
+        whiteSpace: 'nowrap',
         '&, &:active, &:focus, &:hover, &:visited': {
             color: 'var(--color-black)',
         },
@@ -41,7 +42,7 @@ const useStyles = createUseStyles(theme => ({
                 left: '1.125em',
             },
         },
-        [theme.media.md]: {
+        [theme.media.lg]: {
             '& span': {
                 padding: '1em',
                 paddingLeft: '2.5em',
@@ -66,22 +67,18 @@ const useStyles = createUseStyles(theme => ({
                 width: '1px',
                 transition: '0.25s var(--ease-out) 0.25s',
             },
-
             '&:before': {
                 right: 0,
                 top: 0,
             },
-
             '&:after': {
                 bottom: 0,
                 left: 0,
             },
-
             '& span:before': {
                 left: 0,
                 top: 0,
             },
-
             '& span:after': {
                 bottom: 0,
                 right: 0,
