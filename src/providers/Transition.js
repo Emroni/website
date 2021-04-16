@@ -50,7 +50,7 @@ export class TransitionProvider extends React.Component {
     resize = () => {
         this.setState(prevState => {
             const items = prevState.items.map(item => {
-                item.top = item.ref.current.getBoundingClientRect().top + window.scrollY;
+                item.top = item.ref.current ? (item.ref.current.getBoundingClientRect().top + window.scrollY) : Number.MAX_VALUE;
                 return item;
             });
 
