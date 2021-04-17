@@ -6,11 +6,8 @@ const useStyles = createUseStyles(theme => ({
     li: {
         display: 'inline-block',
         width: '50%',
-        [theme.media.sm]: {
+        [theme.media.md]: {
             width: (100/3) + '%',
-        },
-        [theme.media.lg]: {
-            width: '25%',
         },
     },
     a: {
@@ -34,6 +31,7 @@ const useStyles = createUseStyles(theme => ({
             transform: 'translate(-50%, -50%)',
         },
         [theme.media.sm]: {
+            margin: '0.25em',
             '& span': {
                 padding: '0.75em',
                 paddingLeft: '2.25em',
@@ -41,6 +39,9 @@ const useStyles = createUseStyles(theme => ({
             '& svg': {
                 left: '1.125em',
             },
+        },
+        [theme.media.md]: {
+            margin: '0.375em',
         },
         [theme.media.lg]: {
             '& span': {
