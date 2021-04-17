@@ -1,5 +1,5 @@
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faCodepen, faFacebookF, faGithub, faInstagram, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { createUseStyles } from 'react-jss';
 import { Section, Trans } from '../../components';
 import Social from './Social';
@@ -22,14 +22,9 @@ export default function Connect() {
 
     const socials = [
         {
-            icon: faGithub,
-            title: 'GitHub',
-            url: 'https://github.com/Emroni',
-        },
-        {
-            icon: faCodepen,
-            title: 'CodePen',
-            url: 'https://codepen.io/Emroni',
+            icon: faLinkedinIn,
+            title: 'LinkedIn',
+            url: 'https://linkedin.com/in/emroni',
         },
         {
             icon: faStackOverflow,
@@ -37,9 +32,9 @@ export default function Connect() {
             url: 'https://stackoverflow.com/users/6933004',
         },
         {
-            icon: faEnvelope,
-            title: 'Email',
-            url: `mailto:hi@${window.location.host}`,
+            icon: faGithub,
+            title: 'GitHub',
+            url: 'https://github.com/Emroni',
         },
         {
             icon: faTwitter,
@@ -47,19 +42,14 @@ export default function Connect() {
             url: 'https://twitter.com/emroni',
         },
         {
-            icon: faLinkedinIn,
-            title: 'LinkedIn',
-            url: 'https://linkedin.com/in/emroni',
+            icon: faCodepen,
+            title: 'CodePen',
+            url: 'https://codepen.io/Emroni',
         },
         {
-            icon: faInstagram,
-            title: 'Instagram',
-            url: 'https://www.instagram.com/emronic/',
-        },
-        {
-            icon: faFacebookF,
-            title: 'Facebook',
-            url: 'https://www.facebook.com/emroni',
+            icon: faEnvelope,
+            title: 'Email',
+            url: 'mailto:hi@emrekoc.io',
         },
     ];
 
