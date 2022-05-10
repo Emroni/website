@@ -16,6 +16,10 @@ module.exports = {
                 'blue-800': '#11293c',
                 'blue-900': '#0e2433',
             },
+            fontFamily: {
+                open: ['Open Sans', 'sans-serif'],
+                work: ['Work Sans', 'sans-serif'],
+            },
         },
     },
 };

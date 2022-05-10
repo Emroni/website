@@ -1,6 +1,6 @@
 import React from 'react';
 
-const colors = [
+const groups = [
     [
         'bg-black',
         'bg-white',
@@ -32,12 +32,12 @@ const colors = [
 ];
 
 export default {
-    title: 'Styles/Colors',
+    title: 'Styles',
 };
 
-export const Default = () =>
+export const Colors = () =>
     <div>
-        {colors.map((group, g) => (
+        {groups.map((group, g) => (
             <div className="flex" key={g}>
                 {group.map((color, c) => (
                     <div className="m-2" key={`${g}-${c}`}>
