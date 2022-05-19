@@ -12,6 +12,9 @@ module.exports = {
             },
         },
     ],
+    core: {
+        disableTelemetry: true,
+    },
     framework: '@storybook/react',
     stories: [
         '../src/**/*.stories.@(js|jsx|ts|tsx)',
