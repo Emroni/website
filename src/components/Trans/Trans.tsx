@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { useTransition } from '../providers';
+import { useTransition } from '@/providers';
 
 const useStyles = createUseStyles({
     fade: {

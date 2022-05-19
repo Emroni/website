@@ -1,4 +1,4 @@
-import { Link, Trans } from './index';
+import { Link, Trans } from '@/components';
 
 export default function Resume() {
 

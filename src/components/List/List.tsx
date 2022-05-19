@@ -1,7 +1,7 @@
+import { Trans } from '@/components';
 import clsx from 'clsx';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Trans } from './index';
 
 const useStyles = createUseStyles({
     list: {
