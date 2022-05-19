@@ -25,10 +25,12 @@ const useStyles = createUseStyles((theme: any) => ({
             paddingLeft: '2em',
         },
         '& svg': {
-            position: 'absolute',
+            height: '16px',
             left: '1em',
+            position: 'absolute',
             top: '50%',
             transform: 'translate(-50%, -50%)',
+            width: '16px',
         },
         [theme.media.sm]: {
             margin: '0.25em',
