@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
+.font-work {
+    @apply font-semibold;
+}
+
+html,
+body {
+    @apply font-open;
+    @apply text-base;
+    @apply text-black;
+}
+
+h1 {
+    @apply font-semibold;
+    @apply font-work;
+    @apply text-6xl;
+}
+
+h2 {
+    @apply font-semibold;
+    @apply font-work;
+    @apply text-4xl;
+}
+
+h3 {
+    @apply font-semibold;
+    @apply font-work;
+    @apply text-2xl;
+}
+
+h4 {
+    @apply font-semibold;
+    @apply font-work;
+    @apply text-xl;
+}
+
+h5 {
+    @apply font-semibold;
+    @apply font-work;
+    @apply text-lg;
+}
+
+h6 {
+    @apply font-semibold;
+    @apply font-work;
+    @apply text-base;
+}
