@@ -1,4 +1,4 @@
-import { Resume, Section, Trans } from '@/components';
+import { Link, Section, Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
 import Block from './Block';
 
@@ -27,11 +27,13 @@ export default function Intro() {
             I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in these fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
         </Trans>
         <Trans className={classes.blocks} fade={false} stall={0.5}>
-            <Block title="Know" items="JavaScript,PHP,HTML/CSS"/>
-            <Block title="Love" items="React,Three.js,D3.js"/>
-            <Block title="Teach" items="Development,Automation,Animation"/>
+            <Block title="Know" items="JavaScript,PHP,HTML/CSS" />
+            <Block title="Love" items="React,Three.js,D3.js" />
+            <Block title="Teach" items="Development,Automation,Animation" />
         </Trans>
-        <Resume/>
+        <Trans tag="p">
+            <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+        </Trans>
     </Section>;
 
 }
