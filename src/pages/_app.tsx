@@ -1,5 +1,5 @@
 import { ThemeProvider, TransitionProvider } from '../providers';
-import '../styles/index.css';
+import '../styles/old.scss';
 
 export default function App({ Component, pageProps }) {
 
