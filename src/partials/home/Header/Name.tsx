@@ -1,5 +1,5 @@
+import { Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
-import { Trans } from '../../components';
 
 const useStyles = createUseStyles({
     h1: {

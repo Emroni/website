@@ -1,7 +1,7 @@
+import { Section, Trans } from '@/components';
 import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { createUseStyles } from 'react-jss';
-import { Section, Trans } from '../../components';
 import Social from './Social';
 
 const useStyles = createUseStyles((theme: any) => ({

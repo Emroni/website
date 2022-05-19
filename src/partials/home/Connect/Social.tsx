@@ -1,6 +1,6 @@
+import { Trans } from '@/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createUseStyles } from 'react-jss';
-import { Trans } from '../../components';
 
 const useStyles = createUseStyles((theme: any) => ({
     li: {
@@ -123,7 +123,7 @@ export default function Social({
     return <Trans className={classes.li}>
         <a className={classes.a} href={url} target="_blank" rel="noopener noreferrer">
             <span>
-                <FontAwesomeIcon icon={icon}/>
+                <FontAwesomeIcon icon={icon} />
                 {title}
             </span>
         </a>

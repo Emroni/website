@@ -1,5 +1,5 @@
+import { Connect, Education, Experience, Header, Hire, Intro, Knowledge } from '@/partials/home';
 import Head from 'next/head';
-import Sections from '../sections';
 
 export default function Home() {
 
@@ -7,7 +7,13 @@ export default function Home() {
         <Head>
             <title>Emre Koc - Full Stack Developer</title>
         </Head>
-        <Sections />
+        <Header />
+        <Intro />
+        <Experience />
+        <Knowledge />
+        <Education />
+        <Hire />
+        <Connect />
     </>;
 
 }

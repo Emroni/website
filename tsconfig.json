@@ -23,6 +23,9 @@
             "@/components": [
                 "components"
             ],
+            "@/partials/*": [
+                "partials/*"
+            ],
             "@/providers": [
                 "providers"
             ]

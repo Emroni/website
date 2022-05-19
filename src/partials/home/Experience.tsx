@@ -1,5 +1,5 @@
+import { List, Section, Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
-import { List, Section, Trans } from '../components';
 
 const useStyles = createUseStyles({
     container: {

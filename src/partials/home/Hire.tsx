@@ -1,4 +1,4 @@
-import { Link, Resume, Section, Trans } from '../components';
+import { Link, Resume, Section, Trans } from '@/components';
 
 export default function Hire() {
 

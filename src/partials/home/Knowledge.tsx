@@ -1,4 +1,4 @@
-import { List, Section } from '../components';
+import { List, Section } from '@/components';
 
 export default function Knowledge() {
 
