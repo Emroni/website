@@ -53,7 +53,7 @@ export default function Connect() {
         },
     ];
 
-    return <Section title="Connect">
+    return <Section heading="Connect">
         <Trans tag="p">
             Looking for more? Connect with me through any of the channels below.
         </Trans>

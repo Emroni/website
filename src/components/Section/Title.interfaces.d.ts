@@ -1,3 +1,0 @@
-interface TitleProps {
-    children: string;
-}

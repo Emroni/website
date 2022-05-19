@@ -40,7 +40,7 @@ const useStyles = createUseStyles({
     },
 });
 
-export default function Title({ children }: TitleProps) {
+export default function SectionHeading({ children }: SectionHeadingProps) {
 
     const classes = useStyles();
 

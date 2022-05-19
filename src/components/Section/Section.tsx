@@ -1,7 +1,6 @@
+import { SectionBackground, SectionHeading } from '@/components';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
-import Background from './Background';
-import Title from './Title';
 
 const useStyles = createUseStyles((theme: any) => ({
     container: {
@@ -31,7 +30,7 @@ const useStyles = createUseStyles((theme: any) => ({
     },
 }));
 
-export default function Section({ background, children, title }: SectionProps) {
+export default function Section({ background, children, heading }: SectionProps) {
 
     const classes = useStyles();
 
@@ -39,18 +38,18 @@ export default function Section({ background, children, title }: SectionProps) {
         background,
     });
 
-    const slug = title.toLowerCase()
+    const slug = heading.toLowerCase()
         .replace(/\s/g, '-');
 
     return <section className={containerClasses} id={slug}>
-        <Title>
-            {title}
-        </Title>
+        <SectionHeading>
+            {heading}
+        </SectionHeading>
         <div>
             {children}
         </div>
         {background && (
-            <Background />
+            <SectionBackground />
         )}
     </section>;
 

@@ -31,7 +31,7 @@ const useStyles = createUseStyles((theme: any) => ({
     },
 }));
 
-export default function Background() {
+export default function SectionBackground() {
 
     const classes = useStyles();
 

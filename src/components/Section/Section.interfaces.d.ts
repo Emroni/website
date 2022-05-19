@@ -1,5 +1,5 @@
 interface SectionProps {
     background?: boolean;
     children?: any;
-    title: string;
+    heading: string;
 }
