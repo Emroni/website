@@ -1,4 +1,69 @@
-@import 'tailwindcss/base';
+/* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import './typography/typography';
+@import './typography/typography'; */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400;600&display=swap');
+
+:root {
+    --color-black: #0A090C;
+    --color-white: #FFFCF9;
+    --color-blue: #193C56;
+
+    --ease: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    --ease-in: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    --ease-out: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+    --size-xs: 360px;
+    --size-sm: 576px;
+    --size-md: 768px;
+    --size-lg: 992px;
+    --size-xl: 1200px;
+    --size-xxl: 1440px;
+}
+
+html, body {
+    color: var(--color-black);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+ol, ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, strong {
+    font-weight: 600;
+}
+
+h2, h3, h4, p {
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+p {
+    line-height: 1.5;
+
+    @media (min-width: 768px) {
+        font-size: 1.0625em;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 1.125em;
+    }
+}

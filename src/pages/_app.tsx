@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script';
 import { ThemeProvider, TransitionProvider } from '../providers';
-import '../styles/old.scss';
+import '../styles/index.css';
 
 export default function App({ Component, pageProps }) {
 
