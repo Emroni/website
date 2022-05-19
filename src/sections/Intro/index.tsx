@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss';
 import { Resume, Section, Trans } from '../../components';
 import Block from './Block';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme: any) => ({
     blocks: {
         margin: '2em -1em',
         [theme.media.sm]: {

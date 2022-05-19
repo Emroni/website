@@ -48,14 +48,14 @@ export default function Name() {
 
     const topClip = new Array(10)
         .fill(0)
-        .map((item, index) => ({
+        .map((_item, index) => ({
             x: (9 * index) + '%',
             y: (40 * (index % 2)) + '%',
         }));
 
     const bottomClip = new Array(10)
         .fill(0)
-        .map((item, index) => ({
+        .map((_item, index) => ({
             x: (9 * index) + '%',
             y: (10 * (index % 2) + 80) + '%',
         }));

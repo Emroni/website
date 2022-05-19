@@ -3,7 +3,7 @@ import { Trans } from '../../../components';
 import Items from './Items';
 import Title from './Title';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme: any) => ({
     wrap: {
         margin: '1em 0',
         [theme.media.sm]: {

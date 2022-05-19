@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss';
 import Name from './Name';
 import Photo from './Photo';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme: any) => ({
     header: {
         fontSize: '1.6125em',
         padding: '1em 0',

@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
 });
 
 export default function Trans({
-                                  children,
+                                  children = null,
                                   className = '',
                                   fade = true,
                                   stall = 0,

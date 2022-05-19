@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createUseStyles } from 'react-jss';
 import { Trans } from '../../components';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme: any) => ({
     li: {
         display: 'inline-block',
         width: '50%',

@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { Trans } from '../index';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme: any) => ({
     background: {
         backgroundColor: 'var(--color-blue)',
         height: 0,

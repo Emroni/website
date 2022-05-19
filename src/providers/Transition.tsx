@@ -1,12 +1,15 @@
 import React, { createContext, useContext } from 'react';
 
-const DEBUG = false;//process.env.NODE_ENV === 'development';
+const DEBUG = false;
 
 const TransitionContext = createContext({});
 
 export const useTransition = () => useContext(TransitionContext);
 
 export class TransitionProvider extends React.Component {
+
+    resizeTimeout: any;
+    nextTimeout: any;
 
     constructor(props) {
         super(props);
@@ -29,7 +32,7 @@ export class TransitionProvider extends React.Component {
     }
 
     handleAdd = (ref, stall, callback) => {
-        this.setState(prevState => ({
+        this.setState((prevState: any) => ({
             items: [
                 ...prevState.items,
                 {
@@ -42,13 +45,13 @@ export class TransitionProvider extends React.Component {
         }), this.handleResize);
     }
 
-    handleResize = (e) => {
+    handleResize = (e?: any) => {
         window.clearTimeout(this.resizeTimeout);
         this.resizeTimeout = window.setTimeout(this.resize, e ? 100 : 500)
     }
 
     resize = () => {
-        this.setState(prevState => {
+        this.setState((prevState: any) => {
             const items = prevState.items.map(item => {
                 item.top = item.ref.current ? (item.ref.current.getBoundingClientRect().top + window.scrollY) : Number.MAX_VALUE;
                 return item;
@@ -64,11 +67,11 @@ export class TransitionProvider extends React.Component {
     }
 
     handleScroll = () => {
-        const {current} = this.state;
+        const { current } = this.state as any;
         if (!this.nextTimeout && current && (window.scrollY >= current.top - window.innerHeight * 0.9 || window.scrollY >= document.documentElement.offsetHeight - window.innerHeight - 100 || DEBUG)) {
             current.callback();
 
-            this.setState(prevState => ({
+            this.setState((prevState: any) => ({
                 items: prevState.items.slice(1),
             }), this.next);
         }
@@ -78,7 +81,7 @@ export class TransitionProvider extends React.Component {
         const {
             current,
             items,
-        } = this.state;
+        } = this.state as any;
 
         const next = items[0];
         let delay = 100;
@@ -104,8 +107,10 @@ export class TransitionProvider extends React.Component {
     }
 
     render() {
+        const { children } = this.props as any;
+
         return <TransitionContext.Provider value={this.state}>
-            {this.props.children}
+            {children}
         </TransitionContext.Provider>;
     }
 

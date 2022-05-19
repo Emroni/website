@@ -46,7 +46,7 @@ function generateDelays(count) {
 
 export default function List({
                                  children,
-                                 className,
+                                 className = '',
                                  tag = 'ul',
                              }) {
 
