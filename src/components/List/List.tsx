@@ -44,11 +44,7 @@ function generateDelays() {
     return children;
 }
 
-export default function List({
-                                 children,
-                                 className = '',
-                                 tag = 'ul',
-                             }) {
+export default function List({ children, className, tag = 'ul' }: ListProps) {
 
     const classes = useStyles();
     const listClasses = clsx(className, classes.list);

@@ -90,10 +90,7 @@ const useStyles = createUseStyles({
     },
 });
 
-export default function Link({
-                                 children,
-                                 href,
-                             }) {
+export default function Link({ children, href }: LinkProps) {
 
     const classes = useStyles();
 

@@ -31,11 +31,7 @@ const useStyles = createUseStyles((theme: any) => ({
     },
 }));
 
-export default function Section({
-                                    background = false,
-                                    children,
-                                    title,
-                                }) {
+export default function Section({ background, children, title }: SectionProps) {
 
     const classes = useStyles();
 
@@ -47,10 +43,15 @@ export default function Section({
         .replace(/\s/g, '-');
 
     return <section className={containerClasses} id={slug}>
-        <Title>{title}</Title>
-        <div>{children}</div>
+        <Title>
+            {title}
+        </Title>
+        <div>
+            {children}
+        </div>
         {background && (
-            <Background/>)}
+            <Background />
+        )}
     </section>;
 
 }
