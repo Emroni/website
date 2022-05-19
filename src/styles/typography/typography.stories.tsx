@@ -1,8 +1,9 @@
 import React from 'react';
 
-const fonts = [
-    'font-open',
-    'font-work',
+const weights = [
+    'font-light',
+    'font-normal',
+    'font-semibold',
 ];
 
 const sizes = [
@@ -22,46 +23,34 @@ const sizes = [
 ];
 
 export default {
-    title: 'Styles/Typography',
+    title: 'Styles',
 };
 
-export const Classes = () =>
+export const Typography = () => <>
     <table>
         <thead>
             <tr>
                 <th />
-                <th className="text-left font-open font-normal">
-                    Body (font-open)
-                </th>
-                <th className="text-left font-work">
-                    Heading (font-work)
-                </th>
+                {weights.map((weight, w) => (
+                    <th className="text-left" key={w}>
+                        {weight}
+                    </th>
+                ))}
             </tr>
         </thead>
         <tbody>
             {sizes.map((size, s) => (
                 <tr className="align-top hover:bg-gray-100" key={s}>
-                    <td className="pr-4 whitespace-nowrap">
+                    <td className="pr-4 pb-2 whitespace-nowrap">
                         {size}
                     </td>
-                    {fonts.map((font, f) => (
-                        <td className={`${font} ${size}`} key={`${f}-${s}`} title={`${font} ${size}`}>
+                    {weights.map((weight, w) => (
+                        <td className={`pb-2 ${size} ${weight}` } key={`${s}-${w}`}>
                             Lorem ipsum
                         </td>
                     ))}
                 </tr>
             ))}
         </tbody>
-    </table>;
-
-
-export const Tags = () =>
-    <div>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <p>Body, Paragraph</p>
-    </div>;
+    </table>
+</>;
