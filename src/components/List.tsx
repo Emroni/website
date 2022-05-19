@@ -4,7 +4,7 @@ import { createUseStyles } from 'react-jss';
 import { Trans } from './index';
 
 const useStyles = createUseStyles({
-    list: (props: any) => ({
+    list: {
         lineHeight: 1.25,
         marginLeft: '-1em',
         paddingLeft: '1em',
@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
             height: '100%',
         },
         '& li': {
-            ...generateDelays(props.count),
+            ...generateDelays(),
             marginBottom: '0.5em',
             transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
         },
@@ -31,12 +31,12 @@ const useStyles = createUseStyles({
             opacity: 0,
             transform: 'translateX(-0.5em)',
         },
-    }),
+    },
 });
 
-function generateDelays(count) {
+function generateDelays() {
     const children = {};
-    for (let i = 1; i <= count; i++) {
+    for (let i = 1; i <= 15; i++) {
         children[`&:nth-child(${i})`] = {
             transitionDelay: `${0.05 * i}s`,
         };
@@ -50,8 +50,7 @@ export default function List({
                                  tag = 'ul',
                              }) {
 
-    const count = React.Children.count(children);
-    const classes = useStyles({count});
+    const classes = useStyles();
     const listClasses = clsx(className, classes.list);
 
     return <Trans className={listClasses} fade={false} stall={0.25} tag={tag}>
