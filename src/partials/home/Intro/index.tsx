@@ -1,5 +1,5 @@
+import { Resume, Section, Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
-import { Resume, Section, Trans } from '../../components';
 import Block from './Block';
 
 const useStyles = createUseStyles((theme: any) => ({

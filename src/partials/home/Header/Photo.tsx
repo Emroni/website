@@ -1,7 +1,7 @@
+import { Trans } from '@/components';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { Trans } from '../../components';
 
 const useStyles = createUseStyles({
     container: {
