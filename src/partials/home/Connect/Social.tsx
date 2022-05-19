@@ -1,6 +1,6 @@
+import { Trans } from '@/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { createUseStyles } from 'react-jss';
-import { Trans } from '../../components';
 
 const useStyles = createUseStyles((theme: any) => ({
     li: {
@@ -25,10 +25,12 @@ const useStyles = createUseStyles((theme: any) => ({
             paddingLeft: '2em',
         },
         '& svg': {
-            position: 'absolute',
+            height: '16px',
             left: '1em',
+            position: 'absolute',
             top: '50%',
             transform: 'translate(-50%, -50%)',
+            width: '16px',
         },
         [theme.media.sm]: {
             margin: '0.25em',
@@ -123,7 +125,7 @@ export default function Social({
     return <Trans className={classes.li}>
         <a className={classes.a} href={url} target="_blank" rel="noopener noreferrer">
             <span>
-                <FontAwesomeIcon icon={icon}/>
+                <FontAwesomeIcon icon={icon} />
                 {title}
             </span>
         </a>

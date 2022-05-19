@@ -1,5 +1,5 @@
+import { Section, Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
-import { Section, Trans } from '../components';
 
 const useStyles = createUseStyles({
     container: {
@@ -22,7 +22,7 @@ export default function Education() {
 
     const classes = useStyles();
 
-    return <Section title="Education">
+    return <Section heading="Education">
         <Trans className={classes.container}>
             <strong>2010 - 2013 @ The Hague University of Applied Sciences</strong>
             <h3 className={classes.title}>Communication and Multimedia Design</h3>

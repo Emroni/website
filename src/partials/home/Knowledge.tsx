@@ -1,8 +1,8 @@
-import { List, Section } from '../components';
+import { List, Section } from '@/components';
 
 export default function Knowledge() {
 
-    return <Section background title="Technical Knowledge">
+    return <Section background heading="Technical Knowledge">
         <List>
             <li>
                 <strong>Extensive knowledge</strong> of JavaScript, PHP, HTML, CSS, as well as React and Symfony frameworks, and Restful and GraphQL APIs

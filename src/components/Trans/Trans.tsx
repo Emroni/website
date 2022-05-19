@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import { useTransition } from '../providers';
+import { useTransition } from '@/providers';
 
 const useStyles = createUseStyles({
     fade: {
@@ -12,14 +12,7 @@ const useStyles = createUseStyles({
     },
 });
 
-export default function Trans({
-                                  children = null,
-                                  className = '',
-                                  fade = true,
-                                  stall = 0,
-                                  tag = 'div',
-                                  ...props
-                              }) {
+export default function Trans({ children, className, fade = true, stall = 0, tag = 'div', ...props }: TransProps) {
 
     const [active, setActive] = useState(false);
     const [ready, setReady] = useState(false);

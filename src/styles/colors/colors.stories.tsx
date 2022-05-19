@@ -6,18 +6,6 @@ const groups = [
         'bg-white',
     ],
     [
-        'bg-gray-50',
-        'bg-gray-100',
-        'bg-gray-200',
-        'bg-gray-300',
-        'bg-gray-400',
-        'bg-gray-500',
-        'bg-gray-600',
-        'bg-gray-700',
-        'bg-gray-800',
-        'bg-gray-900',
-    ],
-    [
         'bg-blue-50',
         'bg-blue-100',
         'bg-blue-200',

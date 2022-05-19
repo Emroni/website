@@ -1,5 +1,5 @@
+import { List, Section, Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
-import { List, Section, Trans } from '../components';
 
 const useStyles = createUseStyles({
     container: {
@@ -28,7 +28,7 @@ export default function Experience() {
 
     const classes = useStyles();
 
-    return <Section title="Work Experience">
+    return <Section heading="Work Experience">
         <div className={classes.container}>
             <Trans className={classes.title} fade={false} tag="h3">2018 - Present | Freelancer</Trans>
             <List className={classes.list}>

@@ -1,7 +1,7 @@
+import { Trans } from '@/components';
 import clsx from 'clsx';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import { Trans } from './index';
 
 const useStyles = createUseStyles({
     list: {
@@ -44,11 +44,7 @@ function generateDelays() {
     return children;
 }
 
-export default function List({
-                                 children,
-                                 className = '',
-                                 tag = 'ul',
-                             }) {
+export default function List({ children, className, tag = 'ul' }: ListProps) {
 
     const classes = useStyles();
     const listClasses = clsx(className, classes.list);

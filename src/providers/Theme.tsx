@@ -8,7 +8,6 @@ export function ThemeProvider({ children }) {
     useEffect(() => {
         const styles = window.getComputedStyle(document.body);
 
-
         const sizes = {
             xs: styles.getPropertyValue('--size-xs'),
             sm: styles.getPropertyValue('--size-sm'),

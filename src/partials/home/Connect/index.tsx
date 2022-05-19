@@ -1,7 +1,7 @@
+import { Section, Trans } from '@/components';
 import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { createUseStyles } from 'react-jss';
-import { Section, Trans } from '../../components';
 import Social from './Social';
 
 const useStyles = createUseStyles((theme: any) => ({
@@ -53,7 +53,7 @@ export default function Connect() {
         },
     ];
 
-    return <Section title="Connect">
+    return <Section heading="Connect">
         <Trans tag="p">
             Looking for more? Connect with me through any of the channels below.
         </Trans>

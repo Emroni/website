@@ -1,49 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;400;600&display=swap');
 
-.font-work {
-    @apply font-semibold;
+html, body {
+    color: var(--color-black);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
 }
 
-html,
-body {
-    @apply font-open;
-    @apply text-base;
-    @apply text-black;
+h1, h2, h3, h4, strong {
+    font-weight: 600;
 }
 
-h1 {
-    @apply font-semibold;
-    @apply font-work;
-    @apply text-6xl;
+h2, h3, h4, p {
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 h2 {
-    @apply font-semibold;
-    @apply font-work;
-    @apply text-4xl;
+    font-size: 1.5em;
 }
 
 h3 {
-    @apply font-semibold;
-    @apply font-work;
-    @apply text-2xl;
+    font-size: 1.17em;
 }
 
-h4 {
-    @apply font-semibold;
-    @apply font-work;
-    @apply text-xl;
-}
+p {
+    line-height: 1.5;
+    margin-bottom: 1em;
 
-h5 {
-    @apply font-semibold;
-    @apply font-work;
-    @apply text-lg;
-}
+    @media (min-width: 768px) {
+        font-size: 1.0625em;
+    }
 
-h6 {
-    @apply font-semibold;
-    @apply font-work;
-    @apply text-base;
+    @media (min-width: 992px) {
+        font-size: 1.125em;
+    }
 }

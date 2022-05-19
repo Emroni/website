@@ -1,5 +1,5 @@
 import { createUseStyles } from 'react-jss';
-import { Trans } from '../index';
+import { Trans } from '@/components';
 
 const useStyles = createUseStyles((theme: any) => ({
     background: {
@@ -31,7 +31,7 @@ const useStyles = createUseStyles((theme: any) => ({
     },
 }));
 
-export default function Background() {
+export default function SectionBackground() {
 
     const classes = useStyles();
 
