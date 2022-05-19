@@ -1,5 +1,5 @@
+import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
-import classnames from 'classnames';
 import { createUseStyles } from 'react-jss';
 import { useTransition } from '../providers';
 
@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
 
 export default function Trans({
                                   children,
-                                  className,
+                                  className = '',
                                   fade = true,
                                   stall = 0,
                                   tag = 'div',
@@ -25,7 +25,7 @@ export default function Trans({
     const [ready, setReady] = useState(false);
     const classes = useStyles();
     const ref = useRef();
-    const transition = useTransition();
+    const transition: any = useTransition();
 
     useEffect(() => {
         if (!ready) {
@@ -38,12 +38,12 @@ export default function Trans({
         transition,
     ]);
 
-    const classNames = classnames(className, {
+    const classNames = clsx(className, {
         [classes.fade]: fade,
         active,
     });
 
-    const Tag = tag;
+    const Tag: any = tag;
 
     return <Tag className={classNames} ref={ref} {...props}>{children}</Tag>;
 

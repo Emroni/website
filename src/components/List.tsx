@@ -1,10 +1,10 @@
+import clsx from 'clsx';
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import { Trans } from './index';
-import classnames from 'classnames';
 
 const useStyles = createUseStyles({
-    list: props => ({
+    list: (props: any) => ({
         lineHeight: 1.25,
         marginLeft: '-1em',
         paddingLeft: '1em',
@@ -52,7 +52,7 @@ export default function List({
 
     const count = React.Children.count(children);
     const classes = useStyles({count});
-    const listClasses = classnames(className, classes.list);
+    const listClasses = clsx(className, classes.list);
 
     return <Trans className={listClasses} fade={false} stall={0.25} tag={tag}>
         {children}

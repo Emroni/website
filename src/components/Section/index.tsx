@@ -1,9 +1,9 @@
-import * as classnames from 'classnames';
+import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 import Background from './Background';
 import Title from './Title';
 
-const useStyles = createUseStyles(theme => ({
+const useStyles = createUseStyles((theme: any) => ({
     container: {
         boxSizing: 'border-box',
         marginLeft: 'auto',
@@ -32,14 +32,14 @@ const useStyles = createUseStyles(theme => ({
 }));
 
 export default function Section({
-                                    background,
+                                    background = false,
                                     children,
                                     title,
                                 }) {
 
     const classes = useStyles();
 
-    const containerClasses = classnames(classes.container, {
+    const containerClasses = clsx(classes.container, {
         background,
     });
 
