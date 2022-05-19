@@ -1,6 +1,18 @@
+import googleTagManager from '@analytics/google-tag-manager';
+import Analytics from 'analytics';
 import Head from 'next/head';
 import { ThemeProvider, TransitionProvider } from '../providers';
 import '../styles/old.scss';
+
+const analytics = Analytics({
+    app: 'website',
+    plugins: [
+        googleTagManager({
+            containerId: 'G-QP155SXRPR',
+        }),
+    ],
+});
+analytics.page();
 
 export default function App({ Component, pageProps }) {
 
