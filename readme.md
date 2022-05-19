@@ -1,9 +1,13 @@
 # Emre Koc - Website
 
-## Design
-The design is made with Figma and can be viewed here: https://www.figma.com/file/AiVwGiMTlyXhTlivmFC5kg/Website-v5
+:warning: **Work in progress**  
+This website is being updated to use Next.js and other libraries (see list below). Some parts might not be (completely) implemented yet.
 
-## Frameworks and tools
+## Design
+The design is made with Figma and can be viewed online:  
+https://www.figma.com/file/AiVwGiMTlyXhTlivmFC5kg/Website-v5
+
+## Frameworks and libraries
 This project is built using the most widely known frameworks and libraries of today, including:
 - [Next.js](https://nextjs.org/) (React framework)
 - [Tailwind](https://tailwindcss.com/) (styling framework)
