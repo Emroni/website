@@ -1,19 +1,7 @@
-import { Button } from '@/components';
-import Head from 'next/head';
+import Sections from '../sections';
 
 export default function Home() {
 
-    return <>
-        <Head>
-            <title>Emre Koc - Full Stack Developer</title>
-        </Head>
-        <main>
-            <h1>Home 1</h1>
-            <h2>Home 2</h2>
-            <h3>Home 3</h3>
-            <p>Home</p>
-            <Button>Button</Button>
-        </main>
-    </>;
+    return <Sections/>;
 
 }
