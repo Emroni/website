@@ -4,27 +4,13 @@ import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({
-    container: {
-        display: 'inline-block',
-        width: '50%',
-        [theme.media.md]: {
-            width: (100 / 3) + '%',
-        },
-    },
     a: {
         textDecoration: 'none',
         display: 'inline-block',
         position: 'relative',
-        margin: '0.125em',
         whiteSpace: 'nowrap',
         '& span': {
             display: 'inline-block',
-        },
-        [theme.media.sm]: {
-            margin: '0.25em',
-        },
-        [theme.media.md]: {
-            margin: '0.375em',
         },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
@@ -100,7 +86,6 @@ const useStyles = createUseStyles((theme: any) => ({
             width: '16px',
         },
         [theme.media.sm]: {
-            margin: '0.25em',
             '& span': {
                 padding: '0.75em',
                 paddingLeft: '2.25em',
@@ -126,7 +111,7 @@ const useStyles = createUseStyles((theme: any) => ({
     },
     image: {
         '& span': {
-            padding: '0.5em 1em',
+            padding: '1em',
         },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
@@ -135,7 +120,8 @@ const useStyles = createUseStyles((theme: any) => ({
         },
     },
     img: {
-        height: '1.5em',
+        display: 'inline-block',
+        height: '2em',
     },
 }));
 
@@ -148,17 +134,15 @@ export default function Button({ children, icon, image, url }: ButtonProps) {
         [`${classes.text}`]: children,
     });
 
-    return <Trans className={classes.container}>
-        <a className={anchorClasses} href={url} target="_blank" rel="noopener noreferrer">
-            <span>
-                {image ? (
-                    <img className={classes.img} src={image} />
-                ) : <>
-                    <FontAwesomeIcon icon={icon} />
-                    {children}
-                </>}
-            </span>
-        </a>
+    return <Trans className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
+        <span>
+            {image ? (
+                <img className={classes.img} src={image} />
+            ) : <>
+                <FontAwesomeIcon icon={icon} />
+                {children}
+            </>}
+        </span>
     </Trans>;
 
 }
