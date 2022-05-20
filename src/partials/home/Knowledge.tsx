@@ -3,12 +3,16 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({
     blocks: {
-        margin: '2em -1em',
+        display: 'grid',
+        gap: '1em',
+        margin: '0 -1em',
         [theme.media.sm]: {
-            margin: '2em -1.5em',
+            gap: '1.5em',
+            margin: '0 -1.25em',
         },
         [theme.media.md]: {
-            margin: '2em -2em',
+            gap: '2em',
+            margin: '0 -1.5em',
         },
     },
 }));

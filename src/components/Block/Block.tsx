@@ -3,9 +3,6 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({
     wrap: {
-        margin: '1em 0',
-    },
-    container: {
         position: 'relative',
         '&:before, &:after': {
             content: '""',
@@ -67,6 +64,12 @@ const useStyles = createUseStyles((theme: any) => ({
             '.wrap:not(.active) &': {
                 opacity: 0,
                 transform: 'translateX(-0.5em)',
+            },
+        },
+        [theme.media.sm]: {
+            paddingLeft: '1.25rem',
+            '&:before': {
+                width: '0.75rem',
             },
         },
         [theme.media.md]: {
@@ -147,21 +150,19 @@ export default function Block({ items, title }: BlockProps) {
     const classes = useStyles();
 
     return <Trans className={`wrap ${classes.wrap}`} fade={false} stall={0.1}>
-        <div className={classes.container}>
-            <h3 className={classes.title}>
-                <span>
-                    {title}
-                </span>
-                <span />
-            </h3>
-            <ul className={classes.list}>
-                {items.split(',').map((item, key) =>
-                    <li className={classes.item} key={key}>
-                        <span>{item}</span>
-                    </li>
-                )}
-            </ul>
-        </div>
+        <h3 className={classes.title}>
+            <span>
+                {title}
+            </span>
+            <span />
+        </h3>
+        <ul className={classes.list}>
+            {items.split(',').map((item, key) =>
+                <li className={classes.item} key={key}>
+                    <span>{item}</span>
+                </li>
+            )}
+        </ul>
     </Trans>;
 
 }
