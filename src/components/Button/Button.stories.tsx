@@ -4,8 +4,6 @@ import Button from './Button';
 
 export default {
     args: {
-        children: 'Lorem ipsum',
-        icon: faUserCircle,
         url: 'http://emrekoc.io',
     },
     argTypes: {
@@ -23,3 +21,17 @@ const Template = (args) =>
     <Button {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+    children: 'Lorem ipsum',
+    icon: faUserCircle,
+};
+
+export const Image = Template.bind({});
+Image.args = {
+    image: '/assets/clients/just.svg',
+};
+Image.parameters = {
+    backgrounds: {
+        default: 'Blue 500',
+    },
+};

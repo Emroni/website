@@ -1,5 +1,6 @@
 import { Trans } from '@/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({
@@ -16,47 +17,17 @@ const useStyles = createUseStyles((theme: any) => ({
         position: 'relative',
         margin: '0.125em',
         whiteSpace: 'nowrap',
-        '&, &:active, &:focus, &:hover, &:visited': {
-            color: 'var(--color-black)',
-        },
         '& span': {
             display: 'inline-block',
-            padding: '0.5em',
-            paddingLeft: '2em',
-        },
-        '& svg': {
-            height: '16px',
-            left: '1em',
-            position: 'absolute',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '16px',
         },
         [theme.media.sm]: {
             margin: '0.25em',
-            '& span': {
-                padding: '0.75em',
-                paddingLeft: '2.25em',
-            },
-            '& svg': {
-                left: '1.125em',
-            },
         },
         [theme.media.md]: {
             margin: '0.375em',
         },
-        [theme.media.lg]: {
-            '& span': {
-                padding: '1em',
-                paddingLeft: '2.5em',
-            },
-            '& svg': {
-                left: '1.25em',
-            },
-        },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
-                backgroundColor: 'var(--color-black)',
                 content: '""',
                 position: 'absolute',
             },
@@ -112,17 +83,82 @@ const useStyles = createUseStyles((theme: any) => ({
             },
         },
     },
+    text: {
+        '&, &:active, &:focus, &:hover, &:visited': {
+            color: 'var(--color-black)',
+        },
+        '& span': {
+            padding: '0.5em',
+            paddingLeft: '2em',
+        },
+        '& svg': {
+            height: '16px',
+            left: '1em',
+            position: 'absolute',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '16px',
+        },
+        [theme.media.sm]: {
+            margin: '0.25em',
+            '& span': {
+                padding: '0.75em',
+                paddingLeft: '2.25em',
+            },
+            '& svg': {
+                left: '1.125em',
+            },
+        },
+        [theme.media.lg]: {
+            '& span': {
+                padding: '1em',
+                paddingLeft: '2.5em',
+            },
+            '& svg': {
+                left: '1.25em',
+            },
+        },
+        '@media (hover)': {
+            '&:before, &:after, span:before, span:after': {
+                backgroundColor: 'var(--color-black)',
+            },
+        },
+    },
+    image: {
+        '& span': {
+            padding: '1.5em 3em',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+        },
+        '@media (hover)': {
+            '&:before, &:after, span:before, span:after': {
+                backgroundColor: 'var(--color-white)',
+            },
+        },
+    },
 }));
 
-export default function Button({ children, icon, url }: ButtonProps) {
+export default function Button({ children, icon, image, url }: ButtonProps) {
 
     const classes = useStyles();
 
+    const anchorClasses = clsx(classes.a, {
+        [`${classes.image}`]: image,
+        [`${classes.text}`]: children,
+    });
+
+    const contentStyles = image ? {
+        backgroundImage: `url('${image}')`,
+    } : undefined;
+
     return <Trans className={classes.li}>
-        <a className={classes.a} href={url} target="_blank" rel="noopener noreferrer">
-            <span>
-                <FontAwesomeIcon icon={icon} />
-                {children}
+        <a className={anchorClasses} href={url} target="_blank" rel="noopener noreferrer">
+            <span style={contentStyles}>
+                {!image && <>
+                    <FontAwesomeIcon icon={icon} />
+                    {children}
+                </>}
             </span>
         </a>
     </Trans>;
