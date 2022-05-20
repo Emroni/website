@@ -9,8 +9,8 @@ export default function Home() {
         </Head>
         <Header />
         <Intro />
-        <Experience />
         <Knowledge />
+        <Experience />
         <Education />
         <Connect />
     </>;
