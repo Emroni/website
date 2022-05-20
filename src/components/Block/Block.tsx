@@ -4,11 +4,6 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles((theme: any) => ({
     wrap: {
         margin: '1em 0',
-        [theme.media.sm]: {
-            flex: 1,
-            padding: '0 0.5em',
-            margin: 0,
-        },
     },
     container: {
         position: 'relative',
@@ -85,7 +80,7 @@ const useStyles = createUseStyles((theme: any) => ({
         position: 'relative',
         padding: '0.5rem',
         [theme.media.md]: {
-            padding: '1rem',
+            padding: '0.75rem',
         },
         '&:after': {
             content: '""',
@@ -102,12 +97,10 @@ const useStyles = createUseStyles((theme: any) => ({
         },
     },
     item: {
+        display: 'inline-block',
         position: 'relative',
         padding: '0.125em 0.5rem',
-        marginBottom: '0.25em',
-        '&:last-child': {
-            marginBottom: 0,
-        },
+        margin: '0.25em',
         '&:before': {
             content: '""',
             backgroundColor: 'var(--color-blue)',
@@ -130,32 +123,24 @@ const useStyles = createUseStyles((theme: any) => ({
                 transform: 'translateX(-0.5em)',
             },
         },
-        '&:nth-child(1)': {
-            '&:before': {
-                transitionDelay: '0.325s',
-            },
-            '& span': {
-                transitionDelay: '0.375s',
-            },
-        },
-        '&:nth-child(2)': {
-            '&:before': {
-                transitionDelay: '0.35s',
-            },
-            '& span': {
-                transitionDelay: '0.4s',
-            },
-        },
-        '&:nth-child(3)': {
-            '&:before': {
-                transitionDelay: '0.375s',
-            },
-            '& span': {
-                transitionDelay: '0.425s',
-            },
-        },
+        ...generateDelays(),
     },
 }));
+
+function generateDelays() {
+    const children = {};
+    for (let i = 1; i <= 40; i++) {
+        children[`&:nth-child(${i})`] = {
+            '&:before': {
+                transitionDelay: `${0.025 * i + 0.3}s`,
+            },
+            '& span': {
+                transitionDelay: `${0.025 * i + 0.35}s`,
+            },
+        };
+    }
+    return children;
+}
 
 export default function Block({ items, title }: BlockProps) {
 
