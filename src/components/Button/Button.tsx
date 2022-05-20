@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({
-    li: {
+    container: {
         display: 'inline-block',
         width: '50%',
         [theme.media.md]: {
@@ -126,16 +126,16 @@ const useStyles = createUseStyles((theme: any) => ({
     },
     image: {
         '& span': {
-            padding: '1.5em 3em',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
+            padding: '0.5em 1em',
         },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
                 backgroundColor: 'var(--color-white)',
             },
         },
+    },
+    img: {
+        height: '1.5em',
     },
 }));
 
@@ -148,14 +148,12 @@ export default function Button({ children, icon, image, url }: ButtonProps) {
         [`${classes.text}`]: children,
     });
 
-    const contentStyles = image ? {
-        backgroundImage: `url('${image}')`,
-    } : undefined;
-
-    return <Trans className={classes.li}>
+    return <Trans className={classes.container}>
         <a className={anchorClasses} href={url} target="_blank" rel="noopener noreferrer">
-            <span style={contentStyles}>
-                {!image && <>
+            <span>
+                {image ? (
+                    <img className={classes.img} src={image} />
+                ) : <>
                     <FontAwesomeIcon icon={icon} />
                     {children}
                 </>}
