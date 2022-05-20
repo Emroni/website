@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
     list: {
         lineHeight: 1.25,
         marginLeft: '-1em',
-        paddingLeft: '1em',
+        paddingLeft: '0.75em',
         position: 'relative',
         '&:before': {
             backgroundColor: 'currentColor',
@@ -24,8 +24,24 @@ const useStyles = createUseStyles({
         },
         '& li': {
             ...generateDelays(),
-            marginBottom: '0.5em',
+            padding: '0.25em',
+            position: 'relative',
             transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
+            '&:not(.subtitle):before': {
+                backgroundColor: 'var(--color-blue)',
+                content: '""',
+                height: '100%',
+                left: 0,
+                opacity: 0,
+                position: 'absolute',
+                top: 0,
+                transition: 'opacity 0.25s var(--ease)',
+                width: '100%',
+                zIndex: -1,
+            },
+            '&:hover:before': {
+                opacity: 0.05,
+            },
         },
         '&:not(.active) li': {
             opacity: 0,

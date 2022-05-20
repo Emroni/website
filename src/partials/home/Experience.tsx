@@ -46,7 +46,7 @@ export default function Experience() {
         <div className={classes.container}>
             <Trans className={classes.title} fade={false} tag="h3">2009 - 2018 | Full-time @ Just</Trans>
             <List className={classes.list}>
-                <li>
+                <li className="subtitle">
                     <h4 className={classes.subtitle}>2014 | Digital Lead</h4>
                 </li>
                 <li>Led department of frontend and backend development, responsible for quality control of all deliverables</li>
@@ -62,7 +62,7 @@ export default function Experience() {
                 <li>Created motion graphics in After Effects for advertising videos, making use of ExtendScript to generate variations</li>
             </List>
             <List className={classes.list}>
-                <li>
+                <li className="subtitle">
                     <h4 className={classes.subtitle}>2011 | Full Stack Developer</h4>
                 </li>
                 <li>Led small teams of frontend and backend developers</li>
@@ -72,7 +72,7 @@ export default function Experience() {
                 <li>Built motion graphics for videos and animations for websites in Flash</li>
             </List>
             <List className={classes.list}>
-                <li>
+                <li className="subtitle">
                     <h4 className={classes.subtitle}>2009 | Flash Developer</h4>
                 </li>
                 <li>Built and implemented components and full websites in Flash from designs in Photoshop</li>
