@@ -3,12 +3,27 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
     container: {
+        marginLeft: '-1em',
+        paddingLeft: '1em',
+        position: 'relative',
         '&:not(:last-child)': {
             marginBottom: '2em',
         },
+        '&:before': {
+            backgroundColor: 'var(--color-white)',
+            content: '""',
+            height: 0,
+            left: 0,
+            position: 'absolute',
+            top: 0,
+            transition: 'height 0.5s var(--ease)',
+            width: '1px',
+        },
+        '&.active:before': {
+            height: '100%',
+        },
     },
     title: {
-        color: 'var(--color-blue)',
         fontWeight: 400,
         fontSize: '1.25em',
         margin: '0.25em 0',
@@ -22,7 +37,7 @@ export default function Education() {
 
     const classes = useStyles();
 
-    return <Section heading="Education">
+    return <Section background heading="Education">
         <Trans className={classes.container}>
             <strong>2010 - 2013 @ The Hague University of Applied Sciences</strong>
             <h3 className={classes.title}>Communication and Multimedia Design</h3>
