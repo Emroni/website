@@ -12,9 +12,9 @@ const useStyles = createUseStyles((theme: any) => ({
             width: '1px',
             position: 'absolute',
             transition: 'height 0.25s',
-            '$wrap:not(.active) &': {
-                height: '0 !important',
-            },
+        },
+        '&:not(.active):before, &:not(.active):after': {
+            height: '0 !important',
         },
         '&:before': {
             left: 0,
