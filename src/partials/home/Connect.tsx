@@ -1,4 +1,4 @@
-import { Button, Link, Section, Trans } from '@/components';
+import { Button, Section, Trans } from '@/components';
 import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { createUseStyles } from 'react-jss';
@@ -59,11 +59,6 @@ export default function Connect() {
                     Email
                 </Button>
             </li>
-        </Trans>
-        <Trans tag="p">
-            <Link href="/assets/Emre-Koc-Resume.pdf">
-                Download Resume (PDF)
-            </Link>
         </Trans>
     </Section>;
 

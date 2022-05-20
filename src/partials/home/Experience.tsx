@@ -1,4 +1,4 @@
-import { List, Section, Trans } from '@/components';
+import { Link, List, Section, Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -78,6 +78,9 @@ export default function Experience() {
                 <li>Built and implemented components and full websites in Flash from designs in Photoshop</li>
             </List>
         </div>
+        <Trans tag="p">
+            <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+        </Trans>
     </Section>;
 
 }

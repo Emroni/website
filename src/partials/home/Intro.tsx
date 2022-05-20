@@ -1,4 +1,4 @@
-import { Link, Section, Trans } from '@/components';
+import { Section, Trans } from '@/components';
 
 export default function Intro() {
 
@@ -8,9 +8,6 @@ export default function Intro() {
         </Trans>
         <Trans tag="p">
             I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in these fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
-        </Trans>
-        <Trans tag="p">
-            <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
         </Trans>
     </Section>;
 
