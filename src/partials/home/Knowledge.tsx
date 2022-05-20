@@ -1,22 +1,27 @@
-import { List, Section } from '@/components';
+import { Block, Section, Trans } from '@/components';
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles((theme: any) => ({
+    blocks: {
+        margin: '2em -1em',
+        [theme.media.sm]: {
+            margin: '2em -1.5em',
+        },
+        [theme.media.md]: {
+            margin: '2em -2em',
+        },
+    },
+}));
 
 export default function Knowledge() {
 
-    return <Section background heading="Technical Knowledge">
-        <List>
-            <li>
-                <strong>Extensive knowledge</strong> of JavaScript, PHP, HTML, CSS, as well as React and Symfony frameworks, and Restful and GraphQL APIs
-            </li>
-            <li>
-                <strong>Proficient</strong> in Three.js, PixiJS and D3.js for 2D/3D animations, motion design and visualization
-            </li>
-            <li>
-                <strong>Working knowledge</strong> of Sketch, Illustrator, Photoshop and After Effects
-            </li>
-            <li>
-                <strong>Strong sense</strong> for mathematics and automation
-            </li>
-        </List>
+    const classes = useStyles();
+
+    return <Section heading="Technical Knowledge">
+        <Trans className={classes.blocks} fade={false} stall={0.5}>
+            <Block title="Extensive" items="JavaScript,TypeScript,PHP,HTML,CSS,SQL,React,Symfony,WordPress,Node.js,REST APIs,Generators,Three.js,GSAP,Charts,D3.js,Next.js,Automation,Motion Design,Data visualization"/>
+            <Block title="Proficient" items="Tailwind,Bootstrap,Storybook,Jest,D3.js,Pixi.js,Redux,Charts.js,OpenAPI,Swagger,Twig,Blade,Websockets,OpenAPI,Swagger,GraphQL,Mock Servic Worker,Scrapers,Azure Functions,Laravel,Nginx,Apache,GitHub Actions,Docker,Deployer,Travis CI,Sketch,Figma ,Photoshop ,Illustrator,After effects" />
+        </Trans>
     </Section>;
 
 }

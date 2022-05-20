@@ -1,23 +1,6 @@
 import { Link, Section, Trans } from '@/components';
-import { createUseStyles } from 'react-jss';
-import Block from './Block';
-
-const useStyles = createUseStyles((theme: any) => ({
-    blocks: {
-        margin: '2em -1em',
-        [theme.media.sm]: {
-            display: 'flex',
-            margin: '2em -1.5em',
-        },
-        [theme.media.md]: {
-            margin: '2em -2em',
-        },
-    },
-}));
 
 export default function Intro() {
-
-    const classes = useStyles();
 
     return <Section background heading="Hi">
         <Trans tag="p">
@@ -25,11 +8,6 @@ export default function Intro() {
         </Trans>
         <Trans tag="p">
             I build custom frontend and backend solutions, automation tools, motion design and animations. My experience in these fields have also allowed me to mentor dozens of developers with any skill level between intern and senior.
-        </Trans>
-        <Trans className={classes.blocks} fade={false} stall={0.5}>
-            <Block title="Know" items="JavaScript,PHP,HTML/CSS" />
-            <Block title="Love" items="React,Three.js,D3.js" />
-            <Block title="Teach" items="Development,Automation,Animation" />
         </Trans>
         <Trans tag="p">
             <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>

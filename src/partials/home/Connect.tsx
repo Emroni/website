@@ -1,4 +1,4 @@
-import { Button, Section, Trans } from '@/components';
+import { Button, Link, Section, Trans } from '@/components';
 import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { createUseStyles } from 'react-jss';
@@ -21,7 +21,7 @@ export default function Connect() {
 
     return <Section heading="Connect">
         <Trans tag="p">
-            Looking for more? Connect with me through any of the channels below.
+            I'm currently located in Chiang Mai, Thailand. I work remotely and at a fixed hourly rate. For questions or inquiries, feel free to contact me through any of the channels below.
         </Trans>
         <Trans tag="ul" className={classes.socials}>
             <Button icon={faLinkedinIn} url="https://linkedin.com/in/emroni">
@@ -42,6 +42,11 @@ export default function Connect() {
             <Button icon={faEnvelope} url="mailto:hi@emrekoc.io">
                 Email
             </Button>
+        </Trans>
+        <Trans tag="p">
+            <Link href="/assets/Emre-Koc-Resume.pdf">
+                Download Resume (PDF)
+            </Link>
         </Trans>
     </Section>;
 
