@@ -1,22 +1,29 @@
-import { List, Section } from '@/components';
+import { Block, Section, Trans } from '@/components';
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles((theme: any) => ({
+    blocks: {
+        margin: '2em -1em',
+        [theme.media.sm]: {
+            display: 'flex',
+            margin: '2em -1.5em',
+        },
+        [theme.media.md]: {
+            margin: '2em -2em',
+        },
+    },
+}));
 
 export default function Knowledge() {
 
+    const classes = useStyles();
+
     return <Section heading="Technical Knowledge">
-        <List>
-            <li>
-                <strong>Extensive knowledge</strong> of JavaScript, PHP, HTML, CSS, as well as React and Symfony frameworks, and Restful and GraphQL APIs
-            </li>
-            <li>
-                <strong>Proficient</strong> in Three.js, PixiJS and D3.js for 2D/3D animations, motion design and visualization
-            </li>
-            <li>
-                <strong>Working knowledge</strong> of Sketch, Illustrator, Photoshop and After Effects
-            </li>
-            <li>
-                <strong>Strong sense</strong> for mathematics and automation
-            </li>
-        </List>
+        <Trans className={classes.blocks} fade={false} stall={0.5}>
+            <Block title="Know" items="JavaScript,PHP,HTML/CSS" />
+            <Block title="Love" items="React,Three.js,D3.js" />
+            <Block title="Teach" items="Development,Automation,Animation" />
+        </Trans>
     </Section>;
 
 }

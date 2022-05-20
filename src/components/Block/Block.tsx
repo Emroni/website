@@ -14,7 +14,7 @@ const useStyles = createUseStyles((theme: any) => ({
         position: 'relative',
         '&:before, &:after': {
             content: '""',
-            backgroundColor: 'var(--color-white)',
+            backgroundColor: 'var(--color-blue)',
             top: '0.625em',
             height: 'calc(100% - 0.625em)',
             width: '1px',
@@ -46,7 +46,7 @@ const useStyles = createUseStyles((theme: any) => ({
         margin: 0,
         '&:before, span:last-child:after': {
             content: '""',
-            backgroundColor: 'var(--color-white)',
+            backgroundColor: 'var(--color-blue)',
             height: '1px',
             position: 'absolute',
             left: 0,
@@ -89,7 +89,7 @@ const useStyles = createUseStyles((theme: any) => ({
         },
         '&:after': {
             content: '""',
-            backgroundColor: 'var(--color-white)',
+            backgroundColor: 'var(--color-blue)',
             position: 'absolute',
             left: 0,
             bottom: 0,
@@ -110,7 +110,7 @@ const useStyles = createUseStyles((theme: any) => ({
         },
         '&:before': {
             content: '""',
-            backgroundColor: 'var(--color-white)',
+            backgroundColor: 'var(--color-blue)',
             opacity: 0.05,
             position: 'absolute',
             left: 0,
