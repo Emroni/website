@@ -1,4 +1,4 @@
-import { Connect, Education, Experience, Header, Intro, Knowledge } from '@/partials/home';
+import { Clients, Connect, Education, Experience, Header, Intro, Knowledge } from '@/partials/home';
 import Head from 'next/head';
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
         <Header />
         <Intro />
         <Knowledge />
+        <Clients />
         <Experience />
         <Education />
         <Connect />
