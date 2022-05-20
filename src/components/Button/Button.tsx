@@ -7,7 +7,7 @@ const useStyles = createUseStyles((theme: any) => ({
         display: 'inline-block',
         width: '50%',
         [theme.media.md]: {
-            width: (100/3) + '%',
+            width: (100 / 3) + '%',
         },
     },
     a: {
@@ -114,11 +114,7 @@ const useStyles = createUseStyles((theme: any) => ({
     },
 }));
 
-export default function Social({
-                                   icon,
-                                   title,
-                                   url,
-                               }) {
+export default function Button({ children, icon, url }: ButtonProps) {
 
     const classes = useStyles();
 
@@ -126,7 +122,7 @@ export default function Social({
         <a className={classes.a} href={url} target="_blank" rel="noopener noreferrer">
             <span>
                 <FontAwesomeIcon icon={icon} />
-                {title}
+                {children}
             </span>
         </a>
     </Trans>;
