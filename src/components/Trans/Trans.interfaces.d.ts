@@ -1,4 +1,5 @@
 interface TransProps {
+    [prop: string]: any;
     children?: any;
     className?: string;
     fade?: boolean;

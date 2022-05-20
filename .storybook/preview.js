@@ -15,6 +15,13 @@ export const parameters = {
     actions: {
         argTypesRegex: "^on[A-Z].*"
     },
+    backgrounds: {
+        default: 'White',
+        values: [
+            { name: 'White', value: '#ffffff' },
+            { name: 'Blue 500', value: '#193C56' },
+        ],
+    },
     controls: {
         matchers: {
             color: /(bg|text)-*/,
