@@ -23,8 +23,8 @@
             "@/components": [
                 "components"
             ],
-            "@/partials/*": [
-                "partials/*"
+            "@/partials": [
+                "partials"
             ],
             "@/providers": [
                 "providers"

@@ -1,5 +1,6 @@
 interface ListProps {
-    children: JSX.IntrinsicElements.li[];
+    children: JSX.IntrinsicElements.li | JSX.IntrinsicElements.li[];
     className?: string;
-    tag?: 'ol' | 'ul',
+    tag?: 'ol' | 'ul';
+    title?: string;
 }
