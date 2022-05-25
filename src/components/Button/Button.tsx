@@ -97,7 +97,7 @@ export default function Button({ children, icon, image, url }: ButtonProps) {
             {image ? (
                 <img className="h-8 inline-block" src={image} />
             ) : <>
-                <FontAwesomeIcon className="h-4 w-4 left-2 absolute top-3 sm:left-3 sm:top-4 md:left-4" icon={icon} />
+                <FontAwesomeIcon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" icon={icon} />
                 {children}
             </>}
         </span>

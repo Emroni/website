@@ -31,7 +31,7 @@ export default function Section({ background, children, heading }: SectionProps)
         <SectionHeading>
             {heading}
         </SectionHeading>
-        <div className="text-base md:text-lg">
+        <div>
             {children}
         </div>
         {background && (
