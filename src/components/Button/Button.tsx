@@ -1,5 +1,4 @@
-import { Trans } from '@/components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon, Trans } from '@/components';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
@@ -62,14 +61,14 @@ const useStyles = createUseStyles({
             },
         },
     },
-    text: {
+    dark: {
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
                 backgroundColor: 'var(--color-black)',
             },
         },
     },
-    image: {
+    light: {
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
                 backgroundColor: 'var(--color-white)',
@@ -78,29 +77,28 @@ const useStyles = createUseStyles({
     },
 });
 
-export default function Button({ children, icon, image, url }: ButtonProps) {
+export default function Button({ children, className, icon, image, imageClassName, light, url }: ButtonProps) {
 
     const classes = useStyles();
 
-    const anchorClasses = clsx('inline-block relative whitespace-nowrap', classes.a, {
-        [`${classes.image}`]: image,
-        [`${classes.text}`]: !image,
-    });
+    const anchorClasses = clsx('inline-block leading-none p-2 relative whitespace-nowrap sm:p-3 md:p-4', classes.a, {
+        [`${classes.dark}`]: !light,
+        [`${classes.light}`]: light,
+        'pl-8 sm:pl-9 md:pl-10': icon,
+    }, className);
 
-    const spanClasses = clsx('inline-block', {
-        'p-4': image,
-        'p-2 pl-8 sm:p-3 sm:pl-9 md:-4 md:pl-10': !image,
-    });
+    const imageClasses = clsx('inline-block w-full', imageClassName);
 
     return <Trans className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
-        <span className={spanClasses}>
-            {image ? (
-                <img alt={children} className="h-8 inline-block" src={image} />
-            ) : <>
-                <FontAwesomeIcon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" icon={icon} />
-                {children}
-            </>}
-        </span>
+        {image ? (
+            <img alt={children} className={imageClasses} src={image} />
+        ) : <>
+            {icon && (
+                <Icon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" name={icon} />
+            )}
+            {children}
+        </>}
+        <span className="absolute inset-0" />
     </Trans>;
 
 }
