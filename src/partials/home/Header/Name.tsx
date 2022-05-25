@@ -2,26 +2,12 @@ import { Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
-    h1: {
-        fontSize: '1em',
-        margin: 0,
-    },
     svg: {
-        display: 'block',
         height: '1.3875em',
         width: '7em',
     },
-    text: {
-        textTransform: 'uppercase',
-        '&:first-child': {
-            fontWeight: 100,
-            letterSpacing: '0.1875em',
-        },
-        '&:last-child': {
-            fontWeight: 600,
-            letterSpacing: '0.1875em',
-            fontSize: '0.375em',
-        },
+    bottom: {
+        fontSize: '0.375em',
     },
     clip: {
         ...generateDelays(),
@@ -60,8 +46,8 @@ export default function Name() {
             y: (10 * (index % 2) + 80) + '%',
         }));
 
-    return <h1 className={classes.h1}>
-        <Trans className={classes.svg} fade={false} stall={1} tag="svg">
+    return <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+        <Trans className={`block ${classes.svg}`} fade={false} stall={1} tag="svg">
             <defs>
                 <clipPath id="top-clip">
                     {topClip.map((item, index) =>
@@ -73,8 +59,8 @@ export default function Name() {
                  </clipPath>
             </defs>
             <g>
-                <text className={classes.text} clipPath="url(#top-clip)" x="-1%" y="55%">Emre Koc</text>
-                <text className={classes.text} clipPath="url(#bottom-clip)" y="95%">Full Stack Developer</text>
+                <text className="font-light tracking-huge uppercase" clipPath="url(#top-clip)" x="-1%" y="55%">Emre Koc</text>
+                <text className={`font-semibold tracking-huge uppercase ${classes.bottom}`} clipPath="url(#bottom-clip)" y="95%">Full Stack Developer</text>
             </g>
         </Trans>
     </h1>;

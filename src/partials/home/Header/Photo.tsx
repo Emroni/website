@@ -4,30 +4,9 @@ import { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
-    container: {
-        backfaceVisibility: 'hidden',
-        borderRadius: '100%',
-        height: '2.25em',
-        marginRight: '1em',
-        overflow: 'hidden',
-        position: 'relative',
-        transform: 'translate3d(0,0,0)',
-        width: '2.25em',
-    },
-    svg: {
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 1,
-    },
+    svg: {},
     border: {
-        fill: 'none',
-        stroke: 'var(--color-blue-500)',
         strokeDasharray: '0, 157%',
-        strokeWidth: '0.25em',
-        opacity: 0,
         '$svg.active &': {
             opacity: 1,
             strokeDasharray: '157%, 0',
@@ -35,12 +14,7 @@ const useStyles = createUseStyles({
         },
     },
     image: {
-        height: '100%',
-        left: 0,
-        position: 'absolute',
-        top: 0,
         transition: 'opacity 0.5s var(--ease) 0.5s, transform 0.5s var(--ease) 0.5s',
-        width: '100%',
         '$svg:not(.active) + &, &.loading': {
             opacity: 0,
             transform: 'scale(0.95)',
@@ -64,11 +38,11 @@ export default function Photo() {
         loading,
     });
 
-    return <div className={classes.container}>
-        <Trans className={classes.svg} fade={false} tag="svg">
-            <circle className={classes.border} cx="50%" cy="50%" r="50%"/>
+    return <div className="h-14 mr-6 overflow-hidden relative rounded-full w-14 xs:h-20 xs:mr-8 xs:w-20 sm:h-24 sm:mr-12 sm:w-24 md:h-28 md:mr-14 md:w-28 lg:h-32 lg:mr-14 lg:w-32 xl:h-36 xl:mr-16 xl:w-36">
+        <Trans className={`absolute fill-transparent h-full left-0 top-0 w-full z-10 ${classes.svg}`} fade={false} tag="svg">
+            <circle className={`opacity-0 stroke-1.5 stroke-blue-500 xs:stroke-2 sm:stroke-3 xl:stroke-4 ${classes.border}`} cx="50%" cy="50%" r="50%" />
         </Trans>
-        <img alt="Emre Koc" className={imageClasses} src={loading ? '' : src}/>
+        <img alt="Emre Koc" className={`absolute inset-0 ${imageClasses}`} src={loading ? '' : src} />
     </div>;
 
 }

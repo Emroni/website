@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     content: [
         './src/**/*.{css,html,js,jsx,ts,tsx}'
@@ -34,14 +36,25 @@ module.exports = {
             'blue-700': '#143146',
             'blue-800': '#11293C',
             'blue-900': '#0E2433',
+            'transparent': 'transparent',
             'white': '#FFFFFF',
         },
         fontFamily: {
             sans: ['Work Sans', 'sans-serif'],
         },
+        screens: {
+            xs: '475px',
+            ...defaultTheme.screens,
+        },
         extend: {
-            screens: {
-                xs: '320px',
+            letterSpacing: {
+                huge: '0.1875em',
+            },
+            strokeWidth: {
+                '1.5': '6px',
+                '2': '8px',
+                '3': '12px',
+                '4': '16px',
             },
         },
     },
