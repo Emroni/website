@@ -5,7 +5,7 @@ const useStyles = createUseStyles((theme: any) => ({
     wrap: {
         '&:before, &:after': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             top: '0.625em',
             height: 'calc(100% - 0.625em)',
             width: '1px',
@@ -29,7 +29,7 @@ const useStyles = createUseStyles((theme: any) => ({
     title: {
         '&:before, span:last-child:after': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             height: '1px',
             position: 'absolute',
             left: 0,
@@ -69,7 +69,7 @@ const useStyles = createUseStyles((theme: any) => ({
     list: {
         '&:after': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             position: 'absolute',
             left: 0,
             bottom: 0,
@@ -84,7 +84,7 @@ const useStyles = createUseStyles((theme: any) => ({
     item: {
         '&:before': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             opacity: 0.05,
             position: 'absolute',
             left: 0,

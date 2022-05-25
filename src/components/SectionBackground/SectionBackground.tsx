@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
     background: {
-        backgroundColor: 'var(--color-blue)',
+        backgroundColor: 'var(--color-blue-500)',
         transform: 'translate(-50%, -50%) skewY(-2deg)',
         transition: 'height 0.5s var(--ease), top 0.5s var(--ease)',
         '&.active': {

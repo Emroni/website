@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
         },
     },
     title: {
-        color: 'var(--color-blue)',
+        color: 'var(--color-blue-500)',
         fontWeight: 400,
         transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
         '&:not(.active)': {

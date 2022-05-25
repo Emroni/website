@@ -65,6 +65,6 @@ Image.args = {
 };
 Image.parameters = {
     backgrounds: {
-        default: 'Blue 500',
+        default: 'blue-500',
     },
 };

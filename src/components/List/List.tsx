@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
             position: 'relative',
             transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
             '&:not(.subtitle):before': {
-                backgroundColor: 'var(--color-blue)',
+                backgroundColor: 'var(--color-blue-500)',
                 content: '""',
                 height: '100%',
                 left: 0,

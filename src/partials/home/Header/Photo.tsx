@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
     },
     border: {
         fill: 'none',
-        stroke: 'var(--color-blue)',
+        stroke: 'var(--color-blue-500)',
         strokeDasharray: '0, 157%',
         strokeWidth: '0.25em',
         opacity: 0,

@@ -1,38 +1,32 @@
 import { useEffect, useState } from 'react';
 import { ThemeProvider as JssProvider } from 'react-jss';
+import resolveConfig from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../tailwind.config.js';
 
 export function ThemeProvider({ children }) {
 
     const [theme, setTheme] = useState(null);
 
     useEffect(() => {
-        const styles = window.getComputedStyle(document.body);
+        // Get Tailwind config including customizations
+        const twConfig = resolveConfig(tailwindConfig);
+        
+        // Parse columns into media queries
+        const mediaEntries = Object.entries(twConfig.theme.columns)
+            .map(([column, size]) => [column, `@media (min-width: ${size})`]);
 
-        const sizes = {
-            xs: styles.getPropertyValue('--size-xs'),
-            sm: styles.getPropertyValue('--size-sm'),
-            md: styles.getPropertyValue('--size-md'),
-            lg: styles.getPropertyValue('--size-lg'),
-            xl: styles.getPropertyValue('--size-xl'),
-            xxl: styles.getPropertyValue('--size-xxl'),
-        };
-
+        // Parse as theme
         const newTheme = {
-            media: {
-                xs: `@media (min-width: ${sizes.xs})`,
-                sm: `@media (min-width: ${sizes.sm})`,
-                md: `@media (min-width: ${sizes.md})`,
-                lg: `@media (min-width: ${sizes.lg})`,
-                xl: `@media (min-width: ${sizes.xl})`,
-                xxl: `@media (min-width: ${sizes.xxl})`,
-            },
-            sizes,
+            ...twConfig.theme,
+            media: Object.fromEntries(mediaEntries),
         };
         setTheme(newTheme);
     }, []);
 
     return theme ? (
-        <JssProvider theme={theme}>{children}</JssProvider>
+        <JssProvider theme={theme}>
+            {children}
+        </JssProvider>
     ) : null;
 
 }
