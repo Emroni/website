@@ -5,10 +5,6 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
     list: {
-        lineHeight: 1.25,
-        marginLeft: '-1em',
-        paddingLeft: '0.75em',
-        position: 'relative',
         '&:before': {
             backgroundColor: 'currentColor',
             content: '""',
@@ -27,8 +23,8 @@ const useStyles = createUseStyles({
             padding: '0.25em',
             position: 'relative',
             transition: 'opacity 0.5s var(--ease), transform 0.5s var(--ease)',
-            '&:not(.subtitle):before': {
-                backgroundColor: 'var(--color-blue)',
+            '&:not(.title):before': {
+                backgroundColor: 'var(--color-blue-500)',
                 content: '""',
                 height: '100%',
                 left: 0,
@@ -41,6 +37,9 @@ const useStyles = createUseStyles({
             },
             '&:hover:before': {
                 opacity: 0.05,
+            },
+            '&.title': {
+                fontWeight: 600,
             },
         },
         '&:not(.active) li': {
@@ -60,12 +59,19 @@ function generateDelays() {
     return children;
 }
 
-export default function List({ children, className, tag = 'ul' }: ListProps) {
+export default function List({ children, className, tag = 'ul', title }: ListProps) {
 
     const classes = useStyles();
-    const listClasses = clsx(className, classes.list);
+    const listClasses = clsx('-ml-4 pl-3 relative', className, classes.list);
 
     return <Trans className={listClasses} fade={false} stall={0.25} tag={tag}>
+        {title && (
+            <li className="title">
+                <h4>
+                    {title}
+                </h4>
+            </li>
+        )}
         {children}
     </Trans>;
 

@@ -2,39 +2,25 @@ import { SectionBackground, SectionHeading } from '@/components';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles((theme: any) => ({
+const useStyles = createUseStyles({
     container: {
-        boxSizing: 'border-box',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        padding: '3em 2em',
-        position: 'relative',
-        [theme.media.sm]: {
-            maxWidth: theme.sizes.sm,
-            padding: '4em',
-        },
-        [theme.media.md]: {
-            maxWidth: theme.sizes.md,
-            padding: '5em',
-        },
-        [theme.media.lg]: {
-            maxWidth: theme.sizes.lg,
-            padding: '6rem',
-        },
-        [theme.media.xl]: {
-            padding: '7rem',
-        },
         '&.background': {
             color: 'var(--color-white)',
         },
+        '& p': {
+            marginBottom: '1em',
+            '&:last-child': {
+                marginBottom: 0,
+            },
+        },
     },
-}));
+});
 
 export default function Section({ background, children, heading }: SectionProps) {
 
     const classes = useStyles();
 
-    const containerClasses = clsx(classes.container, {
+    const containerClasses = clsx('mx-auto px-8 py-12 relative sm:max-w-md sm:px-0 sm:py-16 md:max-w-xl md:py-20 lg:max-w-3xl lg:py-24 xl:py-28', classes.container, {
         background,
     });
 

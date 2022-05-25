@@ -3,10 +3,9 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({
     wrap: {
-        position: 'relative',
         '&:before, &:after': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             top: '0.625em',
             height: 'calc(100% - 0.625em)',
             width: '1px',
@@ -28,17 +27,9 @@ const useStyles = createUseStyles((theme: any) => ({
         },
     },
     title: {
-        fontSize: '1.25rem',
-        fontWeight: 400,
-        letterSpacing: '0.125em',
-        textTransform: 'uppercase',
-        display: 'flex',
-        position: 'relative',
-        paddingLeft: '1rem',
-        margin: 0,
         '&:before, span:last-child:after': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             height: '1px',
             position: 'absolute',
             left: 0,
@@ -52,8 +43,6 @@ const useStyles = createUseStyles((theme: any) => ({
             width: '0.5rem',
         },
         '& span': {
-            position: 'relative',
-            display: 'inline-block',
             transition: 'opacity 0.25s var(--ease) 0.05s, transform 0.25s var(--ease) 0.05s',
             '&:last-child': {
                 flex: 1,
@@ -67,27 +56,20 @@ const useStyles = createUseStyles((theme: any) => ({
             },
         },
         [theme.media.sm]: {
-            paddingLeft: '1.25rem',
             '&:before': {
                 width: '0.75rem',
             },
         },
         [theme.media.md]: {
-            paddingLeft: '1.5rem',
             '&:before': {
                 width: '1rem',
             },
         },
     },
     list: {
-        position: 'relative',
-        padding: '0.5rem',
-        [theme.media.md]: {
-            padding: '0.75rem',
-        },
         '&:after': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             position: 'absolute',
             left: 0,
             bottom: 0,
@@ -100,13 +82,9 @@ const useStyles = createUseStyles((theme: any) => ({
         },
     },
     item: {
-        display: 'inline-block',
-        position: 'relative',
-        padding: '0.125em 0.5rem',
-        margin: '0.25em',
         '&:before': {
             content: '""',
-            backgroundColor: 'var(--color-blue)',
+            backgroundColor: 'var(--color-blue-500)',
             opacity: 0.05,
             position: 'absolute',
             left: 0,
@@ -119,7 +97,6 @@ const useStyles = createUseStyles((theme: any) => ({
             },
         },
         '& span': {
-            display: 'inline-block',
             transition: 'opacity 0.25s var(--ease), transform 0.25s var(--ease)',
             '.wrap:not(.active) &': {
                 opacity: 0,
@@ -149,17 +126,19 @@ export default function Block({ items, title }: BlockProps) {
 
     const classes = useStyles();
 
-    return <Trans className={`wrap ${classes.wrap}`} fade={false} stall={0.1}>
-        <h3 className={classes.title}>
+    return <Trans className={`relative wrap ${classes.wrap}`} fade={false} stall={0.1}>
+        <h3 className={`flex leading-none pl-4 relative text-xl tracking-widest uppercase sm:pl-5 md:pl-6 ${classes.title}`}>
             <span>
                 {title}
             </span>
-            <span />
+            <span className="inline-block relative" />
         </h3>
-        <ul className={classes.list}>
+        <ul className={`p-2 relative md:p-3 ${classes.list}`}>
             {items.split(',').map((item, key) =>
-                <li className={classes.item} key={key}>
-                    <span>{item}</span>
+                <li className={`inline-block m-1 px-2 py-0.5 relative ${classes.item}`} key={key}>
+                    <span className="inline-block">
+                        {item}
+                    </span>
                 </li>
             )}
         </ul>

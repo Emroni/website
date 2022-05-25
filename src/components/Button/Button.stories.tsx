@@ -6,7 +6,7 @@ const icons = { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter };
 
 export default {
     args: {
-        children: '',
+        children: 'Lorem ipsum',
         icon: undefined,
         image: undefined,
         url: 'http://emrekoc.io',
@@ -55,7 +55,6 @@ const Template = (args) =>
 
 export const Default = Template.bind({});
 Default.args = {
-    children: 'Lorem ipsum',
     icon: 'faGithub',
 };
 
@@ -65,6 +64,6 @@ Image.args = {
 };
 Image.parameters = {
     backgrounds: {
-        default: 'Blue 500',
+        default: 'blue-500',
     },
 };
