@@ -1,5 +1,5 @@
 interface ButtonProps {
-    children?: string;
+    children: string;
     icon?: IconDefinition;
     image?: string;
     url: string;

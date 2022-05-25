@@ -84,18 +84,18 @@ export default function Button({ children, icon, image, url }: ButtonProps) {
 
     const anchorClasses = clsx('inline-block relative whitespace-nowrap', classes.a, {
         [`${classes.image}`]: image,
-        [`${classes.text}`]: children,
+        [`${classes.text}`]: !image,
     });
 
     const spanClasses = clsx('inline-block', {
         'p-4': image,
-        'p-2 pl-8 sm:p-3 sm:pl-9 md:-4 md:pl-10': children,
+        'p-2 pl-8 sm:p-3 sm:pl-9 md:-4 md:pl-10': !image,
     });
 
     return <Trans className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
         <span className={spanClasses}>
             {image ? (
-                <img className="h-8 inline-block" src={image} />
+                <img alt={children} className="h-8 inline-block" src={image} />
             ) : <>
                 <FontAwesomeIcon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" icon={icon} />
                 {children}
