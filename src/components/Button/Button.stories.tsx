@@ -7,8 +7,10 @@ const icons = { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter };
 export default {
     args: {
         children: 'Lorem ipsum',
+        className: '',
         icon: undefined,
         image: undefined,
+        light: false,
         url: 'http://emrekoc.io',
     },
     argTypes: {
@@ -61,6 +63,8 @@ Default.args = {
 export const Image = Template.bind({});
 Image.args = {
     image: '/assets/clients/just.svg',
+    imageClassName: '',
+    light: true,
 };
 Image.parameters = {
     backgrounds: {
