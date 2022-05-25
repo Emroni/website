@@ -1,5 +1,4 @@
-import { Trans } from '@/components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon, Trans } from '@/components';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
@@ -91,12 +90,14 @@ export default function Button({ children, className, icon, image, imageClassNam
     const imageClasses = clsx('inline-block w-full', imageClassName);
 
     return <Trans className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
-        {icon && (
-            <FontAwesomeIcon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" icon={icon} />
-        )}
         {image ? (
             <img alt={children} className={imageClasses} src={image} />
-        ) : children}
+        ) : <>
+            {icon && (
+                <Icon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" name={icon} />
+            )}
+            {children}
+        </>}
         <span className="absolute inset-0" />
     </Trans>;
 

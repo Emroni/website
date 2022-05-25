@@ -1,7 +1,7 @@
 interface ButtonProps {
     children: any;
     className?: string;
-    icon?: IconDefinition;
+    icon?: string;
     image?: string;
     imageClassName?: string;
     light?: boolean;

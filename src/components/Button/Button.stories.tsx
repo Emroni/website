@@ -1,8 +1,5 @@
-import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import Button from './Button';
-
-const icons = { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter };
 
 export default {
     args: {
@@ -16,17 +13,16 @@ export default {
     argTypes: {
         icon: {
             control: {
-                labels: {
-                    faCodepen: 'faCodepen',
-                    faGithub: 'faGithub',
-                    faLinkedinIn: 'faLinkedinIn',
-                    faStackOverflow: 'faStackOverflow',
-                    faTwitter: 'faTwitter',
-                },
                 type: 'select',
             },
-            mapping: icons,
-            options: Object.keys(icons),
+            options: [
+                'codepen',
+                'envelope',
+                'github',
+                'linkedin',
+                'stackoverflow',
+                'twitter',
+            ],
         },
         image: {
             control: {
@@ -57,7 +53,7 @@ const Template = (args) =>
 
 export const Default = Template.bind({});
 Default.args = {
-    icon: 'faGithub',
+    icon: 'github',
 };
 
 export const Image = Template.bind({});
