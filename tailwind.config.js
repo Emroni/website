@@ -8,8 +8,8 @@ module.exports = {
             const colorEntries = Object.entries(theme('colors'))
                 .map(([name, value]) => ([`--color-${name}`, value]));
 
-            // Map columns to size variables
-            const sizeEntries = Object.entries(theme('columns'))
+            // Map screens to size variables
+            const sizeEntries = Object.entries(theme('screens'))
                 .map(([name, value]) => ([`--size-${name}`, value]));
 
             // Add to root
@@ -38,6 +38,11 @@ module.exports = {
         },
         fontFamily: {
             sans: ['Work Sans', 'sans-serif'],
+        },
+        extend: {
+            screens: {
+                xs: '320px',
+            },
         },
     },
 };

@@ -11,8 +11,8 @@ export function ThemeProvider({ children }) {
         // Get Tailwind config including customizations
         const twConfig = resolveConfig(tailwindConfig);
         
-        // Parse columns into media queries
-        const mediaEntries = Object.entries(twConfig.theme.columns)
+        // Parse screens into media queries
+        const mediaEntries = Object.entries(twConfig.theme.screens)
             .map(([column, size]) => [column, `@media (min-width: ${size})`]);
 
         // Parse as theme
