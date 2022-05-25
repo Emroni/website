@@ -2,14 +2,6 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
     link: {
-        '&, & > span': {
-            display: 'inline-block',
-            position: 'relative',
-        },
-        '&, &:active, &:focus, &:hover, &:visited': {
-            color: 'var(--color-black)',
-            textDecoration: 'none',
-        },
         '&:before, &:after, & > span:after': {
             content: '""',
             backgroundColor: 'var(--color-black)',
@@ -94,8 +86,10 @@ export default function Link({ children, href }: LinkProps) {
 
     const classes = useStyles();
 
-    return <a href={href} className={classes.link} target="_blank" rel="noopener noreferrer">
-        <span>{children}</span>
+    return <a href={href} className={`inline-block relative ${classes.link}`} target="_blank" rel="noopener noreferrer">
+        <span className="inline-block relative">
+            {children}
+        </span>
     </a>;
 
 }

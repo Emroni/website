@@ -1,24 +1,61 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
     content: [
         './src/**/*.{css,html,js,jsx,ts,tsx}'
     ],
+    plugins: [
+        ({ addBase, theme }) => {
+            // Map colors to variables
+            const colorEntries = Object.entries(theme('colors'))
+                .map(([name, value]) => ([`--color-${name}`, value]));
+
+            // Map screens to size variables
+            const sizeEntries = Object.entries(theme('screens'))
+                .map(([name, value]) => ([`--size-${name}`, value]));
+
+            // Add to root
+            addBase({
+                ':root': {
+                    ...Object.fromEntries(colorEntries),
+                    ...Object.fromEntries(sizeEntries),
+                },
+            });
+        },
+    ],
     theme: {
         colors: {
             'black': '#000000',
-            'blue-50': '#cfd7dc',
-            'blue-100': '#8699a6',
-            'blue-200': '#627b8c',
-            'blue-300': '#4c677b',
-            'blue-400': '#3a586e',
-            'blue-500': '#193c56',
-            'blue-600': '#173a52',
+            'blue-50': '#CFD7DC',
+            'blue-100': '#8699A6',
+            'blue-200': '#627B8C',
+            'blue-300': '#4C677B',
+            'blue-400': '#3A586E',
+            'blue-500': '#193C56',
+            'blue-600': '#173A52',
             'blue-700': '#143146',
-            'blue-800': '#11293c',
-            'blue-900': '#0e2433',
-            'white': '#ffffff',
+            'blue-800': '#11293C',
+            'blue-900': '#0E2433',
+            'transparent': 'transparent',
+            'white': '#FFFFFF',
         },
         fontFamily: {
             sans: ['Work Sans', 'sans-serif'],
+        },
+        screens: {
+            xs: '475px',
+            ...defaultTheme.screens,
+        },
+        extend: {
+            letterSpacing: {
+                huge: '0.1875em',
+            },
+            strokeWidth: {
+                '1.5': '6px',
+                '2': '8px',
+                '3': '12px',
+                '4': '16px',
+            },
         },
     },
 };
