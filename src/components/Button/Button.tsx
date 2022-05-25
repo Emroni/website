@@ -3,15 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles((theme: any) => ({
+const useStyles = createUseStyles({
     a: {
-        textDecoration: 'none',
-        display: 'inline-block',
-        position: 'relative',
-        whiteSpace: 'nowrap',
-        '& span': {
-            display: 'inline-block',
-        },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
                 content: '""',
@@ -70,39 +63,6 @@ const useStyles = createUseStyles((theme: any) => ({
         },
     },
     text: {
-        '&, &:active, &:focus, &:hover, &:visited': {
-            color: 'var(--color-black)',
-        },
-        '& span': {
-            padding: '0.5em',
-            paddingLeft: '2em',
-        },
-        '& svg': {
-            height: '16px',
-            left: '1em',
-            position: 'absolute',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '16px',
-        },
-        [theme.media.sm]: {
-            '& span': {
-                padding: '0.75em',
-                paddingLeft: '2.25em',
-            },
-            '& svg': {
-                left: '1.125em',
-            },
-        },
-        [theme.media.lg]: {
-            '& span': {
-                padding: '1em',
-                paddingLeft: '2.5em',
-            },
-            '& svg': {
-                left: '1.25em',
-            },
-        },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
                 backgroundColor: 'var(--color-black)',
@@ -110,36 +70,34 @@ const useStyles = createUseStyles((theme: any) => ({
         },
     },
     image: {
-        '& span': {
-            padding: '1em',
-        },
         '@media (hover)': {
             '&:before, &:after, span:before, span:after': {
                 backgroundColor: 'var(--color-white)',
             },
         },
     },
-    img: {
-        display: 'inline-block',
-        height: '2em',
-    },
-}));
+});
 
 export default function Button({ children, icon, image, url }: ButtonProps) {
 
     const classes = useStyles();
 
-    const anchorClasses = clsx(classes.a, {
+    const anchorClasses = clsx('inline-block relative whitespace-nowrap', classes.a, {
         [`${classes.image}`]: image,
         [`${classes.text}`]: children,
     });
 
+    const spanClasses = clsx('inline-block', {
+        'p-4': image,
+        'p-2 pl-8 sm:p-3 sm:pl-9 md:-4 md:pl-10': children,
+    });
+
     return <Trans className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
-        <span>
+        <span className={spanClasses}>
             {image ? (
-                <img className={classes.img} src={image} />
+                <img className="h-8 inline-block" src={image} />
             ) : <>
-                <FontAwesomeIcon icon={icon} />
+                <FontAwesomeIcon className="h-4 w-4 left-2 absolute top-3 sm:left-3 sm:top-4 md:left-4" icon={icon} />
                 {children}
             </>}
         </span>

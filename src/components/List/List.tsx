@@ -5,10 +5,6 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
     list: {
-        lineHeight: 1.25,
-        marginLeft: '-1em',
-        paddingLeft: '0.75em',
-        position: 'relative',
         '&:before': {
             backgroundColor: 'currentColor',
             content: '""',
@@ -63,7 +59,7 @@ function generateDelays() {
 export default function List({ children, className, tag = 'ul' }: ListProps) {
 
     const classes = useStyles();
-    const listClasses = clsx(className, classes.list);
+    const listClasses = clsx('-ml-4 pl-3 relative', className, classes.list);
 
     return <Trans className={listClasses} fade={false} stall={0.25} tag={tag}>
         {children}
