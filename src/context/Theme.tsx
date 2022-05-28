@@ -1,30 +1,16 @@
 import { useEffect, useState } from 'react';
 import { ThemeProvider as JssProvider } from 'react-jss';
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../tailwind.config.js';
 
 export function ThemeProvider({ children }) {
 
-    const [theme, setTheme] = useState(null);
+    const [ready, setReady] = useState(false);
 
     useEffect(() => {
-        // Get Tailwind config including customizations
-        const twConfig = resolveConfig(tailwindConfig);
-        
-        // Parse screens into media queries
-        const mediaEntries = Object.entries(twConfig.theme.screens)
-            .map(([column, size]) => [column, `@media (min-width: ${size})`]);
-
-        // Parse as theme
-        const newTheme = {
-            ...twConfig.theme,
-            media: Object.fromEntries(mediaEntries),
-        };
-        setTheme(newTheme);
+        setReady(true);
     }, []);
 
-    return theme ? (
-        <JssProvider theme={theme}>
+    return ready ? (
+        <JssProvider theme={{}}>
             {children}
         </JssProvider>
     ) : null;
