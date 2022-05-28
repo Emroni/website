@@ -6,6 +6,7 @@ export function ThemeProvider({ children }) {
     const [ready, setReady] = useState(false);
 
     useEffect(() => {
+        // Wait for pre-animation styles to be applied
         setReady(true);
     }, []);
 
