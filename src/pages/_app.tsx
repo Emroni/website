@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Script from 'next/script';
-import { ThemeProvider, TransitionProvider } from '../providers';
+import { ThemeProvider, TransitionProvider } from '../context';
 import '../styles/index.css';
 
 export default function App({ Component, pageProps }) {
