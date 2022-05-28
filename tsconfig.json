@@ -20,14 +20,14 @@
         "jsx": "preserve",
         "baseUrl": "./src",
         "paths": {
+            "@/context": [
+                "context"
+            ],
             "@/components": [
                 "components"
             ],
             "@/partials": [
                 "partials"
-            ],
-            "@/providers": [
-                "providers"
             ]
         }
     },
