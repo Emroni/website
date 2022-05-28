@@ -1,7 +1,7 @@
 import { Trans } from '@/components';
 import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles((theme: any) => ({
+const useStyles = createUseStyles({
     wrap: {
         '&:before, &:after': {
             content: '""',
@@ -55,12 +55,12 @@ const useStyles = createUseStyles((theme: any) => ({
                 transform: 'translateX(-0.5em)',
             },
         },
-        [theme.media.sm]: {
+        '@media (min-width: 640)': {
             '&:before': {
                 width: '0.75rem',
             },
         },
-        [theme.media.md]: {
+        '@media (min-width: 768px)': {
             '&:before': {
                 width: '1rem',
             },
@@ -105,7 +105,7 @@ const useStyles = createUseStyles((theme: any) => ({
         },
         ...generateDelays(),
     },
-}));
+});
 
 function generateDelays() {
     const children = {};

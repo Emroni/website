@@ -1,4 +1,4 @@
-import { ThemeProvider, TransitionProvider } from '@/providers';
+import { ThemeProvider, TransitionProvider } from '@/context';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../tailwind.config.js';
 import '../src/styles/index.css';
