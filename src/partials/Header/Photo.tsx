@@ -26,7 +26,7 @@ export default function Photo() {
 
     const [loading, setLoading] = useState(true);
     const classes = useStyles();
-    const src = '/assets/emre-koc.png';
+    const src = '/assets/emre-koc.jpg';
 
     useEffect(() => {
         const image = new window.Image();
