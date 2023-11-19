@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
     return <>
         <Head>
             <meta name="description" content="Full Stack Developer" />
-            <meta property="og:url" content="https://emroni.com" />
+            <meta property="og:url" content="https://emrekoc.io" />
             <meta property="og:description" content="Full Stack Developer" />
             <meta property="og:site_name" content="Emre Koc" />
             <meta property="og:title" content="Emre Koc" />
