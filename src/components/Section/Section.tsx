@@ -1,5 +1,5 @@
-import { SectionBackground, SectionHeading } from '@/components';
 import clsx from 'clsx';
+import { SectionBackground, SectionHeading } from 'components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({

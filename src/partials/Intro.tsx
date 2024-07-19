@@ -1,4 +1,4 @@
-import { Section, Trans } from '@/components';
+import { Section, Trans } from 'components';
 
 export default function Intro() {
 

@@ -1,5 +1,5 @@
-import { Icon, Trans } from '@/components';
 import clsx from 'clsx';
+import { Icon, Trans } from 'components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({

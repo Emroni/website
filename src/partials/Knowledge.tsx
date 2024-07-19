@@ -1,4 +1,4 @@
-import { Block, Link, Section, Trans } from '@/components';
+import { Block, Link, Section, Trans } from 'components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles((theme: any) => ({

@@ -1,5 +1,5 @@
-import { Trans } from '@/components';
 import clsx from 'clsx';
+import { Trans } from 'components';
 import { useEffect, useState } from 'react';
 import { createUseStyles } from 'react-jss';
 

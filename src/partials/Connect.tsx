@@ -1,4 +1,4 @@
-import { Button, Section, Trans } from '@/components';
+import { Button, Section, Trans } from 'components';
 
 const channels = [
     {
