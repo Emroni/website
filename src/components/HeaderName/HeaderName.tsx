@@ -28,7 +28,7 @@ function generateDelays() {
     return children;
 }
 
-export default function Name() {
+export default function HeaderName() {
 
     const classes = useStyles();
 
