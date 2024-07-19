@@ -92,7 +92,9 @@ export default function Button({ children, className, icon, image, imageClassNam
 
     return <Transition className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
         {image ? (
-            <img alt={children} className={imageClasses} src={image} />
+            <picture>
+                <img alt={children} className={imageClasses} src={image} />
+            </picture>
         ) : <>
             {icon && (
                 <Icon className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4" name={icon} />

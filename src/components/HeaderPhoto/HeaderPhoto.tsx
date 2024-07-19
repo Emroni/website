@@ -41,7 +41,9 @@ export default function HeaderPhoto() {
         <Transition className="absolute fill-transparent h-full left-0 top-0 w-full z-10" fade={false} tag="svg">
             <circle className={`opacity-0 stroke-1.5 stroke-blue-500 xs:stroke-2 sm:stroke-3 xl:stroke-4 ${classes.border}`} cx="50%" cy="50%" r="50%" />
         </Transition>
-        <img alt="Emre Koc" className={`absolute inset-0 ${imageClasses}`} src={loading ? '' : src} />
+        <picture>
+            <img alt="Emre Koc" className={`absolute inset-0 ${imageClasses}`} src={loading ? '' : src} />
+        </picture>
     </div>;
 
 }

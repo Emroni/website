@@ -19,6 +19,8 @@ export default function Icon({ className, name }: IconProps) {
         return <FontAwesomeIcon className={className} icon={faIcon} />;
     }
 
-    return <img alt={name} className={className} src={`/assets/icons/${name}.svg`} />;
+    return <picture>
+        <img alt={name} className={className} src={`/assets/icons/${name}.svg`} />
+    </picture>;
 
 }
