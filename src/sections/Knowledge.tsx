@@ -1,21 +1,4 @@
 import { Block, Link, Section, Transition } from 'components';
-import { createUseStyles } from 'react-jss';
-
-const useStyles = createUseStyles((theme: any) => ({
-    blocks: {
-        display: 'grid',
-        gap: '1em',
-        margin: '0 -1em 1em',
-        [theme.media.sm]: {
-            gap: '1.5em',
-            margin: '0 -1.25em 1.5em',
-        },
-        [theme.media.md]: {
-            gap: '2em',
-            margin: '0 -1.5em 2em',
-        },
-    },
-}));
 
 export default function Knowledge() {
 
