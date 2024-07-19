@@ -1,5 +1,3 @@
-import React from 'react';
-
 const colorGroups = [
     [
         'bg-black',
@@ -61,31 +59,29 @@ export const Colors = () =>
         ))}
     </div>;
 
-export const Typography = () => <>
-    <table>
-        <thead>
-            <tr>
-                <th />
+export const Typography = () => <table>
+    <thead>
+        <tr>
+            <th />
+            {fontWeights.map((weight, w) => (
+                <th className="text-left" key={w}>
+                    {weight}
+                </th>
+            ))}
+        </tr>
+    </thead>
+    <tbody>
+        {fontSizes.map((size, s) => (
+            <tr className="align-top hover:bg-gray-100" key={s}>
+                <td className="pr-4 pb-2 whitespace-nowrap">
+                    {size}
+                </td>
                 {fontWeights.map((weight, w) => (
-                    <th className="text-left" key={w}>
-                        {weight}
-                    </th>
+                    <td className={`pb-2 ${size} ${weight}`} key={`${s}-${w}`}>
+                        Lorem ipsum
+                    </td>
                 ))}
             </tr>
-        </thead>
-        <tbody>
-            {fontSizes.map((size, s) => (
-                <tr className="align-top hover:bg-gray-100" key={s}>
-                    <td className="pr-4 pb-2 whitespace-nowrap">
-                        {size}
-                    </td>
-                    {fontWeights.map((weight, w) => (
-                        <td className={`pb-2 ${size} ${weight}`} key={`${s}-${w}`}>
-                            Lorem ipsum
-                        </td>
-                    ))}
-                </tr>
-            ))}
-        </tbody>
-    </table>
-</>;
+        ))}
+    </tbody>
+</table>;
