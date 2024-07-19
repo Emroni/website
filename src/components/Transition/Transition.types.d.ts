@@ -1,4 +1,4 @@
-interface TransProps {
+interface TransitionProps {
     [prop: string]: any;
     children?: any;
     className?: string;

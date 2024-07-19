@@ -1,10 +1,10 @@
 import React, { createContext, useContext } from 'react';
 
-const TransitionContext = createContext({});
+const TransitionsContext = createContext({});
 
-export const useTransition = () => useContext(TransitionContext);
+export const useTransitions = () => useContext(TransitionsContext);
 
-export class TransitionProvider extends React.Component<TransitionProviderProps, TransitionState> {
+export class TransitionsProvider extends React.Component<TransitionsProviderProps, TransitionsState> {
 
     resizeTimeout: any;
     nextTimeout: any;
@@ -107,9 +107,9 @@ export class TransitionProvider extends React.Component<TransitionProviderProps,
     render() {
         const { children } = this.props as any;
 
-        return <TransitionContext.Provider value={this.state}>
+        return <TransitionsContext.Provider value={this.state}>
             {children}
-        </TransitionContext.Provider>;
+        </TransitionsContext.Provider>;
     }
 
 }

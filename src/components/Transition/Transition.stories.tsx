@@ -1,5 +1,5 @@
 import React from 'react';
-import Trans from './Trans';
+import Transition from './Transition';
 
 export default {
     args: {
@@ -9,11 +9,11 @@ export default {
         stall: 0,
         tag: 'div',
     },
-    component: Trans,
-    title: 'Components/Trans',
+    component: Transition,
+    title: 'Components/Transition',
 };
 
 const Template = (args) =>
-    <Trans {...args} />;
+    <Transition {...args} />;
 
 export const Default = Template.bind({});

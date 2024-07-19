@@ -1,4 +1,4 @@
-import { Button, Section, Trans } from 'components';
+import { Button, Section, Transition } from 'components';
 
 const channels = [
     {
@@ -41,10 +41,10 @@ const channels = [
 export default function Connect() {
 
     return <Section heading="Connect">
-        <Trans tag="p">
+        <Transition tag="p">
             For questions or inquiries, feel free to contact me through any of the channels below.
-        </Trans>
-        <Trans tag="ul" className="gap-2 grid grid-cols-2 -mx-2 my-4 sm:-mx-3 sm:my-6 md:gap-4 md:-mx-4 md:my-8 lg:grid-cols-4">
+        </Transition>
+        <Transition tag="ul" className="gap-2 grid grid-cols-2 -mx-2 my-4 sm:-mx-3 sm:my-6 md:gap-4 md:-mx-4 md:my-8 lg:grid-cols-4">
             {channels.map((channel, index) => (
                 <li key={index}>
                     <Button icon={channel.icon} url={channel.url}>
@@ -52,7 +52,7 @@ export default function Connect() {
                     </Button>
                 </li>
             ))}
-        </Trans>
+        </Transition>
     </Section>;
 
 }

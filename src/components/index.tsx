@@ -6,4 +6,4 @@ export { default as List } from './List/List';
 export { default as Section } from './Section/Section';
 export { default as SectionBackground } from './SectionBackground/SectionBackground';
 export { default as SectionHeading } from './SectionHeading/SectionHeading';
-export { default as Trans } from './Trans/Trans';
+export { default as Transition } from './Transition/Transition';

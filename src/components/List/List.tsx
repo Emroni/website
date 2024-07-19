@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { Trans } from 'components';
 import { createUseStyles } from 'react-jss';
+import Transition from '../Transition/Transition';
 
 const useStyles = createUseStyles({
     list: {
@@ -63,7 +63,7 @@ export default function List({ children, className, tag = 'ul', title }: ListPro
     const classes = useStyles();
     const listClasses = clsx('-ml-4 pl-3 relative', className, classes.list);
 
-    return <Trans className={listClasses} fade={false} stall={0.25} tag={tag}>
+    return <Transition className={listClasses} fade={false} stall={0.25} tag={tag}>
         {title && (
             <li className="title">
                 <h4>
@@ -72,6 +72,6 @@ export default function List({ children, className, tag = 'ul', title }: ListPro
             </li>
         )}
         {children}
-    </Trans>;
+    </Transition>;
 
 }

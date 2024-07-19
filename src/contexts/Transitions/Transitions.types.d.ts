@@ -1,8 +1,8 @@
-interface TransitionProviderProps {
+interface TransitionsProviderProps {
     children: any;
 }
 
-interface TransitionState {
+interface TransitionsState {
     add(ref: any, stall: number, callback: CallableFunction): void;
     current: any;
     items: any[];

@@ -1,5 +1,5 @@
-import { Trans } from 'components';
 import { createUseStyles } from 'react-jss';
+import Transition from '../Transition/Transition';
 
 const useStyles = createUseStyles({
     background: {
@@ -17,6 +17,6 @@ export default function SectionBackground() {
 
     const classes = useStyles();
 
-    return <Trans className={`absolute h-0 left-1/2 -top-4 w-screen -z-10 sm:-top-6 md:-top-8 lg:-top-10 xl:-top-12 ${classes.background}`} fade={false}/>;
+    return <Transition className={`absolute h-0 left-1/2 -top-4 w-screen -z-10 sm:-top-6 md:-top-8 lg:-top-10 xl:-top-12 ${classes.background}`} fade={false}/>;
 
 }

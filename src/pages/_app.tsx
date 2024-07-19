@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'contexts/Theme/Theme';
-import { TransitionProvider } from 'contexts/Transition/Transition';
+import { TransitionsProvider } from 'contexts/Transitions/Transitions';
 import Head from 'next/head';
 import Script from 'next/script';
 import '../styles/index.css';
@@ -21,9 +21,9 @@ export default function App({ Component, pageProps }) {
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-QP155SXRPR" />
         <Script src="/assets/gtag.js" />
         <ThemeProvider>
-            <TransitionProvider>
+            <TransitionsProvider>
                 <Component {...pageProps} />
-            </TransitionProvider>
+            </TransitionsProvider>
         </ThemeProvider>
     </>;
 

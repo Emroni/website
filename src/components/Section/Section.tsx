@@ -1,6 +1,7 @@
 import clsx from 'clsx';
-import { SectionBackground, SectionHeading } from 'components';
 import { createUseStyles } from 'react-jss';
+import SectionBackground from '../SectionBackground/SectionBackground';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const useStyles = createUseStyles({
     container: {

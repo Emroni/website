@@ -1,4 +1,4 @@
-import { Link, List, Section, Trans } from 'components';
+import { Link, List, Section, Transition } from 'components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -17,21 +17,21 @@ export default function Experience() {
 
     return <Section heading="Work Experience">
         <div>
-            <Trans className={`text-blue-500 ${classes.title}`} fade={false} tag="h3">2018 - Present | Freelancer</Trans>
+            <Transition className={`text-blue-500 ${classes.title}`} fade={false} tag="h3">2018 - Present | Freelancer</Transition>
             <List className="mt-4">
                 <li>Developed frontend of public websites and internal portals in React, making use of frameworks like Material-UI and Next.js</li>
                 <li>Developed backend systems in PHP with Symfony, Laravel and Zend frameworks, using Twig and Blade templating engines</li>
                 <li>Built custom content management systems for managing data in SQL databases</li>
                 <li>Expanded, restructured and implemented speed improvements in existing applications</li>
                 <li>Built automation tools for generating APIs for Azure Functions based on routines export from SQL database</li>
-                <li>Implemented extensive SEO improvements using microdata and JSON-LD, based on Schema.org's vocabulary</li>
+                <li>Implemented extensive SEO improvements using microdata and JSON-LD, based on Schema.org&apos;s vocabulary</li>
                 <li>Designed mockups and wireframes in Sketch and Illustrator</li>
                 <li>Mentored juniors in React and development in general on weekly basis</li>
                 <li>Hosted monthly developer meetups, giving talks about a career in web development</li>
             </List>
         </div>
         <div className="mt-8">
-            <Trans className={`text-blue-500 ${classes.title}`} fade={false} tag="h3">2009 - 2018 | Full-time @ Just</Trans>
+            <Transition className={`text-blue-500 ${classes.title}`} fade={false} tag="h3">2009 - 2018 | Full-time @ Just</Transition>
             <List className="mt-4" title="2014 | Digital Lead">
                 <li>Led department of frontend and backend development, responsible for quality control of all deliverables</li>
                 <li>Acted as bridge between project management and development team by handling all technical questions by project mangers, clients and other agencies</li>
@@ -56,9 +56,9 @@ export default function Experience() {
                 <li>Built and implemented components and full websites in Flash from designs in Photoshop</li>
             </List>
         </div>
-        <Trans className="mt-4 sm:mt-6 md:mt-8" tag="p">
+        <Transition className="mt-4 sm:mt-6 md:mt-8" tag="p">
             <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
-        </Trans>
+        </Transition>
     </Section>;
 
 }

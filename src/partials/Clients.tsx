@@ -1,4 +1,4 @@
-import { Button, Section, Trans } from 'components';
+import { Button, Section, Transition } from 'components';
 
 const clients = [
     {
@@ -78,7 +78,7 @@ const clients = [
 export default function Clients() {
 
     return <Section background heading="Clients">
-        <Trans className="gap-4 grid grid-cols-2 items-center -mx-4 md:gap-6 md:grid-cols-3" tag="ul">
+        <Transition className="gap-4 grid grid-cols-2 items-center -mx-4 md:gap-6 md:grid-cols-3" tag="ul">
             {clients.map((client, index) => (
                 <li key={index}>
                     <Button image={`/assets/clients/${client.image}`} imageClassName={client.imageClassName} light url={client.url}>
@@ -86,7 +86,7 @@ export default function Clients() {
                     </Button>
                 </li>
             ))}
-        </Trans>
+        </Transition>
     </Section>;
 
 }

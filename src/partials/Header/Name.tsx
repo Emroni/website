@@ -1,4 +1,4 @@
-import { Trans } from 'components';
+import { Transition } from 'components';
 import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
@@ -47,7 +47,7 @@ export default function Name() {
         }));
 
     return <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-        <Trans className={`block ${classes.svg}`} fade={false} stall={1} tag="svg">
+        <Transition className={`block ${classes.svg}`} fade={false} stall={1} tag="svg">
             <defs>
                 <clipPath id="top-clip">
                     {topClip.map((item, index) =>
@@ -62,7 +62,7 @@ export default function Name() {
                 <text className="font-light tracking-huge uppercase" clipPath="url(#top-clip)" x="-1%" y="55%">Emre Koc</text>
                 <text className={`font-semibold tracking-huge uppercase ${classes.bottom}`} clipPath="url(#bottom-clip)" y="95%">Full Stack Developer</text>
             </g>
-        </Trans>
+        </Transition>
     </h1>;
 
 }

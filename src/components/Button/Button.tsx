@@ -1,6 +1,7 @@
 import clsx from 'clsx';
-import { Icon, Trans } from 'components';
 import { createUseStyles } from 'react-jss';
+import Icon from '../Icon/Icon';
+import Transition from '../Transition/Transition';
 
 const useStyles = createUseStyles({
     a: {
@@ -89,7 +90,7 @@ export default function Button({ children, className, icon, image, imageClassNam
 
     const imageClasses = clsx('inline-block w-full', imageClassName);
 
-    return <Trans className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
+    return <Transition className={anchorClasses} href={url} tag="a" target="_blank" rel="noopener noreferrer">
         {image ? (
             <img alt={children} className={imageClasses} src={image} />
         ) : <>
@@ -99,6 +100,6 @@ export default function Button({ children, className, icon, image, imageClassNam
             {children}
         </>}
         <span className="absolute inset-0" />
-    </Trans>;
+    </Transition>;
 
 }

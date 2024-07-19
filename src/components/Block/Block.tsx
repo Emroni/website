@@ -1,5 +1,5 @@
-import { Trans } from 'components';
 import { createUseStyles } from 'react-jss';
+import Transition from '../Transition/Transition';
 
 const useStyles = createUseStyles({
     wrap: {
@@ -126,7 +126,7 @@ export default function Block({ items, title }: BlockProps) {
 
     const classes = useStyles();
 
-    return <Trans className={`relative wrap ${classes.wrap}`} fade={false} stall={0.1}>
+    return <Transition className={`relative wrap ${classes.wrap}`} fade={false} stall={0.1}>
         <h3 className={`flex leading-none pl-4 relative text-xl tracking-widest uppercase sm:pl-5 md:pl-6 ${classes.title}`}>
             <span>
                 {title}
@@ -142,6 +142,6 @@ export default function Block({ items, title }: BlockProps) {
                 </li>
             )}
         </ul>
-    </Trans>;
+    </Transition>;
 
 }
