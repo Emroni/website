@@ -18,17 +18,17 @@ export default function Transition({ children, className, fade = true, stall = 0
     const [ready, setReady] = useState(false);
     const classes = useStyles();
     const ref = useRef();
-    const transition: any = useTransitions();
+    const transitions = useTransitions();
 
     useEffect(() => {
         if (!ready) {
             setReady(true);
-            transition.add(ref, stall, () => setActive(true));
+            transitions.add(ref, stall, () => setActive(true));
         }
     }, [
         ready,
         stall,
-        transition,
+        transitions,
     ]);
 
     const classNames = clsx(className, {

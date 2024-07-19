@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 
-const TransitionsContext = createContext({});
+const TransitionsContext = createContext<TransitionsState>({} as TransitionsState);
 
 export const useTransitions = () => useContext(TransitionsContext);
 
