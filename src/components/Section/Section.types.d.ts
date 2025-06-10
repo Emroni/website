@@ -1,5 +1,9 @@
 interface SectionProps {
     background?: boolean;
-    children?: any;
+    children?: React.ReactNode;
     heading: string;
+}
+
+interface SectionContainerProps {
+    $background?: boolean;
 }
