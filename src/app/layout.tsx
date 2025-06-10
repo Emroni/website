@@ -1,6 +1,6 @@
 import { TransitionsProvider } from '@/contexts/Transitions/Transitions';
 import '@fontsource-variable/work-sans';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Registry from './registry';
 import './styles.css';
 
@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     // property="og:type" content="website" />
     // property="og:image" content="/assets/share.png" />
     // name="theme-color" content="#ffffff" />
+};
+
+export const viewport: Viewport = {
+    initialScale: 1,
+    width: 'device-width',
 };
 
 export default function RootLayout({ children }: LayoutProps) {

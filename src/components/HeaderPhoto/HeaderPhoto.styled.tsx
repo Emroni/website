@@ -97,4 +97,5 @@ export const Picture = styled.picture<HeaderPhotoPictureProps>`
 
 export const Img = styled.img`
     max-width: 100%;
+    min-height: 100%;
 `;

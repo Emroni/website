@@ -32,20 +32,20 @@ export const Heading = styled.h1`
 
 export const Svg = styled.svg`
     display: block;
-    height: 68px;
-    width: 336px;
+    height: 1.3875em;
+    width: 7em;
 `;
 
 export const Top = styled.text`
-    letter-spacing: 9px;
-    text-transform: uppercase;
     font-weight: 100;
+    letter-spacing: 0.1875em;
+    text-transform: uppercase;
 `;
 
 export const Bottom = styled.text`
-    font-size: 18px;
+    font-size: 0.375em;
     font-weight: 600;
-    letter-spacing: 3.5px;
+    letter-spacing: 0.1875em;
     text-transform: uppercase;
 `;
 
