@@ -1,7 +1,8 @@
-import { Layout } from '@/components';
 import { TransitionsProvider } from '@/contexts/Transitions/Transitions';
 import '@fontsource-variable/work-sans';
 import type { Metadata } from 'next';
+import Registry from './registry';
+import './styles.css';
 
 export const metadata: Metadata = {
     title: 'Emre Koc - Full Stack Developer',
@@ -18,8 +19,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps) {
     return (
-        <Layout>
-            <TransitionsProvider>{children}</TransitionsProvider>
-        </Layout>
+        <html lang="en">
+            <body>
+                <Registry>
+                    <TransitionsProvider>{children}</TransitionsProvider>
+                </Registry>
+            </body>
+        </html>
     );
 }
