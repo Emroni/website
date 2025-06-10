@@ -1,4 +1,5 @@
 import { Layout } from '@/components';
+import { TransitionsProvider } from '@/contexts/Transitions/Transitions';
 import '@fontsource-variable/work-sans';
 import type { Metadata } from 'next';
 
@@ -16,5 +17,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps) {
-    return <Layout>{children}</Layout>;
+    return (
+        <Layout>
+            <TransitionsProvider>{children}</TransitionsProvider>
+        </Layout>
+    );
 }
