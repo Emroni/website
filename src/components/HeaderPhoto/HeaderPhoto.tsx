@@ -1,56 +1,25 @@
 'use client';
 import { Transition } from '@/components';
-import { useState } from 'react';
-
-const classes = {
-    svg: `{}`,
-    border: `{
-        strokeDasharray: '0, 157%',
-        '$svg.active &': {
-            opacity: 1,
-            strokeDasharray: '157%, 0',
-            transition: 'stroke-dasharray 0.5s var(--ease)',
-        },
-    }`,
-    image: `{
-        transition: 'opacity 0.5s var(--ease) 0.5s, transform 0.5s var(--ease) 0.5s',
-        '$svg:not(.active) + &, &.loading': {
-            opacity: 0,
-            transform: 'scale(0.95)',
-        },
-    }`,
-};
+import { useEffect, useState } from 'react';
+import { Border, Container, Img, Picture, Svg } from './HeaderPhoto.styled';
 
 export default function HeaderPhoto() {
-    const [loading /* , setLoading */] = useState(true);
-    const src = '/assets/emre-koc.jpg';
+    const [src, setSrc] = useState<string | undefined>(undefined);
 
-    // useEffect(() => {
-    //     const image = new window.Image();
-    //     image.onload = () => setLoading(false);
-    //     image.src = src;
-    // }, [src]);
-
-    const imageClasses = '';
-    // const imageClasses = clsx(classes.image, {
-    //     loading,
-    // });
+    useEffect(() => {
+        const image = new window.Image();
+        image.onload = () => setSrc(image.src);
+        image.src = '/assets/emre-koc.jpg';
+    }, []);
 
     return (
-        <div className="h-14 mr-6 overflow-hidden relative rounded-full w-14 xs:h-20 xs:mr-8 xs:w-20 sm:h-24 sm:mr-12 sm:w-24 md:h-28 md:mr-14 md:w-28 lg:h-32 lg:mr-14 lg:w-32 xl:h-36 xl:mr-16 xl:w-36">
-            <Transition className="absolute fill-transparent h-full left-0 top-0 w-full z-10" fade={false}>
-                <svg className={classes.svg}>
-                    <circle
-                        className={`opacity-0 stroke-1.5 stroke-blue-500 xs:stroke-2 sm:stroke-3 xl:stroke-4 ${classes.border}`}
-                        cx="50%"
-                        cy="50%"
-                        r="50%"
-                    />
-                </svg>
+        <Container>
+            <Transition component={Svg} fade={false}>
+                <Border cx="50%" cy="50%" r="50%" />
             </Transition>
-            <picture>
-                <img alt="Emre Koc" className={`absolute inset-0 ${imageClasses}`} src={loading ? undefined : src} />
-            </picture>
-        </div>
+            <Picture $loading={!src}>
+                <Img alt="Emre Koc" src={src} />
+            </Picture>
+        </Container>
     );
 }

@@ -22,3 +22,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.fade {
+    transition: opacity 0.5s var(--ease);
+
+    &:not(.active) {
+        opacity: 0;
+    }
+}
