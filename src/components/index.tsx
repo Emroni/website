@@ -4,6 +4,7 @@ export { default as Header } from './Header/Header';
 export { default as HeaderName } from './HeaderName/HeaderName';
 export { default as HeaderPhoto } from './HeaderPhoto/HeaderPhoto';
 export { default as Icon } from './Icon/Icon';
+export { default as Image } from './Image/Image';
 export { default as Link } from './Link/Link';
 export { default as List } from './List/List';
 export { default as Section } from './Section/Section';
