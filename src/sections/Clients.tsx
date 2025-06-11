@@ -1,75 +1,76 @@
-import { Button, Section, Transition } from '@/components';
+'use client';
+import { Button, Image, Section, Transition } from '@/components';
 
 const clients = [
     {
         image: 'just.svg',
-        imageClassName: 'h-6',
+        imageHeight: 24,
         name: 'Just',
         url: 'https://wearejust.com/',
     },
     {
         image: 'noderelate.svg',
-        imageClassName: 'h-10',
+        imageHeight: 40,
         name: 'NodeRelate',
         url: 'https://noderelate.com/',
     },
     {
         image: 'watch4media.svg',
-        imageClassName: 'h-9',
+        imageHeight: 36,
         name: 'Watch4Media',
         url: 'https://watch4media.nl/',
     },
     {
         image: 'marathon.svg',
-        imageClassName: 'h-10',
+        imageHeight: 40,
         name: 'Marathon',
         url: 'https://www.marathonstudio.cz/english',
     },
     {
         image: 'kromatic.svg',
-        imageClassName: 'h-10',
+        imageHeight: 40,
         name: 'Kromatic',
         url: 'https://kromatic.com/',
     },
     {
         image: 'iglu.png',
-        imageClassName: 'h-10',
+        imageHeight: 40,
         name: 'Iglu',
         url: 'https://iglu.net/',
     },
     {
         image: 'siccode.svg',
-        imageClassName: 'h-7',
+        imageHeight: 28,
         name: 'SIC Code',
         url: 'https://siccode.com/',
     },
     {
         image: 'pressive.png',
-        imageClassName: 'h-10',
+        imageHeight: 40,
         name: 'Pressive',
         url: 'https://pressiveweb.com/',
     },
     {
         image: 'reelmetrics.svg',
-        imageClassName: 'h-10',
+        imageHeight: 40,
         name: 'ReelMetrics',
         url: 'https://www.reelmetrics.com/',
     },
     {
         image: 'tothepoint.png',
-        imageClassName: '',
+        imageHeight: null,
         name: 'To The Point',
         url: 'https://www.tothepoint.digital/',
     },
     {
         image: 'nijgh.png',
-        imageClassName: 'h-16',
+        imageHeight: 64,
         name: 'Nijgh',
         url: 'https://www.nijgh.com/',
     },
     {
         image: 'xim.png',
-        imageClassName: 'h-16',
+        imageHeight: 64,
         name: 'Xim',
         url: 'https://xim.systems/',
     },
@@ -81,13 +82,12 @@ export default function Clients() {
             <Transition className="gap-4 grid grid-cols-2 items-center -mx-4 md:gap-6 md:grid-cols-3" tag="ul">
                 {clients.map((client, index) => (
                     <li key={index}>
-                        <Button
-                            image={`/assets/clients/${client.image}`}
-                            imageClassName={client.imageClassName}
-                            light
-                            url={client.url}
-                        >
-                            {client.name}
+                        <Button url={client.url}>
+                            <Image
+                                alt={client.name}
+                                height={client.imageHeight}
+                                src={`/assets/clients/${client.image}`}
+                            />
                         </Button>
                     </li>
                 ))}

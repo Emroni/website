@@ -24,6 +24,10 @@ body {
     padding: 0;
 }
 
+a {
+    color: inherit;
+}
+
 .fade {
     transition: opacity 0.5s var(--ease);
 

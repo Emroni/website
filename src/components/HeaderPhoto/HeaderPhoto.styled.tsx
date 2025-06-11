@@ -75,10 +75,7 @@ export const Border = styled.circle`
 `;
 
 export const Container = styled.div`
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     position: absolute;
     transition: opacity 0.5s var(--ease) 0.5s, transform 0.5s var(--ease) 0.5s;
 
