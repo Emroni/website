@@ -1,15 +1,15 @@
 'use client';
 import { useMemo } from 'react';
 import Transition from '../Transition/Transition';
-import { Background, Container, Heading, HeadingArrowLeft, HeadingArrowRight, HeadingContent } from './Section.styled';
+import { Container, Heading, HeadingArrowLeft, HeadingArrowRight, HeadingContent } from './Section.styled';
 
-export default function Section({ background, children, heading }: SectionProps) {
+export default function Section({ children, heading }: SectionProps) {
     const slug = useMemo(() => {
         return heading.toLowerCase().replace(/\s/g, '-');
     }, [heading]);
 
     return (
-        <Container $background={background} id={slug}>
+        <Transition component={Container} fade={false} id={slug}>
             <Transition component={Heading} fade={false} stall={0.5}>
                 <HeadingArrowLeft width="11px" height="24px" viewBox="0 0 7 16">
                     <polygon fill="currentColor" points="7 2.38923077 5.45 1 0 8 5.45 15 7 13.6107692 2.61 8" />
@@ -27,7 +27,6 @@ export default function Section({ background, children, heading }: SectionProps)
                 </HeadingArrowRight>
             </Transition>
             <div>{children}</div>
-            {background && <Transition component={Background} fade={false} />}
-        </Container>
+        </Transition>
     );
 }

@@ -22,7 +22,7 @@ export default function Education() {
     // const classes = useStyles();
 
     return (
-        <Section background heading="Education">
+        <Section heading="Education">
             <Transition className={`-ml-4 pl-4 relative ${classes.container}`}>
                 <span className="font-semibold text-blue-50">
                     2010 - 2013 @ The Hague University of Applied Sciences

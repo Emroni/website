@@ -2,7 +2,7 @@ import { Section, Transition } from '@/components';
 
 export default function Intro() {
     return (
-        <Section background heading="Hi">
+        <Section heading="Hi">
             <Transition tag="p">
                 I&apos;m an expert Full Stack Developer with 15 years of experience in web technologies. With extensive
                 knowledge of JavaScript and PHP, my specialty lies in React and Symfony frameworks. I have a consistent

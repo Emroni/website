@@ -1,15 +1,31 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const Container = styled.section<SectionContainerProps>`
+export const Container = styled.section`
     margin: 0 auto;
     padding: 48px 32px;
     position: relative;
 
-    ${({ $background }) =>
-        $background &&
-        css`
-            color: var(--white);
-        `}
+    &:nth-child(even) {
+        color: var(--white);
+
+        &:before {
+            content: '';
+            background-color: var(--blue-500);
+            height: 0;
+            left: 50%;
+            position: absolute;
+            top: -16px;
+            transform: translate(-50%, -50%) skewY(-2deg);
+            transition: height 0.5s var(--ease), top 0.5s var(--ease);
+            width: 100vw;
+            z-index: -10;
+        }
+
+        &.active:before {
+            height: 100%;
+            top: 50%;
+        }
+    }
 
     p {
         margin-bottom: 1em;
@@ -22,53 +38,36 @@ export const Container = styled.section<SectionContainerProps>`
     @media (min-width: 640px) {
         max-width: 448px;
         padding: 64px 0;
+
+        &:nth-child(even):before {
+            top: -24px;
+        }
     }
 
     @media (min-width: 768px) {
         max-width: 576px;
         padding: 80px 0;
+
+        &:nth-child(even):before {
+            top: -32px;
+        }
     }
 
     @media (min-width: 1024px) {
         max-width: 768px;
         padding: 96px 0;
+
+        &:nth-child(even):before {
+            top: -40px;
+        }
     }
 
     @media (min-width: 1280px) {
         padding: 112px 0;
-    }
-`;
 
-export const Background = styled.div`
-    background-color: var(--blue-500);
-    height: 0;
-    left: 50%;
-    position: absolute;
-    top: -16px;
-    transform: translate(-50%, -50%) skewY(-2deg);
-    transition: height 0.5s var(--ease), top 0.5s var(--ease);
-    width: 100vw;
-    z-index: -10;
-
-    &.active {
-        height: 100%;
-        top: 50%;
-    }
-
-    @media (min-width: 640px) {
-        top: -24px;
-    }
-
-    @media (min-width: 768px) {
-        top: -32px;
-    }
-
-    @media (min-width: 1024px) {
-        top: -40px;
-    }
-
-    @media (min-width: 1280px) {
-        top: -48px;
+        &:nth-child(even):before {
+            top: -48px;
+        }
     }
 `;
 

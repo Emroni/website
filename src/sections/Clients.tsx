@@ -77,7 +77,7 @@ const clients = [
 
 export default function Clients() {
     return (
-        <Section background heading="Clients">
+        <Section heading="Clients">
             <Transition className="gap-4 grid grid-cols-2 items-center -mx-4 md:gap-6 md:grid-cols-3" tag="ul">
                 {clients.map((client, index) => (
                     <li key={index}>
