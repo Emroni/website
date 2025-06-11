@@ -50,7 +50,7 @@ export default function Connect() {
             >
                 {channels.map((channel, index) => (
                     <li key={index}>
-                        <Button icon={channel.icon} url={channel.url}>
+                        <Button icon={channel.icon as IconName} url={channel.url}>
                             {channel.label}
                         </Button>
                     </li>

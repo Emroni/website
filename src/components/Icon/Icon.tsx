@@ -1,26 +1,26 @@
-// import { faCodepen, faGithub, faLinkedinIn, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
-// import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faCodepen,
+    faGithub,
+    faLinkedinIn,
+    faStackOverflow,
+    faTwitter,
+    faUpwork,
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const faIcons: Record<string, string> = {
-    codepen: 'faCodepen',
-    envelope: 'faEnvelope',
-    github: 'faGithub',
-    linkedin: 'faLinkedinIn',
-    stackoverflow: 'faStackOverflow',
-    twitter: 'faTwitter',
+const icons: IconMap = {
+    codepen: faCodepen,
+    envelope: faEnvelope,
+    github: faGithub,
+    linkedin: faLinkedinIn,
+    stackoverflow: faStackOverflow,
+    twitter: faTwitter,
+    upwork: faUpwork,
 };
 
-export default function Icon({ className, name }: IconProps) {
-    const faIcon = faIcons[name];
+export default function Icon({ name }: IconProps) {
+    const icon = icons[name];
 
-    if (faIcon) {
-        // return <FontAwesomeIcon className={className} icon={faIcon} />;
-    }
-
-    return (
-        <picture>
-            <img alt={name} className={className} src={`/assets/icons/${name}.svg`} />
-        </picture>
-    );
+    return <FontAwesomeIcon icon={icon} />;
 }

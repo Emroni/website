@@ -99,7 +99,7 @@ export default function Button({ children, className, icon, image, imageClassNam
                 <>
                     {icon && (
                         <Icon
-                            className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4"
+                            // className="h-4 w-4 left-2 absolute top-1/2 -translate-y-1/2 sm:left-3 md:left-4"
                             name={icon}
                         />
                     )}
