@@ -1,16 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-export const Svg = styled.svg`
-    fill: transparent;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-`;
-
-export const Container = styled.div`
+export const Wrap = styled.div`
     border-radius: 9999px;
     height: 56px;
     margin-right: 24px;
@@ -49,6 +39,16 @@ export const Container = styled.div`
     }
 `;
 
+export const Svg = styled.svg`
+    fill: transparent;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+`;
+
 export const Border = styled.circle`
     opacity: 0;
     stroke-dasharray: 0, 157%;
@@ -74,7 +74,7 @@ export const Border = styled.circle`
     }
 `;
 
-export const Picture = styled.picture<HeaderPhotoPictureProps>`
+export const Container = styled.div`
     top: 0;
     right: 0;
     bottom: 0;
@@ -86,16 +86,4 @@ export const Picture = styled.picture<HeaderPhotoPictureProps>`
         opacity: 0;
         transform: scale(0.95);
     }
-
-    ${({ $loading }) =>
-        $loading &&
-        css`
-            opacity: 0;
-            transform: scale(0.95);
-        `}
-`;
-
-export const Img = styled.img`
-    max-width: 100%;
-    min-height: 100%;
 `;

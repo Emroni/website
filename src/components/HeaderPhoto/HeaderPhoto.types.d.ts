@@ -1,3 +1,0 @@
-interface HeaderPhotoPictureProps {
-    $loading?: boolean;
-}
