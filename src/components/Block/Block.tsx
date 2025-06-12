@@ -4,7 +4,7 @@ import { Heading, List, ListItem, Wrap } from './Block.styled';
 
 export default function Block({ items, title }: BlockProps) {
     return (
-        <Transition className="wrap" component={Wrap} fade={false} stall={0.1}>
+        <Transition component={Wrap} fade={false} stall={0.1}>
             <Heading>
                 <span>{title}</span>
                 <span />

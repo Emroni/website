@@ -25,7 +25,7 @@ export const Heading = styled.h4`
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
-    .wrap:not(.active) & {
+    ${`.${Wrap.styledComponentId}`}:not(.active) & {
         opacity: 0;
         transform: translateX(-4px);
     }
@@ -68,7 +68,7 @@ export const Item = styled.li`
         `
     )}
 
-    .wrap:not(.active) & {
+    ${`.${Wrap.styledComponentId}`}:not(.active) & {
         opacity: 0;
         transform: translateX(-4px);
     }

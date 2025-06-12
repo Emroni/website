@@ -63,7 +63,7 @@ export const Heading = styled.h3`
         top: 50%;
         transition: width 0.25s var(--ease-in);
 
-        .wrap:not(.active) & {
+        ${`.${Wrap.styledComponentId}`}:not(.active) & {
             width: 0 !important;
         }
     }
@@ -83,7 +83,7 @@ export const Heading = styled.h3`
                 width: 100%;
             }
         }
-        .wrap:not(.active) & {
+        ${`.${Wrap.styledComponentId}`}:not(.active) & {
             opacity: 0;
             transform: translateX(-0.5em);
         }
@@ -121,7 +121,7 @@ export const List = styled.ul`
         height: 1px;
         transition: width 0.25s var(--ease-out) 0.3s;
 
-        .wrap:not(.active) & {
+        ${`.${Wrap.styledComponentId}`}:not(.active) & {
             width: 0 !important;
         }
     }
@@ -148,7 +148,7 @@ export const ListItem = styled.li`
         height: 100%;
         transition: width 0.25s var(--ease);
 
-        .wrap:not(.active) & {
+        ${`.${Wrap.styledComponentId}`}:not(.active) & {
             width: 0;
         }
     }
@@ -157,7 +157,7 @@ export const ListItem = styled.li`
         display: inline-block;
         transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
 
-        .wrap:not(.active) & {
+        ${`.${Wrap.styledComponentId}`}:not(.active) & {
             opacity: 0;
             transform: translateX(-0.5em);
         }

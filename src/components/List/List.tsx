@@ -4,7 +4,7 @@ import { Container, Heading, Item, Wrap } from './List.styled';
 
 export default function List({ items, title }: ListProps) {
     return (
-        <Transition className="wrap" component={Wrap} fade={false} stall={0.25}>
+        <Transition component={Wrap} fade={false} stall={0.25}>
             {title && <Heading>{title}</Heading>}
             <Container>
                 {items.map((item, index) => (
