@@ -2,6 +2,7 @@ import _ from 'lodash';
 import styled, { css } from 'styled-components';
 
 export const Wrap = styled.div`
+    margin: 0 -16px;
     position: relative;
 
     &:before,
@@ -30,6 +31,14 @@ export const Wrap = styled.div`
         right: 0;
         transition-delay: 0.3s;
         transition-timing-function: var(--ease-out);
+    }
+
+    @media (min-width: 640px) {
+        margin: 0 -20px;
+    }
+
+    @media (min-width: 768px) {
+        margin: 0 -24px;
     }
 `;
 
