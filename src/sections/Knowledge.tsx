@@ -1,3 +1,4 @@
+'use client';
 import { Block, Link, Section, Transition } from '@/components';
 
 export default function Knowledge() {

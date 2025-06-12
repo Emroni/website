@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Heading = styled.h1`
     font-size: 24px;
@@ -53,7 +53,7 @@ export const Clip = styled.circle`
     transition: r 1s var(--ease-out);
 
     ${_.range(1, 10).map(
-        i => `
+        i => css`
             &:nth-child(${i}) {
                 transition-delay: ${0.05 * (i - 1)}s;
             }
