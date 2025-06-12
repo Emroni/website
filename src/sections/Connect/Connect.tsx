@@ -1,4 +1,6 @@
+'use client';
 import { Button, Section, Transition } from '@/components';
+import { Container } from './Connect.styled';
 
 const channels = [
     {
@@ -44,10 +46,7 @@ export default function Connect() {
             <Transition component="p">
                 For questions or inquiries, feel free to contact me through any of the channels below.
             </Transition>
-            <Transition
-                className="gap-2 grid grid-cols-2 -mx-2 my-4 sm:-mx-3 sm:my-6 md:gap-4 md:-mx-4 md:my-8 lg:grid-cols-4"
-                component="ul"
-            >
+            <Transition component={Container}>
                 {channels.map((channel, index) => (
                     <li key={index}>
                         <Button icon={channel.icon as IconName} url={channel.url}>

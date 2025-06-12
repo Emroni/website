@@ -5,6 +5,7 @@ export const Container = styled.a`
     line-height: 1;
     padding: 8px;
     position: relative;
+    text-decoration: none;
     white-space: nowrap;
 
     @media (min-width: 640px) {
