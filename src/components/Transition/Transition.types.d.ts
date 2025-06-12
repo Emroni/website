@@ -5,5 +5,4 @@ interface TransitionProps {
     component?: React.ElementType;
     fade?: boolean;
     stall?: number;
-    tag?: React.ElementType;
 }

@@ -14,7 +14,7 @@ export default function Experience() {
     return (
         <Section heading="Work Experience">
             <div>
-                <Transition className={`text-blue-500 ${classes.title}`} fade={false} tag="h3">
+                <Transition className={`text-blue-500 ${classes.title}`} component="h3" fade={false}>
                     2018 - Present | Freelancer
                 </Transition>
                 <List
@@ -32,7 +32,7 @@ export default function Experience() {
                 />
             </div>
             <div className="mt-8">
-                <Transition className={`text-blue-500 ${classes.title}`} fade={false} tag="h3">
+                <Transition className={`text-blue-500 ${classes.title}`} component="h3" fade={false}>
                     2009 - 2018 | Full-time @ Just
                 </Transition>
                 <List
@@ -66,7 +66,7 @@ export default function Experience() {
                     items={['Built and implemented components and full websites in Flash from designs in Photoshop']}
                 />
             </div>
-            <Transition className="mt-4 sm:mt-6 md:mt-8" tag="p">
+            <Transition className="mt-4 sm:mt-6 md:mt-8" component="p">
                 <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
             </Transition>
         </Section>

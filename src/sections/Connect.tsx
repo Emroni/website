@@ -41,12 +41,12 @@ const channels = [
 export default function Connect() {
     return (
         <Section heading="Connect">
-            <Transition tag="p">
+            <Transition component="p">
                 For questions or inquiries, feel free to contact me through any of the channels below.
             </Transition>
             <Transition
-                tag="ul"
                 className="gap-2 grid grid-cols-2 -mx-2 my-4 sm:-mx-3 sm:my-6 md:gap-4 md:-mx-4 md:my-8 lg:grid-cols-4"
+                component="ul"
             >
                 {channels.map((channel, index) => (
                     <li key={index}>

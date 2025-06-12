@@ -9,7 +9,6 @@ export default function Transition({
     component,
     fade = true,
     stall = 0,
-    tag = 'div',
     ...props
 }: TransitionProps) {
     const [active, setActive] = useState(false);
@@ -29,7 +28,7 @@ export default function Transition({
         fade,
     });
 
-    const Component: React.ElementType = component || tag;
+    const Component: React.ElementType = component || 'div';
 
     return (
         <Component className={classNames} ref={ref} {...props}>
