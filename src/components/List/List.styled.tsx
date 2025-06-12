@@ -21,7 +21,6 @@ export const Wrap = styled.div`
 `;
 
 export const Heading = styled.h4`
-    font-size: 18px;
     font-weight: 600;
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
@@ -39,7 +38,6 @@ export const Container = styled.ul`
 `;
 
 export const Item = styled.li`
-    font-size: 18px;
     margin-left: -4px;
     padding: 4px;
     position: relative;

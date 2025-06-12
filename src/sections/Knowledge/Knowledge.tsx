@@ -1,5 +1,5 @@
 'use client';
-import { Block, Link, Section, Transition } from '@/components';
+import { Block, ResumeLink, Section, Transition } from '@/components';
 
 export default function Knowledge() {
     return (
@@ -18,9 +18,7 @@ export default function Knowledge() {
                     items="Tailwind,Bootstrap,Storybook,Jest,D3.js,Pixi.js,Redux,Charts.js,OpenAPI,Swagger,Twig,Blade,Websockets,OpenAPI,Swagger,GraphQL,Mock Servic Worker,Scrapers,Azure Functions,Laravel,Nginx,Apache,GitHub Actions,Docker,Deployer,Travis CI,Sketch,Figma ,Photoshop ,Illustrator,After effects"
                 />
             </Transition>
-            <Transition className="mt-4 sm:mt-6 md:mt-8" component="p">
-                <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
-            </Transition>
+            <ResumeLink />
         </Section>
     );
 }

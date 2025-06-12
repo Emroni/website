@@ -1,4 +1,4 @@
-import { Link, List, Section, Transition } from '@/components';
+import { List, ResumeLink, Section, Transition } from '@/components';
 
 const classes = {
     title: `{
@@ -66,9 +66,7 @@ export default function Experience() {
                     items={['Built and implemented components and full websites in Flash from designs in Photoshop']}
                 />
             </div>
-            <Transition className="mt-4 sm:mt-6 md:mt-8" component="p">
-                <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
-            </Transition>
+            <ResumeLink />
         </Section>
     );
 }
