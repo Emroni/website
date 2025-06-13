@@ -6,6 +6,7 @@ import './styles.css';
 
 export const metadata: Metadata = {
     description: 'Full Stack Developer',
+    metadataBase: new URL('https://emrekoc.io'),
     openGraph: {
         description: 'Full Stack Developer',
         images: '/assets/share.png',
