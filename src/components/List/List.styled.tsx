@@ -3,6 +3,15 @@ import styled, { css } from 'styled-components';
 
 export const Wrap = styled.div`
     position: relative;
+    margin: 32px 0;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 
     &:before {
         background-color: currentColor;
@@ -22,7 +31,7 @@ export const Wrap = styled.div`
 
 export const Heading = styled.h4`
     font-weight: 600;
-    margin: 0;
+    margin: 0 0 8px;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
     ${`.${Wrap.styledComponentId}`}:not(.active) & {
