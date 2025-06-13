@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-    margin: 0 auto;
-    padding: 48px 32px;
     position: relative;
 
     &:nth-child(odd) {
@@ -17,7 +15,7 @@ export const Container = styled.section`
             top: -16px;
             transform: translate(-50%, -50%) skewY(-2deg);
             transition: height 0.5s var(--ease), top 0.5s var(--ease);
-            width: 100vw;
+            width: 100%;
             z-index: -10;
         }
 
@@ -26,6 +24,11 @@ export const Container = styled.section`
             top: 50%;
         }
     }
+`;
+
+export const Content = styled.div`
+    margin: 0 auto;
+    padding: 48px 32px;
 
     p {
         margin-bottom: 1em;
