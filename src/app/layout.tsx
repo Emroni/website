@@ -14,12 +14,12 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://emrekoc.io',
     },
-    themeColor: '#ffffff',
     title: 'Emre Koc - Full Stack Developer',
 };
 
 export const viewport: Viewport = {
     initialScale: 1,
+    themeColor: '#ffffff',
     width: 'device-width',
 };
 
