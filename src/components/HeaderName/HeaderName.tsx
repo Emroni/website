@@ -16,7 +16,7 @@ const bottomClip = _.range(10).map(index => ({
 export default function HeaderName() {
     return (
         <Heading>
-            <Transition component={Svg} fade={false} stall={1}>
+            <Transition component={Svg} fade={false} stall={0.5}>
                 <defs>
                     <clipPath id="top-clip">
                         {topClip.map((item, index) => (

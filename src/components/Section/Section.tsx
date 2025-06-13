@@ -10,7 +10,7 @@ export default function Section({ children, heading }: SectionProps) {
 
     return (
         <Transition component={Container} fade={false} id={slug}>
-            <Transition component={Heading} fade={false} stall={0.5}>
+            <Transition component={Heading} fade={false} stall={0.2}>
                 <HeadingArrowLeft width="11px" height="24px" viewBox="0 0 7 16">
                     <polygon fill="currentColor" points="7 2.38923077 5.45 1 0 8 5.45 15 7 13.6107692 2.61 8" />
                 </HeadingArrowLeft>

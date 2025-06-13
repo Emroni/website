@@ -5,7 +5,7 @@ import { Blocks } from './Knowledge.styled';
 export default function Knowledge() {
     return (
         <Section heading="Technical Knowledge">
-            <Transition component={Blocks} fade={false} stall={0.5}>
+            <Transition component={Blocks} fade={false} stall={0.1}>
                 <Block
                     title="Extensive"
                     items="JavaScript,TypeScript,PHP,HTML,CSS,SQL,React,Symfony,WordPress,Node.js,REST APIs,Generators,Three.js,GSAP,Charts,D3.js,Next.js,Automation,Motion Design,Data visualization"
