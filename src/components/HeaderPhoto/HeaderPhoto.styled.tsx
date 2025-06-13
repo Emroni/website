@@ -76,11 +76,13 @@ export const Border = styled.circle`
 
 export const Container = styled.div`
     inset: 0;
+    opacity: 0;
     position: absolute;
+    transform: scale(0.95);
     transition: opacity 0.5s var(--ease) 0.5s, transform 0.5s var(--ease) 0.5s;
 
-    svg:not(.active) + & {
-        opacity: 0;
-        transform: scale(0.95);
+    svg.active + & {
+        opacity: 1;
+        transform: scale(1);
     }
 `;
