@@ -4,11 +4,10 @@ interface TransitionsProviderProps {
 
 interface TransitionsState {
     add(ref: React.RefObject, stall: number, callback: CallableFunction): void;
-    current: TransitionsItem?;
-    items: TransitionsItem[];
 }
 
 interface TransitionsItem {
+    active: boolean;
     callback: CallableFunction;
     stall: number;
     ref: React.RefObject;
