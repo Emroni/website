@@ -33,12 +33,12 @@ export const Container = styled.a`
             content: '';
             position: absolute;
 
-            section:nth-child(even) & {
-                background-color: var(--white);
+            section:nth-of-type(even) & {
+                background-color: var(--black);
             }
 
-            section:nth-child(odd) & {
-                background-color: var(--black);
+            section:nth-of-type(odd) & {
+                background-color: var(--white);
             }
         }
 
