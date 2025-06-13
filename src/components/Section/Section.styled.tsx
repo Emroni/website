@@ -5,7 +5,7 @@ export const Container = styled.section`
     padding: 48px 32px;
     position: relative;
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
         color: var(--white);
 
         &:before {
@@ -39,7 +39,7 @@ export const Container = styled.section`
         max-width: 448px;
         padding: 64px 0;
 
-        &:nth-child(even):before {
+        &:nth-child(odd):before {
             top: -24px;
         }
     }
@@ -48,7 +48,7 @@ export const Container = styled.section`
         max-width: 576px;
         padding: 80px 0;
 
-        &:nth-child(even):before {
+        &:nth-child(odd):before {
             top: -32px;
         }
     }
@@ -57,7 +57,7 @@ export const Container = styled.section`
         max-width: 768px;
         padding: 96px 0;
 
-        &:nth-child(even):before {
+        &:nth-child(odd):before {
             top: -40px;
         }
     }
@@ -65,7 +65,7 @@ export const Container = styled.section`
     @media (min-width: 1280px) {
         padding: 112px 0;
 
-        &:nth-child(even):before {
+        &:nth-child(odd):before {
             top: -48px;
         }
     }

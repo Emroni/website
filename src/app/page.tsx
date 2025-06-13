@@ -5,12 +5,14 @@ export default function Home() {
     return (
         <>
             <Header />
-            <Intro />
-            <Knowledge />
-            <Clients />
-            <Experience />
-            <Education />
-            <Connect />
+            <main>
+                <Intro />
+                <Knowledge />
+                <Clients />
+                <Experience />
+                <Education />
+                <Connect />
+            </main>
         </>
     );
 }

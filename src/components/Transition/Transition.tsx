@@ -30,6 +30,10 @@ export default function Transition({
 
     const Component: React.ElementType = component || 'div';
 
+    if (!ready) {
+        return null;
+    }
+
     return (
         <Component className={classNames} ref={ref} {...props}>
             {children}
