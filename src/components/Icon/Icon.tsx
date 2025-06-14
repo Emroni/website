@@ -22,5 +22,5 @@ const icons: IconMap = {
 export default function Icon({ name }: IconProps) {
     const icon = icons[name];
 
-    return <FontAwesomeIcon icon={icon} />;
+    return <FontAwesomeIcon icon={icon} fontSize={16} />;
 }

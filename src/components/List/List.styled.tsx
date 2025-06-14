@@ -30,8 +30,9 @@ export const Wrap = styled.div`
 `;
 
 export const Heading = styled.h4`
+    font-size: 16px;
     font-weight: 600;
-    margin: 0 0 8px;
+    margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
     ${`.${Wrap.styledComponentId}`}:not(.active) & {

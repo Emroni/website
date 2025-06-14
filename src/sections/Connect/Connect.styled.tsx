@@ -14,7 +14,7 @@ export const Container = styled.ul`
 
     @media (min-width: 768px) {
         margin: 32px -16px;
-        gap: 24px;
+        gap: 16px;
     }
 
     @media (min-width: 1280px) {

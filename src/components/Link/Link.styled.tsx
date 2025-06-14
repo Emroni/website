@@ -39,7 +39,7 @@ export const Container = styled.a`
         &:after {
             right: -0.1875em;
             width: 1px;
-            animation: $link-out 0.5s var(--ease-in) 1 forwards;
+            animation: link-out 0.5s var(--ease-in) 1 forwards;
         }
         & > span:after {
             top: 0.125em;
@@ -57,7 +57,7 @@ export const Container = styled.a`
                 transition: 0.25s var(--ease-in);
             }
             &:after {
-                animation-name: $link-in;
+                animation-name: link-in;
                 animation-timing-function: var(--ease-out);
             }
             & > span:after {

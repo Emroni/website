@@ -29,18 +29,21 @@ export const Content = styled.div`
 
 export const Location = styled.span`
     color: var(--blue-50);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
+    line-height: 24px;
 `;
 
 export const Name = styled.h3`
     font-size: 24px;
     font-weight: 400;
+    line-height: 32px;
     margin: 4px 0;
 `;
 
 export const Info = styled.h3`
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 100;
+    line-height: 24px;
     margin: 0;
 `;

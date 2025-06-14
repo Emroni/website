@@ -31,7 +31,7 @@ export const Content = styled.div`
     padding: 48px 32px;
 
     p {
-        margin-bottom: 1em;
+        margin: 0 0 18px;
 
         &:last-child {
             margin-bottom: 0;
@@ -79,6 +79,7 @@ export const Heading = styled.h2`
     font-size: 24px;
     font-weight: 600;
     line-height: 1;
+    margin: 0;
     margin-bottom: 16px;
     position: relative;
 `;

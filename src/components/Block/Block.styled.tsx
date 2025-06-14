@@ -9,8 +9,8 @@ export const Wrap = styled.div`
     &:after {
         content: '';
         background-color: var(--blue-500);
-        top: 0.625em;
-        height: calc(100% - 0.625em);
+        top: 12px;
+        height: calc(100% - 12px);
         width: 1px;
         position: absolute;
         transition: height 0.25s;
@@ -69,7 +69,7 @@ export const Heading = styled.h3`
     }
 
     &:before {
-        width: 0.5rem;
+        width: 8px;
     }
 
     span {
@@ -93,7 +93,7 @@ export const Heading = styled.h3`
         padding-left: 20px;
 
         &:before {
-            width: 0.75rem;
+            width: 12px;
         }
     }
 
@@ -101,7 +101,7 @@ export const Heading = styled.h3`
         padding-left: 24px;
 
         &:before {
-            width: 1rem;
+            width: 16px;
         }
     }
 `;

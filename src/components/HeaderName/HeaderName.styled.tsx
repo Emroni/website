@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 export const Heading = styled.h1`
     font-size: 24px;
     line-height: 32px;
+    margin: 0;
 
     @media (min-width: 475px) {
         font-size: 30px;
