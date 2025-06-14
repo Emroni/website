@@ -1,3 +1,0 @@
-interface SectionHeadingProps {
-    children: string;
-}

@@ -1,5 +1,4 @@
 interface SectionProps {
-    background?: boolean;
-    children?: any;
-    heading: string;
+    children?: React.ReactNode;
+    title: string;
 }

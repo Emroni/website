@@ -1,3 +1,0 @@
-interface ThemeProviderProps {
-    children: any;
-}

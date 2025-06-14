@@ -1,115 +1,101 @@
-import React, { createContext, useContext } from 'react';
+'use client';
+import { createContext, RefObject, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { useDebounceCallback, useEventListener, useTimeout } from 'usehooks-ts';
 
 const TransitionsContext = createContext<TransitionsState>({} as TransitionsState);
 
 export const useTransitions = () => useContext(TransitionsContext);
 
-export class TransitionsProvider extends React.Component<TransitionsProviderProps, TransitionsState> {
+export function TransitionsProvider({ children }: TransitionsProps) {
+    const [delay, setDelay] = useState<number | null>(null);
+    const [items, setItems] = useState<TransitionsItem[]>([]);
 
-    resizeTimeout: any;
-    nextTimeout: any;
+    const nextItem = useMemo(() => {
+        return items.find(item => !item.active && item.top >= 0);
+    }, [items]);
 
-    constructor(props) {
-        super(props);
+    const add = useCallback((ref: RefObject<null>, stall: number, callback: CallableFunction) => {
+        // Add to items
+        setItems(prevItems => [
+            ...prevItems,
+            {
+                active: false,
+                callback,
+                stall,
+                ref,
+                top: -1,
+            },
+        ]);
+    }, []);
 
-        this.state = {
-            add: this.handleAdd,
-            current: null,
-            items: [],
-        };
-    }
+    const resize = useCallback(() => {
+        setItems(prevItems => {
+            // Update top positions of items
+            const items = prevItems.map(item => ({
+                ...item,
+                top: item.ref.current ? item.ref.current.getBoundingClientRect().top + window.scrollY : -1,
+            }));
 
-    componentDidMount() {
-        window.addEventListener('resize', this.handleResize);
-        window.addEventListener('scroll', this.handleScroll);
-    }
+            // Sort items by top position
+            items.sort((a, b) => a.top - b.top);
+            return items;
+        });
+    }, []);
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize);
-        window.removeEventListener('scroll', this.handleScroll);
-    }
+    const debounceResize = useDebounceCallback(resize, 100);
 
-    handleAdd = (ref, stall, callback) => {
-        this.setState((prevState: any) => ({
-            items: [
-                ...prevState.items,
-                {
-                    callback,
-                    stall,
-                    ref,
-                    top: -1,
-                },
-            ],
-        }), this.handleResize);
-    }
-
-    handleResize = (e?: any) => {
-        window.clearTimeout(this.resizeTimeout);
-        this.resizeTimeout = window.setTimeout(this.resize, e ? 100 : 500)
-    }
-
-    resize = () => {
-        this.setState((prevState: any) => {
-            const items = prevState.items.map(item => {
-                item.top = item.ref.current ? (item.ref.current.getBoundingClientRect().top + window.scrollY) : Number.MAX_VALUE;
-                return item;
-            });
-
-            items.sort((a, b) => a.top < b.top ? -1 : 1);
-
-            return {
-                current: items[0],
-                items,
-            };
-        }, this.handleScroll);
-    }
-
-    handleScroll = () => {
-        const { current } = this.state as any;
-        if (!this.nextTimeout && current && (window.scrollY >= current.top - window.innerHeight * 0.9 || window.scrollY >= document.documentElement.offsetHeight - window.innerHeight - 100)) {
-            current.callback();
-
-            this.setState((prevState: any) => ({
-                items: prevState.items.slice(1),
-            }), this.next);
+    const scroll = useCallback(() => {
+        // Check next item and scroll position
+        if (
+            delay ||
+            !nextItem ||
+            !nextItem.ref.current ||
+            (nextItem.top > window.scrollY + window.innerHeight * 0.9 &&
+                window.scrollY < document.documentElement.offsetHeight - window.innerHeight - 100)
+        ) {
+            return;
         }
-    }
 
-    next = () => {
-        const {
-            current,
-            items,
-        } = this.state as any;
-
-        const next = items[0];
-        let delay = 100;
-
-        if (next) {
-            if (next.top <= window.scrollY) {
-                delay = 0;
-            } else if (current.stall) {
-                delay = current.stall * 1000;
-            } else if (Math.abs(current.top - next.top) < 10) {
-                delay = 50;
+        // Get delay for next item
+        let newTimeout = 50;
+        if (nextItem) {
+            if (nextItem.top <= window.scrollY) {
+                newTimeout = 0;
+            } else if (nextItem?.stall) {
+                newTimeout = nextItem.stall * 1000;
             }
         }
+        setDelay(newTimeout);
 
-        this.setState({
-            current: next,
-        }, () => {
-            this.nextTimeout = window.setTimeout(() => {
-                delete this.nextTimeout;
-                this.handleScroll();
-            }, delay);
-        });
-    }
+        // Active current item
+        nextItem.callback();
+        setItems(prevItems => prevItems.map(item => (item === nextItem ? { ...item, active: true } : item)));
+    }, [nextItem, delay]);
 
-    render() {
-        const { children } = this.props as any;
+    useEventListener('resize', debounceResize);
+    useEventListener('scroll', scroll);
 
-        return <TransitionsContext.Provider value={this.state}>
-            {children}
-        </TransitionsContext.Provider>;
-    }
+    useEffect(() => {
+        // Initial resize
+        debounceResize();
+    }, [debounceResize]);
 
+    useEffect(() => {
+        // Trigger scroll when next item is updated
+        scroll();
+    }, [nextItem, scroll]);
+
+    useTimeout(() => {
+        // Clear delay after timeout
+        setDelay(null);
+    }, delay);
+
+    const state = useMemo<TransitionsState>(
+        () => ({
+            add,
+        }),
+        [add]
+    );
+
+    return <TransitionsContext.Provider value={state}>{children}</TransitionsContext.Provider>;
 }

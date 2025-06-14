@@ -1,43 +1,47 @@
+'use client';
+import { useTransitions } from '@/contexts/Transitions/Transitions';
 import clsx from 'clsx';
-import { useTransitions } from 'contexts/Transitions/Transitions';
 import { useEffect, useRef, useState } from 'react';
-import { createUseStyles } from 'react-jss';
 
-const useStyles = createUseStyles({
-    fade: {
-        transition: 'opacity 0.5s var(--ease)',
-        '&:not(.active)': {
-            opacity: 0,
-        },
-    },
-});
-
-export default function Transition({ children, className, fade = true, stall = 0, tag = 'div', ...props }: TransitionProps) {
-
+export default function Transition({
+    children,
+    className,
+    component,
+    fade = true,
+    stall = 0,
+    onActive,
+    ...props
+}: TransitionProps) {
     const [active, setActive] = useState(false);
     const [ready, setReady] = useState(false);
-    const classes = useStyles();
-    const ref = useRef();
+    const ref = useRef(null);
     const transitions = useTransitions();
 
     useEffect(() => {
         if (!ready) {
             setReady(true);
-            transitions.add(ref, stall, () => setActive(true));
+
+            transitions.add(ref, stall, () => {
+                setActive(true);
+                onActive?.();
+            });
         }
-    }, [
-        ready,
-        stall,
-        transitions,
-    ]);
+    }, [ready, stall, transitions, onActive]);
 
     const classNames = clsx(className, {
-        [classes.fade]: fade,
         active,
+        fade,
     });
 
-    const Tag: any = tag;
+    const Component: React.ElementType = component || 'div';
 
-    return <Tag className={classNames} ref={ref} {...props}>{children}</Tag>;
+    if (!ready) {
+        return null;
+    }
 
+    return (
+        <Component className={classNames} ref={ref} {...props}>
+            {children}
+        </Component>
+    );
 }
