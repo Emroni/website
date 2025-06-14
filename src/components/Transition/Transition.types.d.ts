@@ -1,8 +1,9 @@
 interface TransitionProps {
-    [prop: string]: React.ReactNode;
+    [props: string]: HTMLAttributes;
     children?: React.ReactNode;
     className?: string;
     component?: React.ElementType;
     fade?: boolean;
     stall?: number;
+    onActive?: () => void;
 }

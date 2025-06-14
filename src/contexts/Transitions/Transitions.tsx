@@ -6,7 +6,7 @@ const TransitionsContext = createContext<TransitionsState>({} as TransitionsStat
 
 export const useTransitions = () => useContext(TransitionsContext);
 
-export function TransitionsProvider({ children }: TransitionsProviderProps) {
+export function TransitionsProvider({ children }: TransitionsProps) {
     const [delay, setDelay] = useState<number | null>(null);
     const [items, setItems] = useState<TransitionsItem[]>([]);
 
@@ -68,7 +68,7 @@ export function TransitionsProvider({ children }: TransitionsProviderProps) {
         setDelay(newTimeout);
 
         // Active current item
-        nextItem.ref.current.classList.add('active');
+        nextItem.callback();
         setItems(prevItems => prevItems.map(item => (item === nextItem ? { ...item, active: true } : item)));
     }, [nextItem, delay]);
 

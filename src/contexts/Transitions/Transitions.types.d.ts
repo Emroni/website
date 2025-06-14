@@ -1,4 +1,4 @@
-interface TransitionsProviderProps {
+interface TransitionsProps {
     children: React.ReactNode;
 }
 

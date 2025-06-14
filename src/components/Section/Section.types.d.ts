@@ -1,4 +1,4 @@
 interface SectionProps {
     children?: React.ReactNode;
-    heading: string;
+    title: string;
 }

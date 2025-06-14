@@ -9,6 +9,7 @@ export default function Transition({
     component,
     fade = true,
     stall = 0,
+    onActive,
     ...props
 }: TransitionProps) {
     const [active, setActive] = useState(false);
@@ -19,9 +20,13 @@ export default function Transition({
     useEffect(() => {
         if (!ready) {
             setReady(true);
-            transitions.add(ref, stall, () => setActive(true));
+
+            transitions.add(ref, stall, () => {
+                setActive(true);
+                onActive?.();
+            });
         }
-    }, [ready, stall, transitions]);
+    }, [ready, stall, transitions, onActive]);
 
     const classNames = clsx(className, {
         active,

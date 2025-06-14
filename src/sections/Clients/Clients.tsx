@@ -79,11 +79,11 @@ const clients = [
 
 export default function Clients() {
     return (
-        <Section heading="Clients">
+        <Section title="Clients">
             <Transition component={Container}>
                 {clients.map((client, index) => (
                     <li key={index}>
-                        <Button url={client.url}>
+                        <Button label={client.name} url={client.url}>
                             <Image
                                 alt={client.name}
                                 height={client.imageHeight}

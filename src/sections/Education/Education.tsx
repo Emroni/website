@@ -4,7 +4,7 @@ import { Container, Content, Info, Location, Name } from './Education.styled';
 
 export default function Education() {
     return (
-        <Section heading="Education">
+        <Section title="Education">
             <Container>
                 <Transition component={Content}>
                     <Location>2010 - 2013 @ The Hague University of Applied Sciences</Location>

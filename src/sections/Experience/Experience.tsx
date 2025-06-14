@@ -4,7 +4,7 @@ import { Container, Heading } from './Experience.styled';
 
 export default function Experience() {
     return (
-        <Section heading="Work Experience">
+        <Section title="Work Experience">
             <Container>
                 <div>
                     <Transition component={Heading} fade={false}>

@@ -4,7 +4,7 @@ import { Blocks } from './Knowledge.styled';
 
 export default function Knowledge() {
     return (
-        <Section heading="Technical Knowledge">
+        <Section title="Technical Knowledge">
             <Transition component={Blocks} fade={false} stall={0.1}>
                 <Block
                     title="Extensive"
