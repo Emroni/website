@@ -1,9 +1,12 @@
 export { default as Block } from './Block/Block';
 export { default as Button } from './Button/Button';
+export { default as Header } from './Header/Header';
+export { default as HeaderName } from './HeaderName/HeaderName';
+export { default as HeaderPhoto } from './HeaderPhoto/HeaderPhoto';
 export { default as Icon } from './Icon/Icon';
+export { default as Image } from './Image/Image';
 export { default as Link } from './Link/Link';
 export { default as List } from './List/List';
+export { default as ResumeLink } from './ResumeLink/ResumeLink';
 export { default as Section } from './Section/Section';
-export { default as SectionBackground } from './SectionBackground/SectionBackground';
-export { default as SectionHeading } from './SectionHeading/SectionHeading';
-export { default as Trans } from './Trans/Trans';
+export { default as Transition } from './Transition/Transition';
