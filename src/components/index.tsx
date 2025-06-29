@@ -1,8 +1,8 @@
 export { default as Block } from './Block';
 export { default as Button } from './Button';
-export { default as Header } from './Header';
-export { default as HeaderName } from './HeaderName';
-export { default as HeaderPhoto } from './HeaderPhoto';
+export { default as Profile } from './Profile';
+export { default as ProfileName } from './ProfileName';
+export { default as ProfilePhoto } from './ProfilePhoto';
 export { default as Icon } from './Icon';
 export { default as Image } from './Image';
 export { default as Link } from './Link';

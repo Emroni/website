@@ -3,7 +3,7 @@ import Image from '../Image';
 import Transition from '../Transition';
 import { Border, Container, Svg, Wrap } from './styled';
 
-export default function HeaderPhoto() {
+export default function ProfilePhoto() {
     return (
         <Wrap>
             <Transition component={Svg} fade={false}>

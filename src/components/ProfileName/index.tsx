@@ -13,7 +13,7 @@ const bottomClip = _.range(10).map(index => ({
     y: 10 * (index % 2) + 80 + '%',
 }));
 
-export default function HeaderName() {
+export default function ProfileName() {
     return (
         <Heading>
             <Transition component={Svg} fade={false} stall={0.5}>

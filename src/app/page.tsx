@@ -1,12 +1,12 @@
 'use client';
-import { Header } from '@/components';
+import { Profile } from '@/components';
 import { Clients, Connect, Education, Experience, Intro, Knowledge } from '@/sections';
 
 export default function Home() {
     return (
         <>
-            <Header />
             <main>
+                <Profile />
                 <Intro />
                 <Knowledge />
                 <Clients />
