@@ -1,4 +1,4 @@
-interface ListProps {
+export interface ListProps {
     items: string[];
     title?: string;
 }

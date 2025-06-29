@@ -1,12 +1,12 @@
-interface TransitionsProps {
+export interface TransitionsProps {
     children: React.ReactNode;
 }
 
-interface TransitionsState {
+export interface TransitionsState {
     add(ref: React.RefObject, stall: number, callback: CallableFunction): void;
 }
 
-interface TransitionsItem {
+export interface TransitionsItem {
     active: boolean;
     callback: CallableFunction;
     stall: number;

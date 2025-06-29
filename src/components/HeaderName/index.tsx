@@ -1,7 +1,7 @@
 'use client';
-import { Transition } from '@/components';
 import _ from 'lodash';
-import { Bottom, Clip, Heading, Svg, Top } from './HeaderName.styled';
+import Transition from '../Transition';
+import { Bottom, Clip, Heading, Svg, Top } from './styled';
 
 const topClip = _.range(10).map(index => ({
     x: 9 * index + '%',

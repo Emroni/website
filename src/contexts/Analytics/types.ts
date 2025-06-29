@@ -1,7 +1,7 @@
-interface AnalyticsProps {
+export interface AnalyticsProps {
     children: React.ReactNode;
 }
 
-interface AnalyticsState {
+export interface AnalyticsState {
     trackEvent: (action: string, category: string, label?: string, value?: number) => void;
 }

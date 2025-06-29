@@ -1,7 +1,8 @@
 'use client';
-import { useTransitions } from '@/contexts/Transitions/Transitions';
+import { useTransitions } from '@/contexts/Transitions';
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
+import { TransitionProps } from './types';
 
 export default function Transition({
     children,

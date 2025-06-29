@@ -1,6 +1,7 @@
 'use client';
 import { createContext, RefObject, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useDebounceCallback, useEventListener, useTimeout } from 'usehooks-ts';
+import { TransitionsItem, TransitionsProps, TransitionsState } from './types';
 
 const TransitionsContext = createContext<TransitionsState>({} as TransitionsState);
 

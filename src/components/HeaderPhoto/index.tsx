@@ -1,6 +1,7 @@
 'use client';
-import { Image, Transition } from '@/components';
-import { Border, Container, Svg, Wrap } from './HeaderPhoto.styled';
+import Image from '../Image';
+import Transition from '../Transition';
+import { Border, Container, Svg, Wrap } from './styled';
 
 export default function HeaderPhoto() {
     return (

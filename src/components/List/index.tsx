@@ -1,6 +1,7 @@
 'use client';
-import Transition from '../Transition/Transition';
-import { Container, Heading, Item, Wrap } from './List.styled';
+import Transition from '../Transition';
+import { Container, Heading, Item, Wrap } from './styled';
+import { ListProps } from './types';
 
 export default function List({ items, title }: ListProps) {
     return (

@@ -1,8 +1,9 @@
 'use client';
+import { useAnalytics } from '@/contexts/Analytics';
 import { useMemo } from 'react';
-import Transition from '../Transition/Transition';
-import { Container, Content, Heading, HeadingArrowLeft, HeadingArrowRight, HeadingContent } from './Section.styled';
-import { useAnalytics } from '@/contexts/Analytics/Analytics';
+import Transition from '../Transition';
+import { Container, Content, Heading, HeadingArrowLeft, HeadingArrowRight, HeadingContent } from './styled';
+import { SectionProps } from './types';
 
 export default function Section({ children, title }: SectionProps) {
     const analytics = useAnalytics();

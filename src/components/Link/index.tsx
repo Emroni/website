@@ -1,6 +1,7 @@
 'use client';
-import { useAnalytics } from '@/contexts/Analytics/Analytics';
-import { Container, Content } from './Link.styled';
+import { useAnalytics } from '@/contexts/Analytics';
+import { Container, Content } from './styled';
+import { LinkProps } from './types';
 
 export default function Link({ children, href }: LinkProps) {
     const analytics = useAnalytics();

@@ -1,3 +1,4 @@
+'use client';
 import { Header } from '@/components';
 import { Clients, Connect, Education, Experience, Intro, Knowledge } from '@/sections';
 

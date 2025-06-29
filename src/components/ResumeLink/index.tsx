@@ -1,7 +1,7 @@
 'use client';
-import Link from '../Link/Link';
-import Transition from '../Transition/Transition';
-import { Container } from './ResumeLink.styled';
+import Link from '../Link';
+import Transition from '../Transition';
+import { Container } from './styled';
 
 export default function ResumeLink() {
     return (

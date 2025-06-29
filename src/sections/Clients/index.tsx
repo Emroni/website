@@ -1,6 +1,6 @@
 'use client';
 import { Button, Image, Section, Transition } from '@/components';
-import { Container } from './Clients.styled';
+import { Container } from './styled';
 
 const clients = [
     {

@@ -1,6 +1,6 @@
 'use client';
 import { Block, ResumeLink, Section, Transition } from '@/components';
-import { Blocks } from './Knowledge.styled';
+import { Blocks } from './styled';
 
 export default function Knowledge() {
     return (

@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Img, Picture } from './Image.styled';
+import { Img, Picture } from './styled';
+import { ImageProps } from './types';
 
 export default function Image({ alt, height, src, width }: ImageProps) {
     const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);

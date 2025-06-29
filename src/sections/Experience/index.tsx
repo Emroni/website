@@ -1,6 +1,6 @@
 'use client';
 import { List, ResumeLink, Section, Transition } from '@/components';
-import { Container, Heading } from './Experience.styled';
+import { Container, Heading } from './styled';
 
 export default function Experience() {
     return (

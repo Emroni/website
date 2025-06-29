@@ -1,8 +1,9 @@
 'use client';
-import { useAnalytics } from '@/contexts/Analytics/Analytics';
-import Icon from '../Icon/Icon';
-import Transition from '../Transition/Transition';
-import { Container } from './Button.styled';
+import { useAnalytics } from '@/contexts/Analytics';
+import Icon from '../Icon';
+import Transition from '../Transition';
+import { Container } from './styled';
+import { ButtonProps } from './types';
 
 export default function Button({ children, icon, label, url }: ButtonProps) {
     const analytics = useAnalytics();

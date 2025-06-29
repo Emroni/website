@@ -1,5 +1,5 @@
-interface TransitionProps {
-    [props: string]: HTMLAttributes;
+export interface TransitionProps {
+    [props: string]: unknown;
     children?: React.ReactNode;
     className?: string;
     component?: React.ElementType;

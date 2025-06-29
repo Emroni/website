@@ -1,6 +1,6 @@
 'use client';
 import { Section, Transition } from '@/components';
-import { Container, Content, Info, Location, Name } from './Education.styled';
+import { Container, Content, Info, Location, Name } from './styled';
 
 export default function Education() {
     return (

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ImageImgProps } from './types';
 
 export const Picture = styled.picture`
     display: inline-block;

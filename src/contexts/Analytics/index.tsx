@@ -1,6 +1,7 @@
 'use client';
 import { createContext, useContext, useEffect } from 'react';
 import ReactGA from 'react-ga4';
+import { AnalyticsProps, AnalyticsState } from './types';
 
 const AnalyticsContext = createContext<AnalyticsState>({} as AnalyticsState);
 

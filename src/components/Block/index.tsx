@@ -1,6 +1,7 @@
 'use client';
-import Transition from '../Transition/Transition';
-import { Heading, List, ListItem, Wrap } from './Block.styled';
+import Transition from '../Transition';
+import { Heading, List, ListItem, Wrap } from './styled';
+import { BlockProps } from './types';
 
 export default function Block({ items, title }: BlockProps) {
     return (
