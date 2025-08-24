@@ -15,7 +15,7 @@ export default function Transition({
 }: TransitionProps) {
     const [active, setActive] = useState(false);
     const [ready, setReady] = useState(false);
-    const ref = useRef(null);
+    const ref = useRef<HTMLElement>(null);
     const transitions = useTransitions();
 
     useEffect(() => {

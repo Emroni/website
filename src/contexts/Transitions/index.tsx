@@ -15,7 +15,7 @@ export function TransitionsProvider({ children }: TransitionsProps) {
         return items.find(item => !item.active && item.top >= 0);
     }, [items]);
 
-    const add = useCallback((ref: RefObject<null>, stall: number, callback: CallableFunction) => {
+    const add = useCallback((ref: RefObject<HTMLElement | null>, stall: number, callback: CallableFunction) => {
         // Add to items
         setItems(prevItems => [
             ...prevItems,
