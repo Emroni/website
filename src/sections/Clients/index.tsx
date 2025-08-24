@@ -4,34 +4,16 @@ import { Container } from './styled';
 
 const clients = [
     {
-        image: 'just.svg',
-        imageHeight: 24,
-        name: 'Just',
-        url: 'https://wearejust.com/',
+        image: 'kromatic.svg',
+        imageHeight: 40,
+        name: 'Kromatic',
+        url: 'https://kromatic.com/',
     },
     {
         image: 'noderelate.svg',
         imageHeight: 40,
         name: 'NodeRelate',
         url: 'https://noderelate.com/',
-    },
-    {
-        image: 'watch4media.svg',
-        imageHeight: 36,
-        name: 'Watch4Media',
-        url: 'https://watch4media.nl/',
-    },
-    {
-        image: 'marathon.svg',
-        imageHeight: 40,
-        name: 'Marathon',
-        url: 'https://www.marathonstudio.cz/english',
-    },
-    {
-        image: 'kromatic.svg',
-        imageHeight: 40,
-        name: 'Kromatic',
-        url: 'https://kromatic.com/',
     },
     {
         image: 'iglu.png',
@@ -44,6 +26,24 @@ const clients = [
         imageHeight: 28,
         name: 'SIC Code',
         url: 'https://siccode.com/',
+    },
+    {
+        image: 'just.svg',
+        imageHeight: 24,
+        name: 'Just',
+        url: 'https://just.agency/en',
+    },
+    {
+        image: 'watch4media.svg',
+        imageHeight: 36,
+        name: 'Watch4Media',
+        url: 'https://watch4media.nl/',
+    },
+    {
+        image: 'marathon.svg',
+        imageHeight: 40,
+        name: 'Marathon',
+        url: 'https://www.marathonstudio.cz/english',
     },
     {
         image: 'pressive.png',
@@ -73,7 +73,7 @@ const clients = [
         image: 'xim.png',
         imageHeight: 64,
         name: 'Xim',
-        url: 'https://xim.systems/',
+        url: 'https://xim.systems/en',
     },
 ];
 
