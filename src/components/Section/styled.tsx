@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
     position: relative;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
         color: var(--white);
 
         &:before {
@@ -42,7 +42,7 @@ export const Content = styled.div`
         max-width: 448px;
         padding: 64px 0;
 
-        &:nth-child(odd):before {
+        &:nth-child(even):before {
             top: -24px;
         }
     }
@@ -51,7 +51,7 @@ export const Content = styled.div`
         max-width: 576px;
         padding: 80px 0;
 
-        &:nth-child(odd):before {
+        &:nth-child(even):before {
             top: -32px;
         }
     }
@@ -60,7 +60,7 @@ export const Content = styled.div`
         max-width: 768px;
         padding: 96px 0;
 
-        &:nth-child(odd):before {
+        &:nth-child(even):before {
             top: -40px;
         }
     }
@@ -68,7 +68,7 @@ export const Content = styled.div`
     @media (min-width: 1280px) {
         padding: 112px 0;
 
-        &:nth-child(odd):before {
+        &:nth-child(even):before {
             top: -48px;
         }
     }

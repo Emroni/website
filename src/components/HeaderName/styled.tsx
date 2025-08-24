@@ -38,12 +38,14 @@ export const Svg = styled.svg`
 `;
 
 export const Top = styled.text`
+    fill: currentColor;
     font-weight: 100;
     letter-spacing: 0.1875em;
     text-transform: uppercase;
 `;
 
 export const Bottom = styled.text`
+    fill: currentColor;
     font-size: 0.375em;
     font-weight: 600;
     letter-spacing: 0.1875em;

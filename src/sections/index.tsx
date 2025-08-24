@@ -1,4 +1,3 @@
-export { default as Clients } from './Clients';
 export { default as Connect } from './Connect';
 export { default as Education } from './Education';
 export { default as Experience } from './Experience';

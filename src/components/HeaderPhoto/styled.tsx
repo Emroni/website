@@ -53,7 +53,7 @@ export const Border = styled.circle`
     opacity: 0;
     stroke-dasharray: 0, 157%;
     stroke-width: 6px;
-    stroke: var(--blue-500);
+    stroke: var(--white);
 
     @media (min-width: 475px) {
         stroke-width: 8px;
