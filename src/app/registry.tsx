@@ -2,6 +2,7 @@
 import { useServerInsertedHTML } from 'next/navigation';
 import { useState } from 'react';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import { LayoutProps } from './types';
 
 export default function Registry({ children }: LayoutProps) {
     const [styleSheet] = useState(() => new ServerStyleSheet());

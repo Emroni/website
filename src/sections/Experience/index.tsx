@@ -1,0 +1,113 @@
+'use client';
+import { ExperienceBlock, ResumeLink, Section } from '@/components';
+import { Container } from './styled';
+
+export default function Experience() {
+    return (
+        <Section title="Work Experience">
+            <Container>
+                <ExperienceBlock
+                    title="Head of Engineering"
+                    date="March 2025"
+                    company="Krobar.ai"
+                    link="https://krobar.ai/"
+                    items={[
+                        'Developed AI powered modeling and forecasting application in React',
+                        'Integrated OpenAI assistants for guiding users in building models and generating reports',
+                        'Built backend services in Node.js for streaming AI interactions and data processing',
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Head of Engineering"
+                    date="June 2022"
+                    company="Kromatic"
+                    link="https://kromatic.com/"
+                    items={[
+                        'Developed 6 white-label business innovation training applications in React',
+                        'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
+                        'Packaged application deliverables in Docker for Heroku and client on-prem deployments',
+                        'Led contracted development team for building enterprise-level learning management system',
+                        'Implemented Playwright automated tests, covering complex role based access control',
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Senior Full Stack Developer"
+                    date="June 2020"
+                    company="NodeRelate"
+                    link="https://noderelate.com"
+                    items={[
+                        'Developed frontend of enterprise-level data governance application in React',
+                        'Implemented complex data visualizations with D3.js',
+                        'Built backend services in Node.js for Azure AD authentication and Postgres database connection',
+                        'Built automation tools for generating API endpoints for Azure Functions based on routines exported from Postgres database',
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Senior Full Stack Developer"
+                    date="February 2020"
+                    company="Iglu"
+                    link="https://iglu.net"
+                    items={[
+                        'Developed frontend of internal portal for 250 employees in React',
+                        'Implemented invoicing and reporting, linking to Xero accounting software',
+                        'Mentored juniors in web development on weekly basis',
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Senior Full Stack Developer"
+                    date="June 2019"
+                    company="SICCODE.com"
+                    link="https://just.agency/en"
+                    items={[
+                        'Expanded and restructured existing PHP web application',
+                        'Optimized code for load speeds, targeting page loads under 100ms',
+                        "Implemented extensive SEO improvements using microdata and JSON-LD, based on Schema.org's vocabulary",
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Digital Lead"
+                    date="October 2014"
+                    company="Just"
+                    link="https://just.agency/en"
+                    items={[
+                        'Lead of both frontend and backend development, responsible for quality control of all deliverables',
+                        'Acted as bridge between project management and development team by handling all technical questions by project mangers, clients and other agencies',
+                        'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
+                        'Consulted clients on processes and architecture based on project requirements',
+                        'Developed frontend of websites and applications with React',
+                        'Built real-time interactive multi-user applications using WebSockets',
+                        'Built 2D and 3D animations in JavaScript for websites',
+                        'Built automation tools with JavaScript (Node) and PHP for significantly faster development and delivery of advertising banners',
+                        'Developed an internal application with automated repeating tasks, significantly reducing workload for HR, while providing more transparency to employees',
+                        'Developed a standardized cookie bar with implementation documentation for use by government agencies',
+                        'Created motion graphics in After Effects for advertising videos, making use of ExtendScript to generate variations',
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Full Stack Developer"
+                    date="September 2011"
+                    company="Just"
+                    link="https://just.agency/en"
+                    items={[
+                        'Developed frontend of websites with JavaScript, HTML and CSS from designs in Sketch and Illustrator',
+                        'Developed backend systems in PHP for websites and internal applications, using the Symfony, Laravel and CodeIgniter frameworks, with Twig and Blade templating engines',
+                        'Built motion graphics for videos and animations for websites in Flash',
+                        'Led small teams of frontend and backend developers',
+                        'Mentored junior developers in JavaScript and Flash',
+                    ]}
+                />
+                <ExperienceBlock
+                    title="Flash Developer"
+                    date="June 2009"
+                    company="Just"
+                    link="https://just.agency/en"
+                    items={[
+                        'Built full websites in Flash from designs in Photoshop',
+                        'Implemented small Flash components into HTML websites, like navigation bars and animations',
+                    ]}
+                />
+            </Container>
+            <ResumeLink />
+        </Section>
+    );
+}

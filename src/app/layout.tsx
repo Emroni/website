@@ -1,9 +1,10 @@
-import { AnalyticsProvider } from '@/contexts/Analytics/Analytics';
-import { TransitionsProvider } from '@/contexts/Transitions/Transitions';
+import { AnalyticsProvider } from '@/contexts/Analytics';
+import { TransitionsProvider } from '@/contexts/Transitions';
 import '@fontsource-variable/work-sans';
 import type { Metadata, Viewport } from 'next';
 import Registry from './registry';
 import './styles.css';
+import { LayoutProps } from './types';
 
 export const metadata: Metadata = {
     description: 'Full Stack Developer',
