@@ -1,4 +1,3 @@
-export { default as Block } from './Block';
 export { default as Button } from './Button';
 export { default as ExperienceBlock } from './ExperienceBlock';
 export { default as Header } from './Header';
@@ -6,6 +5,7 @@ export { default as HeaderName } from './HeaderName';
 export { default as HeaderPhoto } from './HeaderPhoto';
 export { default as Icon } from './Icon';
 export { default as Image } from './Image';
+export { default as KnowledgeBlock } from './KnowledgeBlock';
 export { default as Link } from './Link';
 export { default as ResumeLink } from './ResumeLink';
 export { default as Section } from './Section';
