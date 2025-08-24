@@ -1,41 +1,25 @@
 import _ from 'lodash';
 import styled, { css } from 'styled-components';
 
-export const Wrap = styled.div`
-    position: relative;
-    margin: 32px 0;
-
-    &:first-of-type {
-        margin-top: 0;
-    }
-
-    &:last-of-type {
-        margin-bottom: 0;
-    }
-
-    &:before {
-        background-color: currentColor;
-        content: '';
-        height: 0;
-        left: -16px;
-        position: absolute;
-        top: 0;
-        transition: height 0.5s var(--ease);
-        width: 1px;
-    }
-
-    &.active:before {
-        height: 100%;
-    }
-`;
-
-export const Heading = styled.h4`
-    font-size: 16px;
+export const Title = styled.h4`
+    font-size: 20px;
     font-weight: 600;
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
-    ${`.${Wrap.styledComponentId}`}:not(.active) & {
+    &:not(.active) {
+        opacity: 0;
+        transform: translateX(-4px);
+    }
+`;
+
+export const Info = styled.div`
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0;
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+
+    &:not(.active) {
         opacity: 0;
         transform: translateX(-4px);
     }
@@ -44,11 +28,26 @@ export const Heading = styled.h4`
 export const Container = styled.ul`
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 12px;
+    position: relative;
+
+    &:before {
+        background-color: currentColor;
+        content: '';
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: 6px;
+        transition: height 0.5s var(--ease);
+        width: 1px;
+    }
+
+    &.active:before {
+        height: calc(100% - 12px);
+    }
 `;
 
 export const Item = styled.li`
-    margin-left: -4px;
     padding: 4px;
     position: relative;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
@@ -78,7 +77,7 @@ export const Item = styled.li`
         `
     )}
 
-    ${`.${Wrap.styledComponentId}`}:not(.active) & {
+    ${`.${Container.styledComponentId}`}:not(.active) & {
         opacity: 0;
         transform: translateX(-4px);
     }
