@@ -8,11 +8,11 @@ export default function Knowledge() {
             <Transition component={Blocks} fade={false} stall={0.1}>
                 <Block
                     title="Extensive"
-                    items="JavaScript,TypeScript,PHP,HTML,CSS,SQL,React,Symfony,WordPress,Node.js,REST APIs,Generators,Three.js,GSAP,Charts,D3.js,Next.js,Automation,Motion Design,Data visualization"
+                    items="TypeScript,JavaScript,React,Node.js,Next.js,Jest,D3.js,Pixi.js,Three.js,Material UI,SQL,HTML,CSS,REST APIs,Data visualization,Generators,Automation,Motion Design"
                 />
                 <Block
                     title="Proficient"
-                    items="Tailwind,Bootstrap,Storybook,Jest,D3.js,Pixi.js,Redux,Charts.js,OpenAPI,Swagger,Twig,Blade,Websockets,OpenAPI,Swagger,GraphQL,Mock Service Worker,Scrapers,Azure Functions,Laravel,Nginx,Apache,GitHub Actions,Docker,Deployer,Travis CI,Sketch,Figma ,Photoshop ,Illustrator,After effects"
+                    items="Redux,Sentry,Figma,Tailwind,Storybook,Swagger,Websockets,GraphQL,OpenAI,Azure,GitHub Actions,Heroku,Docker"
                 />
             </Transition>
             <ResumeLink />
