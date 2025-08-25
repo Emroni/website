@@ -106,6 +106,14 @@ export default function Experience() {
                         'Implemented small Flash components into HTML websites, like navigation bars and animations',
                     ]}
                 />
+                <ExperienceBlock
+                    title="Flash Developer"
+                    date="March 2008"
+                    company="Freelance"
+                    items={[
+                        'Built and implemented small Flash components for various clients through FlashDen (Envato) marketplace',
+                    ]}
+                />
             </Container>
             <ResumeLink />
         </Section>
