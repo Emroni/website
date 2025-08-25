@@ -4,7 +4,7 @@ export default function Intro() {
     return (
         <Section title="Hi">
             <Transition component="p">
-                I&apos;m a Senior Full Stack Developer with 20 years of experience creating modern web applications.
+                I&apos;m a Senior Full Stack Developer with nearly 20 years of experience creating web applications.
                 Specialized in TypeScript, React, and Node.js, I focus on building user-first, scalable, and
                 maintainable products.
             </Transition>

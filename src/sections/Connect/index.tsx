@@ -1,7 +1,7 @@
 'use client';
 import { Button, Section, Transition } from '@/components';
-import { Container } from './styled';
 import { IconName } from '@/components/Icon/types';
+import { Container } from './styled';
 
 const channels = [
     {

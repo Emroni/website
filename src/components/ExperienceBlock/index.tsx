@@ -11,7 +11,7 @@ export default function ExperienceBlock({ company, date, items, link, title }: E
                 {title}
             </Transition>
             <Transition component={Info} fade={false} stall={0.1}>
-                {date} | <Link href={link}>{company}</Link>
+                {date} | {link ? <Link href={link}>{company}</Link> : company}
             </Transition>
             <Transition component={Container} fade={false}>
                 {items.map((item, index) => (

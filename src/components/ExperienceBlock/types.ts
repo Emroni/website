@@ -2,6 +2,6 @@ export interface ExperienceBlockProps {
     company: string;
     date: string;
     items: string[];
-    link: string;
+    link?: string;
     title: string;
 }
