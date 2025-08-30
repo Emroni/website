@@ -12,9 +12,12 @@ export default function Experience() {
                     company="Krobar.ai"
                     link="https://krobar.ai/"
                     items={[
-                        'Developed AI powered modeling and forecasting application in React',
-                        'Integrated OpenAI assistants for guiding users in building models and generating reports',
-                        'Built backend services in Node.js for streaming AI interactions and data processing',
+                        'Developed an AI-powered modeling and forecasting application in React',
+                        'Integrated OpenAI assistants to help users build models, interpret results, and generate reports',
+                        'Architected and implemented backend services in Node.js for streaming AI interactions and data processing',
+                        'Integrated a sophisticated Monte Carlo simulation engine for accurate forecasting and scenario modeling',
+                        'Accelerated development by making implementation-level design decisions while staying consistent with design guidelines',
+                        'Collaborated closely with design, product, and client teams to align technical solutions with business needs',
                     ]}
                 />
                 <ExperienceBlock
@@ -23,11 +26,13 @@ export default function Experience() {
                     company="Kromatic"
                     link="https://kromatic.com/"
                     items={[
-                        'Developed 6 white-label business innovation training applications in React',
-                        'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
-                        'Packaged application deliverables in Docker for Heroku and client on-prem deployments',
+                        'Developed 6 interactive white-label business innovation training applications in React',
                         'Led contracted development team for building enterprise-level learning management system',
-                        'Implemented Playwright automated tests, covering complex role based access control',
+                        'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
+                        'Architected content management system where database content could be extended and customized while preserving the original data',
+                        'Developed Monte Carlo simulation scripts to calculate scenario-based predictions',
+                        'Packaged application deliverables in Docker, supporting both Heroku and complex client-specific on-premises deployments',
+                        'Implemented Playwright automated end-to-end tests, covering role based access control',
                     ]}
                 />
                 <ExperienceBlock

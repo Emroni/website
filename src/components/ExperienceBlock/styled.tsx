@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import styled, { css } from 'styled-components';
 
-export const Title = styled.h4`
-    font-size: 20px;
-    font-weight: 600;
+export const Title = styled.h3`
+    color: var(--blue-500);
+    font-size: 24px;
+    font-weight: 300;
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
@@ -15,7 +16,7 @@ export const Title = styled.h4`
 
 export const Info = styled.div`
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 600;
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 

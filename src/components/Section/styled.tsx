@@ -4,13 +4,12 @@ export const Container = styled.section`
     position: relative;
 
     &:nth-child(even) {
-        color: var(--white);
-
         &:before {
             content: '';
             background-color: var(--blue-500);
             height: 0;
             left: 50%;
+            opacity: 0.05;
             position: absolute;
             top: -16px;
             transform: translate(-50%, -50%) skewY(-2deg);
@@ -75,6 +74,7 @@ export const Content = styled.div`
 `;
 
 export const Heading = styled.h2`
+    color: var(--blue-500);
     display: inline-block;
     font-size: 24px;
     font-weight: 600;
