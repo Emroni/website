@@ -8,7 +8,7 @@ export const Wrap = styled.div`
     &:before,
     &:after {
         content: '';
-        background-color: var(--white);
+        background-color: var(--blue-500);
         top: 12px;
         height: calc(100% - 12px);
         width: 1px;
@@ -57,7 +57,7 @@ export const Heading = styled.h3`
     &:before,
     span:last-child:after {
         content: '';
-        background-color: var(--white);
+        background-color: var(--blue-500);
         height: 1px;
         position: absolute;
         left: 0;
@@ -114,7 +114,7 @@ export const List = styled.ul`
 
     &:after {
         content: '';
-        background-color: var(--white);
+        background-color: var(--blue-500);
         position: absolute;
         left: 0;
         bottom: 0;
@@ -140,7 +140,7 @@ export const ListItem = styled.li`
 
     &:before {
         content: '';
-        background-color: var(--white);
+        background-color: var(--blue-500);
         opacity: 0.05;
         position: absolute;
         left: 0;
