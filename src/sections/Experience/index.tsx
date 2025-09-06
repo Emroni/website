@@ -1,5 +1,5 @@
 'use client';
-import { ExperienceBlock, ResumeLink, Section } from '@/components';
+import { ExperienceBlock, Link, Section, SectionLinks } from '@/components';
 import { Container } from './styled';
 
 export default function Experience() {
@@ -120,7 +120,9 @@ export default function Experience() {
                     ]}
                 />
             </Container>
-            <ResumeLink />
+            <SectionLinks>
+                <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+            </SectionLinks>
         </Section>
     );
 }

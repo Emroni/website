@@ -1,5 +1,5 @@
 'use client';
-import { KnowledgeBlock, ResumeLink, Section, Transition } from '@/components';
+import { KnowledgeBlock, Link, Section, SectionLinks, Transition } from '@/components';
 import { Container } from './styled';
 
 export default function Knowledge() {
@@ -15,7 +15,10 @@ export default function Knowledge() {
                     items="Redux,Sequelize,Figma,Playwright,SQL,Sentry,Tailwind,Storybook,Swagger,Websockets,GraphQL,OpenAI,Azure,GitHub Actions,Heroku,Docker,Automation,Motion Design"
                 />
             </Transition>
-            <ResumeLink />
+            <SectionLinks>
+                <Link href="https://experimental.emrekoc.io/">Experimental Artwork</Link>
+                <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+            </SectionLinks>
         </Section>
     );
 }
