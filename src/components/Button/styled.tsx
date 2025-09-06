@@ -30,16 +30,9 @@ export const Container = styled.a`
         &:after,
         span:before,
         span:after {
+            background-color: var(--black);
             content: '';
             position: absolute;
-
-            section:nth-of-type(even) & {
-                background-color: var(--black);
-            }
-
-            section:nth-of-type(odd) & {
-                background-color: var(--white);
-            }
         }
 
         &:before,
