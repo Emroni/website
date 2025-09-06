@@ -1,21 +1,23 @@
 'use client';
-import { Section, Transition } from '@/components';
-import { Container, Content, Location, Name } from './styled';
+import { EducationBlock, Section } from '@/components';
+import { Container } from './styled';
 
 export default function Education() {
     return (
         <Section title="Education">
             <Container>
-                <Transition component={Content}>
-                    <Name>Communication and Multimedia Design</Name>
-                    <Location>2010 - 2013 | The Hague University of Applied Sciences</Location>
-                    <div>Bachelor of Information and Communication Technology</div>
-                </Transition>
-                <Transition component={Content}>
-                    <Name>Mechanical Engineering</Name>
-                    <Location>2007 - 2009 | Delft University of Technology</Location>
-                    <div>Attended classes in mathematics and physics</div>
-                </Transition>
+                <EducationBlock
+                    date="2010 - 2013"
+                    degree="Bachelor of Information and Communication Technology"
+                    location="The Hague University of Applied Sciences"
+                    name="Communication and Multimedia Design"
+                />
+                <EducationBlock
+                    date="2007 - 2009"
+                    degree="Bachelor of Information and Communication Technology"
+                    location="Delft University of Technology"
+                    name="Mechanical Engineering"
+                />
             </Container>
         </Section>
     );

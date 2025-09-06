@@ -61,7 +61,7 @@ export function TransitionsProvider({ children }: TransitionsProps) {
         let newTimeout = 50;
         if (nextItem) {
             if (nextItem.top <= window.scrollY) {
-                newTimeout = 0;
+                newTimeout = 1;
             } else if (nextItem?.stall) {
                 newTimeout = nextItem.stall * 1000;
             }
