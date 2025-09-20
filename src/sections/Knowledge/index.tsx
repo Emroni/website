@@ -17,7 +17,7 @@ export default function Knowledge() {
             </Transition>
             <SectionLinks>
                 <Link href="https://experimental.emrekoc.io/">Experimental Artwork</Link>
-                <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+                <Link href="/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
             </SectionLinks>
         </Section>
     );

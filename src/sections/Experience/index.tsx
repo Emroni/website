@@ -121,7 +121,7 @@ export default function Experience() {
                 />
             </Container>
             <SectionLinks>
-                <Link href="/assets/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
+                <Link href="/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
             </SectionLinks>
         </Section>
     );
