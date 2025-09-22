@@ -76,7 +76,7 @@ export default function Experience() {
                     link="https://just.agency/en"
                     items={[
                         'Lead of both frontend and backend teams up to a total of 10 developers, responsible for quality control of all deliverables',
-                        'Acted as bridge between project management and development team by handling all technical questions by project mangers, clients and other agencies',
+                        'Acted as bridge between project management and development team by handling all technical questions by project managers, clients and other agencies',
                         'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
                         'Consulted clients on processes and architecture based on project requirements',
                         'Developed frontend of websites and applications with React',
