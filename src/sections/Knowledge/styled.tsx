@@ -5,11 +5,7 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 16px;
 
-    @media (min-width: 640px) {
-        gap: 24px;
-    }
-
     @media (min-width: 768px) {
-        gap: 32px;
+        gap: 8px;
     }
 `;

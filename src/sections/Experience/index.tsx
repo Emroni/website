@@ -12,7 +12,7 @@ export default function Experience() {
                     company="Krobar.ai"
                     link="https://krobar.ai/"
                     items={[
-                        'Developed AI-powered modeling and forecasting application in React',
+                        'Led development of AI-powered modeling and forecasting application in React',
                         'Integrated OpenAI assistants to help users build models, interpret results, and generate reports',
                         'Architected and implemented backend services in Node.js for streaming AI interactions and data processing',
                         'Integrated sophisticated Monte Carlo simulation engine for accurate forecasting and scenario modeling',
