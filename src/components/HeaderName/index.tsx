@@ -33,7 +33,7 @@ export default function HeaderName() {
                     Emre Koc
                 </Top>
                 <Bottom clipPath="url(#bottom-clip)" y="95%">
-                    Full Stack Developer
+                    Senior Software Engineer
                 </Bottom>
             </Transition>
         </Heading>

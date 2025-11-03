@@ -61,8 +61,8 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Senior Full Stack Developer"
                     date="June 2019"
-                    company="SICCODE.com"
-                    link="https://just.agency/en"
+                    company="SICCODE"
+                    link="https://siccode.com"
                     items={[
                         'Expanded and restructured existing PHP web application',
                         'Optimized code for load speeds, targeting page loads under 100ms',
