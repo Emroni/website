@@ -27,7 +27,7 @@ export default function Experience() {
                     link="https://kromatic.com/"
                     items={[
                         'Developed 6 interactive white-label business innovation training applications in React',
-                        'Led contracted development team of 5 for building enterprise-level learning management system',
+                        'Led contracted development teams for building enterprise-level learning management system',
                         'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
                         'Architected content management system where database content could be extended and customized while preserving the original data',
                         'Developed Monte Carlo simulation scripts in Node.js to calculate scenario-based predictions',
@@ -75,7 +75,7 @@ export default function Experience() {
                     company="Just"
                     link="https://just.agency/en"
                     items={[
-                        'Lead of both frontend and backend teams up to a total of 10 developers, responsible for quality control of all deliverables',
+                        'Lead of both frontend and backend teams, responsible for quality control of all deliverables',
                         'Acted as bridge between project management and development team by handling all technical questions by project managers, clients and other agencies',
                         'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
                         'Consulted clients on processes and architecture based on project requirements',
