@@ -1,6 +1,6 @@
 'use client';
 import { Header } from '@/components';
-import { Connect, Education, Experience, Intro, Knowledge } from '@/sections';
+import { Connect, Education, Experience, Intro, Tech } from '@/sections';
 
 export default function Home() {
     return (
@@ -8,7 +8,7 @@ export default function Home() {
             <Header />
             <main>
                 <Intro />
-                <Knowledge />
+                <Tech />
                 <Experience />
                 <Education />
                 <Connect />

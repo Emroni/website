@@ -7,17 +7,17 @@ import './styles.css';
 import { LayoutProps } from './types';
 
 export const metadata: Metadata = {
-    description: 'Full Stack Developer',
+    description: 'Senior Software Engineer',
     metadataBase: new URL('https://emrekoc.io'),
     openGraph: {
-        description: 'Full Stack Developer',
+        description: 'Senior Software Engineer',
         images: '/assets/share.png',
         siteName: 'Emre Koc',
         title: 'Emre Koc',
         type: 'website',
         url: 'https://emrekoc.io',
     },
-    title: 'Emre Koc - Full Stack Developer',
+    title: 'Emre Koc - Senior Software Engineer',
 };
 
 export const viewport: Viewport = {

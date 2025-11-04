@@ -3,7 +3,7 @@ import Transition from '../Transition';
 import { Heading, List, ListItem, Wrap } from './styled';
 import { BlockProps } from './types';
 
-export default function KnowledgeBlock({ items, title }: BlockProps) {
+export default function TechBlock({ items, title }: BlockProps) {
     return (
         <Transition component={Wrap}>
             <Heading>{title}</Heading>

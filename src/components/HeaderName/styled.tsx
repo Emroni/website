@@ -46,9 +46,9 @@ export const Top = styled.text`
 
 export const Bottom = styled.text`
     fill: currentColor;
-    font-size: 0.375em;
+    font-size: 0.295em;
     font-weight: 600;
-    letter-spacing: 0.1875em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
 `;
 
