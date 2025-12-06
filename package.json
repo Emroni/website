@@ -2,6 +2,9 @@
     "name": "website",
     "version": "5.2.0",
     "private": true,
+    "engines": {
+        "node": "22.x"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -32,6 +35,6 @@
         "@types/react-dom": "^19",
         "eslint": "^9",
         "eslint-config-next": "15.5.7",
-        "typescript": "^5"
+        "typescript": "5.9.3"
     }
 }
