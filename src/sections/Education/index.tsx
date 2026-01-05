@@ -14,7 +14,6 @@ export default function Education() {
                 />
                 <EducationBlock
                     date="2007 - 2009"
-                    degree="Bachelor of Information and Communication Technology"
                     location="Delft University of Technology"
                     name="Mechanical Engineering"
                 />
