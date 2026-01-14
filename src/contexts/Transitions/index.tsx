@@ -49,8 +49,7 @@ export function TransitionsProvider({ children }: TransitionsProps) {
         // Check next item and scroll position
         if (
             delay ||
-            !nextItem ||
-            !nextItem.ref.current ||
+            !nextItem?.ref.current ||
             (nextItem.top > window.scrollY + window.innerHeight * 0.9 &&
                 window.scrollY < document.documentElement.offsetHeight - window.innerHeight - 100)
         ) {
@@ -62,7 +61,7 @@ export function TransitionsProvider({ children }: TransitionsProps) {
         if (nextItem) {
             if (nextItem.top <= window.scrollY) {
                 newTimeout = 1;
-            } else if (nextItem?.stall) {
+            } else if (nextItem.stall) {
                 newTimeout = nextItem.stall * 1000;
             }
         }

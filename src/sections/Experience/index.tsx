@@ -9,6 +9,7 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Head of Engineering"
                     date="March 2025"
+                    description="Technical lead for frontend and backend architecture and development of an AI-native SaaS platform"
                     company="Krobar.ai"
                     link="https://krobar.ai/"
                     items={[
@@ -23,6 +24,7 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Head of Engineering"
                     date="June 2022"
+                    description="Technical lead for distributed frontend and backend teams, delivering multiple production React applications and a custom LMS platform"
                     company="Kromatic"
                     link="https://kromatic.com/"
                     items={[
@@ -36,8 +38,9 @@ export default function Experience() {
                     ]}
                 />
                 <ExperienceBlock
-                    title="Senior Full Stack Developer"
+                    title="Lead Full Stack Engineer"
                     date="June 2020"
+                    description="Technical lead for frontend and backend team, overseeing architecture, implementation, and core system integrations"
                     company="NodeRelate"
                     link="https://noderelate.com"
                     items={[
@@ -48,8 +51,9 @@ export default function Experience() {
                     ]}
                 />
                 <ExperienceBlock
-                    title="Senior Full Stack Developer"
+                    title="Lead Frontend Engineer"
                     date="February 2020"
+                    description="Technical lead for frontend, extending architecture and functionality of the internal portal"
                     company="Iglu"
                     link="https://iglu.net"
                     items={[
@@ -59,8 +63,9 @@ export default function Experience() {
                     ]}
                 />
                 <ExperienceBlock
-                    title="Senior Full Stack Developer"
+                    title="Senior Full Stack Engineer"
                     date="June 2019"
+                    description="Modernized and optimized a large production web application, improving performance, structure, and SEO"
                     company="SICCODE"
                     link="https://siccode.com"
                     items={[
@@ -72,10 +77,11 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Digital Lead"
                     date="October 2014"
+                    description="Technical lead for frontend and backend teams, acting as the bridge between development, project management, and clients"
                     company="Just"
                     link="https://just.agency/en"
                     items={[
-                        'Lead of both frontend and backend teams, responsible for quality control of all deliverables',
+                        'Responsible for the architecture, development, and quality control of all deliverables',
                         'Acted as bridge between project management and development team by handling all technical questions by project managers, clients and other agencies',
                         'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
                         'Consulted clients on processes and architecture based on project requirements',
@@ -91,6 +97,7 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Full Stack Developer"
                     date="September 2011"
+                    description="Developed numerous frontend and backend web applications for a variety of clients"
                     company="Just"
                     link="https://just.agency/en"
                     items={[
@@ -104,6 +111,7 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Flash Developer"
                     date="June 2009"
+                    description="Built Flash-based websites and interactive components from design to production"
                     company="Just"
                     link="https://just.agency/en"
                     items={[
@@ -114,9 +122,11 @@ export default function Experience() {
                 <ExperienceBlock
                     title="Flash Developer"
                     date="March 2008"
+                    description="Built and sold reusable Flash components via the Envato marketplace"
                     company="Freelance"
                     items={[
-                        'Built and implemented small Flash components for various clients through FlashDen (Envato) marketplace',
+                        'Designed and built reusable components to be sold through Envato (formerly FlashDen) marketplace',
+                        'Implemented components in client projects and provided support',
                     ]}
                 />
             </Container>
