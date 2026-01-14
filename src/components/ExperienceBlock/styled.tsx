@@ -1,10 +1,16 @@
 import _ from 'lodash';
 import styled, { css } from 'styled-components';
 
-export const Title = styled.h3`
+export const Heading = styled.div`
     color: var(--blue-500);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+`;
+
+export const Title = styled.h3`
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 500;
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
@@ -16,8 +22,9 @@ export const Title = styled.h3`
 
 export const Description = styled.div`
     color: var(--blue-500);
+    font-size: 18px;
+    margin: 4px 0 12px;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
-    margin: 8px 0 12px;
 
     &:not(.active) {
         opacity: 0;
@@ -26,8 +33,7 @@ export const Description = styled.div`
 `;
 
 export const Info = styled.div`
-    font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
 
@@ -60,6 +66,7 @@ export const Container = styled.ul`
 `;
 
 export const Item = styled.li`
+    font-style: italic;
     padding: 4px;
     position: relative;
     transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
