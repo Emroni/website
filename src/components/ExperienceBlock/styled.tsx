@@ -14,6 +14,17 @@ export const Title = styled.h3`
     }
 `;
 
+export const Description = styled.div`
+    color: var(--blue-500);
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+    margin: 8px 0 12px;
+
+    &:not(.active) {
+        opacity: 0;
+        transform: translateX(-4px);
+    }
+`;
+
 export const Info = styled.div`
     font-size: 16px;
     font-weight: 600;
