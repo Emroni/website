@@ -29,25 +29,29 @@ export default function Experience() {
                     link="https://kromatic.com/"
                     items={[
                         'Developed 6 interactive white-label business innovation training applications in React',
-                        'Led contracted development teams for building enterprise-level learning management system',
+                        'Led contracted development teams building an enterprise-level learning management system',
+                        'Conducted technical interviews, code reviews, and performance reviews for staffing decisions',
                         'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
                         'Architected content management system where database content could be extended and customized while preserving the original data',
                         'Developed Monte Carlo simulation scripts in Node.js to calculate scenario-based predictions',
                         'Packaged application deliverables in Docker, supporting both Heroku and complex client-specific on-premises deployments',
-                        'Implemented Playwright automated end-to-end tests, covering role based access control',
+                        'Implemented Playwright automated end-to-end tests, covering role-based access control',
                     ]}
                 />
                 <ExperienceBlock
                     title="Lead Full Stack Engineer"
                     date="June 2020"
-                    description="Technical lead for frontend and backend team, overseeing architecture, implementation, and core system integrations"
+                    description="Technical lead for frontend and backend teams, overseeing architecture, implementation, and core system integrations"
                     company="NodeRelate"
                     link="https://noderelate.com"
                     items={[
                         'Developed frontend of enterprise-level data governance application in React',
-                        'Implemented complex graph data visualizations with D3.js',
+                        'Conducted technical interviews and code reviews, contributing to hiring decisions',
+                        'Created reusable UI React components with Tailwind, using Storybook and Chromatic for regression testing',
+                        'Implemented interactive graph data visualizations with D3.js to represent complex workflows and actions',
                         'Built backend services in Node.js for Azure AD authentication and Postgres database connection',
                         'Built automation tools for generating API endpoints for Azure Functions based on routines exported from Postgres database',
+                        'Set up automatic deployment on Azure',
                     ]}
                 />
                 <ExperienceBlock
@@ -58,8 +62,8 @@ export default function Experience() {
                     link="https://iglu.net"
                     items={[
                         'Developed frontend of internal portal for 250 employees in React',
-                        'Implemented invoicing and reporting, linking to Xero accounting software',
                         'Mentored juniors in web development on weekly basis',
+                        'Implemented invoicing and reporting, linking to Xero accounting software',
                     ]}
                 />
                 <ExperienceBlock
@@ -83,6 +87,7 @@ export default function Experience() {
                     items={[
                         'Responsible for the architecture, development, and quality control of all deliverables',
                         'Acted as bridge between project management and development team by handling all technical questions by project managers, clients and other agencies',
+                        'Conducted technical interviews, performance reviews, and advised management on staffing decisions',
                         'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
                         'Consulted clients on processes and architecture based on project requirements',
                         'Developed frontend of websites and applications with React',
