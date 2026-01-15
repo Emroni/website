@@ -7,7 +7,8 @@ import './styles.css';
 import { LayoutProps } from './types';
 
 export const metadata: Metadata = {
-    description: 'Senior Software Engineer',
+    description:
+        'Senior Software Engineer with nearly 20 years of experience creating web applications, including over a decade as a Technical Lead. Specialized in TypeScript, React, and Node.js, I build user-first, scalable, and maintainable digital products, consistently delivering high-quality code and guiding teams to align engineering decisions with business goals.',
     metadataBase: new URL('https://emrekoc.io'),
     openGraph: {
         description: 'Senior Software Engineer',
