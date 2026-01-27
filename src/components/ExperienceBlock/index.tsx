@@ -4,7 +4,7 @@ import Transition from '../Transition';
 import { Container, Description, Heading, Info, Item, Title } from './styled';
 import { ExperienceBlockProps } from './types';
 
-export default function ExperienceBlock({ company, date, description, items, link, title }: ExperienceBlockProps) {
+export default function ExperienceBlock({ company, description, items, link, startDate, title }: ExperienceBlockProps) {
     return (
         <div>
             <Heading>
@@ -12,7 +12,7 @@ export default function ExperienceBlock({ company, date, description, items, lin
                     {title}
                 </Transition>
                 <Transition component={Info} fade={false}>
-                    {date} | {link ? <Link href={link}>{company}</Link> : company}
+                    {startDate} | {link ? <Link href={link}>{company}</Link> : company}
                 </Transition>
             </Heading>
             <Transition component={Description} fade={false} stall={0.1}>

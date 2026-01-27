@@ -1,6 +1,3 @@
-export interface EducationBlockProps {
-    date: string;
-    degree?: string;
-    location: string;
-    name: string;
-}
+import { Education } from '@/setup';
+
+export type EducationBlockProps = Education;

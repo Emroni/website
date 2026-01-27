@@ -1,4 +1,3 @@
-export interface BlockProps {
-    items: string;
-    title: string;
-}
+import { Skill } from '@/setup';
+
+export type TechBlockProps = Skill;

@@ -3,12 +3,12 @@ import Transition from '../Transition';
 import { Container, Info, Name } from './styled';
 import { EducationBlockProps } from './types';
 
-export default function EducationBlock({ date, degree, location, name }: EducationBlockProps) {
+export default function EducationBlock({ degree, endDate, field, institution, startDate }: EducationBlockProps) {
     return (
         <Transition component={Container}>
-            <Name>{name}</Name>
+            <Name>{field}</Name>
             <Info>
-                {date} | {location}
+                {startDate} - {endDate} | {institution}
             </Info>
             {degree && <div>{degree}</div>}
         </Transition>
