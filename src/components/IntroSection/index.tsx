@@ -1,7 +1,8 @@
-import { Section, Transition } from '@/components';
 import { resume } from '@/setup';
+import Section from '../Section';
+import Transition from '../Transition';
 
-export default function Intro() {
+export default function IntroSection() {
     return (
         <Section title="Hi">
             {resume.intro.map((paragraph, index) => (

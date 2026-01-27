@@ -1,14 +1,18 @@
 'use client';
-import { Link, Section, SectionLinks, TechBlock, Transition } from '@/components';
 import { resume } from '@/setup';
+import Link from '../Link';
+import Section from '../Section';
+import SectionLinks from '../SectionLinks';
+import SkillBlock from '../SkillBlock';
+import Transition from '../Transition';
 import { Container } from './styled';
 
-export default function Tech() {
+export default function SkillsSection() {
     return (
         <Section title="Tech Stack">
             <Transition component={Container} fade={false} stall={0.1}>
                 {resume.skills.map((skill, index) => (
-                    <TechBlock key={index} {...skill} />
+                    <SkillBlock key={index} {...skill} />
                 ))}
             </Transition>
             <SectionLinks>

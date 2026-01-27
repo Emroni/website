@@ -1,9 +1,9 @@
 'use client';
+import { Education } from '@/setup';
 import Transition from '../Transition';
 import { Container, Info, Name } from './styled';
-import { EducationBlockProps } from './types';
 
-export default function EducationBlock({ degree, endDate, field, institution, startDate }: EducationBlockProps) {
+export default function EducationBlock({ degree, endDate, field, institution, startDate }: Education) {
     return (
         <Transition component={Container}>
             <Name>{field}</Name>

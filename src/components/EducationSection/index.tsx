@@ -1,13 +1,14 @@
 'use client';
-import { EducationBlock, Section } from '@/components';
 import { resume } from '@/setup';
+import EducationBlock from '../EducationBlock';
+import Section from '../Section';
 import { Container } from './styled';
 
-export default function Education() {
+export default function EducationSection() {
     return (
         <Section title="Education">
             <Container>
-                {resume.educations.map((education, index) => (
+                {resume.education.map((education, index) => (
                     <EducationBlock key={index} {...education} />
                 ))}
             </Container>

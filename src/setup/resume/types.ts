@@ -17,7 +17,7 @@ export interface Job {
 }
 
 export interface Resume {
-    educations: Education[];
+    education: Education[];
     intro: string[];
     jobs: Job[];
     profile: string;

@@ -1,9 +1,9 @@
 import { AnalyticsProvider } from '@/contexts/Analytics';
 import { TransitionsProvider } from '@/contexts/Transitions';
+import '@/setup/theme.css';
 import '@fontsource-variable/work-sans';
 import type { Metadata, Viewport } from 'next';
 import Registry from './registry';
-import './styles.css';
 import { LayoutProps } from './types';
 
 export const metadata: Metadata = {

@@ -1,8 +1,8 @@
 import { Resume } from './types';
 
 export const resume: Resume = {
-    // Educations
-    educations: [
+    // Education
+    education: [
         {
             field: 'Communication and Multimedia Design',
             institution: 'The Hague University of Applied Sciences',

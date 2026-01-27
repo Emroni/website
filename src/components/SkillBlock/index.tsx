@@ -1,9 +1,9 @@
 'use client';
+import { Skill } from '@/setup';
 import Transition from '../Transition';
 import { Heading, List, ListItem, Wrap } from './styled';
-import { TechBlockProps } from './types';
 
-export default function TechBlock({ category, items }: TechBlockProps) {
+export default function SkillBlock({ category, items }: Skill) {
     return (
         <Transition component={Wrap}>
             <Heading>{category}</Heading>

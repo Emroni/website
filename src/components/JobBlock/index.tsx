@@ -1,10 +1,10 @@
 'use client';
+import { Job } from '@/setup';
 import Link from '../Link';
 import Transition from '../Transition';
 import { Container, Description, Heading, Info, Item, Title } from './styled';
-import { ExperienceBlockProps } from './types';
 
-export default function ExperienceBlock({ company, description, items, link, startDate, title }: ExperienceBlockProps) {
+export default function JobBlock({ company, description, items, link, startDate, title }: Job) {
     return (
         <div>
             <Heading>
