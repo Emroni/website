@@ -18,6 +18,8 @@ export async function GET() {
     // Generate PDF
     const pdf = await page.pdf({
         format: 'Letter',
+        pageRanges: '1-2',
+        printBackground: true,
     });
 
     await browser.close();

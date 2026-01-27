@@ -7,6 +7,7 @@ import {
     faUpwork,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faGlobe, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconMap, IconProps } from './types';
 
@@ -14,7 +15,9 @@ const icons: IconMap = {
     codepen: faCodepen,
     envelope: faEnvelope,
     github: faGithub,
+    globe: faGlobe,
     linkedin: faLinkedinIn,
+    phone: faPhone,
     stackoverflow: faStackOverflow,
     twitter: faTwitter,
     upwork: faUpwork,
