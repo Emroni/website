@@ -1,11 +1,15 @@
 'use client';
-import { Params } from '@fortawesome/fontawesome-svg-core';
-import { useMemo, useState } from 'react';
+import { resume } from '@/setup';
+import { ChangeEvent, useMemo, useState } from 'react';
 import { Container, Controls, Preview } from './styled';
+import { Params } from './types';
 
 export default function ResumePage() {
-    const [params] = useState<Params>({});
+    const [params, setParams] = useState<Params>({
+        profile: resume.profile,
+    });
 
+    // Parse params into query string
     const query = useMemo(() => {
         const searchParams = new URLSearchParams();
         Object.entries(params).forEach(([key, value]) => {
@@ -16,10 +20,19 @@ export default function ResumePage() {
         return searchParams.toString();
     }, [params]);
 
+    function handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
+        setParams(prevParams => ({
+            ...prevParams,
+            profile: e.target.value,
+        }));
+    }
+
     return (
         <Container>
             <Controls>
-                <a href="/api/resume" rel="noreferrer" target="_blank">
+                <textarea value={params.profile} onChange={handleChange} />
+
+                <a href={`/api/resume?${query}`} rel="noreferrer" target="_blank">
                     Download
                 </a>
             </Controls>

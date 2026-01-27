@@ -1,3 +1,3 @@
 export interface Params {
-    time?: string;
+    profile?: string;
 }

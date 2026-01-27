@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import puppeteer from 'puppeteer';
 
-export async function GET() {
+export async function GET(req: NextRequest) {
     // Launch Puppeteer
     const browser = await puppeteer.launch({
         args: ['--disable-setuid-sandbox', '--no-sandbox'],
@@ -11,7 +11,7 @@ export async function GET() {
     const page = await browser.newPage();
 
     // Load resume page
-    await page.goto('http://localhost:3000/resume/preview', {
+    await page.goto(`http://localhost:3000/resume/preview${req.nextUrl.search}`, {
         waitUntil: 'networkidle0',
     });
 

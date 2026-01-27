@@ -1,9 +1,14 @@
 'use client';
 import { ResumeContactItem, ResumeEducation, ResumeJob, ResumeSkill } from '@/components';
 import { resume } from '@/setup';
+import { useSearchParams } from 'next/navigation';
 import { Body, Container, Footer, Head, LeftColumn, Page, RightColumn } from './styled';
 
 export default function ResumePreviewPage() {
+    const searchParams = useSearchParams();
+
+    const profile = searchParams.get('profile') || resume.profile;
+
     return (
         <Container>
             <Page>
@@ -44,7 +49,7 @@ export default function ResumePreviewPage() {
                     <RightColumn>
                         <section>
                             <h2>Profile</h2>
-                            <p>{resume.profile}</p>
+                            <p>{profile}</p>
                         </section>
 
                         <section>
