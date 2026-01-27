@@ -1,94 +1,30 @@
 'use client';
-import { ResumeContactItem, ResumeEducation, ResumeJob, ResumeSkill } from '@/components';
-import { resume } from '@/setup';
-import { Body, Footer, Head, LeftColumn, Page, RightColumn } from './styled';
+import { Params } from '@fortawesome/fontawesome-svg-core';
+import { useMemo, useState } from 'react';
+import { Container, Controls, Preview } from './styled';
 
 export default function ResumePage() {
+    const [params] = useState<Params>({});
+
+    const query = useMemo(() => {
+        const searchParams = new URLSearchParams();
+        Object.entries(params).forEach(([key, value]) => {
+            if (value !== undefined) {
+                searchParams.set(key, value);
+            }
+        });
+        return searchParams.toString();
+    }, [params]);
+
     return (
-        <>
-            <Page>
-                <Head>
-                    <h1>Emre Koc</h1>
-                    <div>Senior Software Engineer</div>
-                </Head>
+        <Container>
+            <Controls>
+                <a href="/api/resume" rel="noreferrer" target="_blank">
+                    Download
+                </a>
+            </Controls>
 
-                <Body>
-                    <LeftColumn>
-                        <section>
-                            <h2>Contact</h2>
-                            <ResumeContactItem href="https://emrekoc.io" icon="globe">
-                                emrekoc.io
-                            </ResumeContactItem>
-                            <ResumeContactItem href="mailto:hi@emrekoc.io" icon="envelope">
-                                hi@emrekoc.io
-                            </ResumeContactItem>
-                            <ResumeContactItem href="https://linkedin.com/in/emroni" icon="linkedin">
-                                linkedin.com/in/emroni
-                            </ResumeContactItem>
-                            <ResumeContactItem href="https://github.com/emroni" icon="github">
-                                github.com/emroni
-                            </ResumeContactItem>
-                            <ResumeContactItem href="tel:+31683889709" icon="phone">
-                                +31683889709
-                            </ResumeContactItem>
-                        </section>
-
-                        <section>
-                            <h2>Tech Stack</h2>
-                            {resume.skills.map((skill, index) => (
-                                <ResumeSkill key={index} {...skill} />
-                            ))}
-                        </section>
-                    </LeftColumn>
-
-                    <RightColumn>
-                        <section>
-                            <h2>Profile</h2>
-                            <p>{resume.profile}</p>
-                        </section>
-
-                        <section>
-                            <h2>Work Experience</h2>
-                            {resume.jobs.slice(0, 2).map((job, index) => (
-                                <ResumeJob key={index} {...job} />
-                            ))}
-                        </section>
-                    </RightColumn>
-                </Body>
-            </Page>
-
-            <Page>
-                <Body>
-                    <LeftColumn>
-                        <section>
-                            <h2>Education</h2>
-                            {resume.education.map((education, index) => (
-                                <ResumeEducation key={index} {...education} />
-                            ))}
-                        </section>
-
-                        <section>
-                            <h2>Languages</h2>
-                            <div>
-                                <b>Dutch</b> native
-                            </div>
-                            <div>
-                                <b>English</b> fluent
-                            </div>
-                        </section>
-                    </LeftColumn>
-
-                    <RightColumn>
-                        <section>
-                            {resume.jobs.slice(2).map((job, index) => (
-                                <ResumeJob key={index} {...job} />
-                            ))}
-                        </section>
-                    </RightColumn>
-                </Body>
-
-                <Footer />
-            </Page>
-        </>
+            <Preview src={`/resume/preview?${query}`} title="Preview" />
+        </Container>
     );
 }

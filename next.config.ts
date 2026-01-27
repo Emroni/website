@@ -2,6 +2,9 @@ import type { NextConfig } from 'next';
 import path from 'path';
 
 const nextConfig: NextConfig = {
+    compiler: {
+        styledComponents: true,
+    },
     output: 'standalone',
     webpack: config => {
         config.resolve.alias = {

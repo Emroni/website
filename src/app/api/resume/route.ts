@@ -11,7 +11,7 @@ export async function GET() {
     const page = await browser.newPage();
 
     // Load resume page
-    await page.goto('http://localhost:3000/resume', {
+    await page.goto('http://localhost:3000/resume/preview', {
         waitUntil: 'networkidle0',
     });
 

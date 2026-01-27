@@ -18,7 +18,10 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://emrekoc.io',
     },
-    title: 'Emre Koc - Senior Software Engineer',
+    title: {
+        default: 'Emre Koc - Senior Software Engineer',
+        template: 'Emre Koc - %s',
+    },
 };
 
 export const viewport: Viewport = {
