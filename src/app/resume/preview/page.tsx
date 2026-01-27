@@ -55,6 +55,7 @@ export default function ResumePreviewPage() {
     const searchParams = useSearchParams();
 
     const profile = searchParams.get('profile') || resume.profile;
+    const skills = searchParams.get('skills');
 
     function getJobs(start: number, end: number) {
         return resume.jobs.slice(start, end).map((job, index) => (
@@ -106,9 +107,11 @@ export default function ResumePreviewPage() {
                                 <TechStackCategory key={index}>
                                     <h3>{skill.category}</h3>
                                     <TechStackItems>
-                                        {skill.items.map((item, index) => (
-                                            <TechStackItem key={index}>{item}</TechStackItem>
-                                        ))}
+                                        {skill.items
+                                            .filter(item => !skills || skills.includes(item))
+                                            .map((item, index) => (
+                                                <TechStackItem key={index}>{item}</TechStackItem>
+                                            ))}
                                     </TechStackItems>
                                 </TechStackCategory>
                             ))}

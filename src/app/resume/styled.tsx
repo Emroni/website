@@ -2,15 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-
-    textarea {
-        box-sizing: border-box;
-        display: block;
-        min-height: 100px;
-        padding: 8px;
-        resize: vertical;
-        width: 100%;
-    }
 `;
 
 export const Controls = styled.div`
@@ -19,6 +10,15 @@ export const Controls = styled.div`
     flex: 1;
     gap: 16px;
     padding: 16px;
+
+    select,
+    textarea {
+        box-sizing: border-box;
+        min-height: 100px;
+        padding: 8px;
+        resize: vertical;
+        width: 100%;
+    }
 `;
 
 export const Preview = styled.iframe`
