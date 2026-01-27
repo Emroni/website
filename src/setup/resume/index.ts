@@ -174,7 +174,7 @@ export const resume: Resume = {
 
     // Profile
     profile:
-        'Senior Software Engineer with nearly 20 years of experience  creating web applications, including over a decade as a Technical Lead. Specialized in TypeScript, React, and Node.js, I build user-first, scalable, and maintainable digital products, consistently delivering high-quality code and guiding teams to align engineering decisions with business goals.',
+        'Senior Software Engineer with nearly 20 years of experience creating web applications, including over a decade as a Technical Lead. Specialized in TypeScript, React, and Node.js, I build user-first, scalable, and maintainable digital products, consistently delivering high-quality code and guiding teams to align engineering decisions with business goals.',
 
     // Skills
     skills: [

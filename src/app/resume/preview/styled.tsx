@@ -60,7 +60,7 @@ export const Page = styled.div`
     }
 `;
 
-export const Head = styled.div`
+export const Header = styled.header`
     background-color: var(--blue-500);
     color: var(--white);
     line-height: 1;
@@ -90,11 +90,73 @@ export const RightColumn = styled.div`
     padding: 16px 24px;
 `;
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
     background-color: var(--blue-500);
     bottom: 0;
     height: 12px;
     left: 0;
     position: absolute;
     width: 100%;
+`;
+
+export const ContactItem = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+
+    svg {
+        color: var(--blue-500);
+    }
+`;
+
+export const EducationItem = styled.div`
+    margin-bottom: 16px;
+`;
+
+export const TechStackCategory = styled.div`
+    margin-bottom: 12px;
+`;
+
+export const TechStackItems = styled.ul`
+    list-style-type: none;
+    margin: 4px 0 4px -6px;
+    padding: 0;
+`;
+
+export const TechStackItem = styled.li`
+    border: 1px solid var(--blue-100);
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 0 2px 2px 0;
+    font-size: 12px;
+`;
+
+export const Job = styled.div`
+    margin-bottom: 24px;
+`;
+
+export const JobTop = styled.div`
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+`;
+
+export const JobDescription = styled.div`
+    color: var(--blue-500);
+    font-size: 15px;
+`;
+
+export const JobItems = styled.ol`
+    font-style: italic;
+    list-style-type: none;
+    margin: 12px 0;
+    padding: 0 0 0 12px;
+
+    border-left: 1px solid var(--blue-50);
+
+    li {
+        margin-bottom: 6px;
+    }
 `;

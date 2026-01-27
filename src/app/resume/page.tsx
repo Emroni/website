@@ -21,16 +21,17 @@ export default function ResumePage() {
     }, [params]);
 
     function handleChange(e: ChangeEvent<HTMLTextAreaElement>) {
+        const { name, value } = e.target;
         setParams(prevParams => ({
             ...prevParams,
-            profile: e.target.value,
+            [name]: value,
         }));
     }
 
     return (
         <Container>
             <Controls>
-                <textarea value={params.profile} onChange={handleChange} />
+                <textarea name="profile" value={params.profile} onChange={handleChange} />
 
                 <a href={`/api/resume?${query}`} rel="noreferrer" target="_blank">
                     Download
