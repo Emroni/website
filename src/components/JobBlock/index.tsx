@@ -1,10 +1,13 @@
 'use client';
 import { Job } from '@/setup';
+import { getDate } from '@/utils';
 import Link from '../Link';
 import Transition from '../Transition';
 import { Container, Description, Heading, Info, Item, Title } from './styled';
 
 export default function JobBlock({ company, description, items, link, startDate, title }: Job) {
+    const date = getDate(startDate).format('MMM YYYY');
+
     return (
         <div>
             <Heading>
@@ -12,7 +15,7 @@ export default function JobBlock({ company, description, items, link, startDate,
                     {title}
                 </Transition>
                 <Transition component={Info} fade={false}>
-                    {startDate} | {link ? <Link href={link}>{company}</Link> : company}
+                    {date} | {link ? <Link href={link}>{company}</Link> : company}
                 </Transition>
             </Heading>
             <Transition component={Description} fade={false} stall={0.1}>

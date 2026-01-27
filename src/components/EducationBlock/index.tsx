@@ -1,5 +1,6 @@
 'use client';
 import { Education } from '@/setup';
+import { getDate } from '@/utils';
 import Transition from '../Transition';
 import { Container, Info, Name } from './styled';
 
@@ -8,7 +9,7 @@ export default function EducationBlock({ degree, endDate, field, institution, st
         <Transition component={Container}>
             <Name>{field}</Name>
             <Info>
-                {startDate} - {endDate} | {institution}
+                {getDate(startDate).format('YYYY')} - {getDate(endDate).format('YYYY')} | {institution}
             </Info>
             {degree && <div>{degree}</div>}
         </Transition>
