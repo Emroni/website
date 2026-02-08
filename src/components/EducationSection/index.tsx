@@ -10,13 +10,13 @@ export default function EducationSection() {
                 <EducationBlock
                     date="2010 - 2013"
                     degree="Bachelor of Information and Communication Technology"
-                    location="The Hague University of Applied Sciences"
-                    name="Communication and Multimedia Design"
+                    institution="The Hague University of Applied Sciences"
+                    study="Communication and Multimedia Design"
                 />
                 <EducationBlock
                     date="2007 - 2009"
-                    location="Delft University of Technology"
-                    name="Mechanical Engineering"
+                    institution="Delft University of Technology"
+                    study="Mechanical Engineering"
                 />
             </Container>
         </Section>
