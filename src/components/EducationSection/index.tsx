@@ -1,8 +1,9 @@
 'use client';
-import { EducationBlock, Section } from '@/components';
+import EducationBlock from '../EducationBlock';
+import Section from '../Section';
 import { Container } from './styled';
 
-export default function Education() {
+export default function EducationSection() {
     return (
         <Section title="Education">
             <Container>

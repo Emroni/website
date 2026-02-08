@@ -1,6 +1,7 @@
-import { Section, Transition } from '@/components';
+import Section from '../Section';
+import Transition from '../Transition';
 
-export default function Intro() {
+export default function IntroSection() {
     return (
         <Section title="Hi">
             <Transition component="p">

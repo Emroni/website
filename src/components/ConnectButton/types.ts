@@ -1,6 +1,6 @@
 import { IconName } from '../Icon/types';
 
-export interface ButtonProps {
+export interface ConnectButtonProps {
     children?: React.ReactNode;
     icon?: IconName;
     label: string;

@@ -1,17 +1,15 @@
-'use client';
-import { Header } from '@/components';
-import { Connect, Education, Experience, Intro, Tech } from '@/sections';
+import { ConnectSection, EducationSection, ExperienceSection, Header, IntroSection, TechSection } from '@/components';
 
 export default function Home() {
     return (
         <>
             <Header />
             <main>
-                <Intro />
-                <Tech />
-                <Experience />
-                <Education />
-                <Connect />
+                <IntroSection />
+                <TechSection />
+                <ExperienceSection />
+                <EducationSection />
+                <ConnectSection />
             </main>
         </>
     );
