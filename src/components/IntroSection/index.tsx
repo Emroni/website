@@ -1,6 +1,8 @@
-import { Section, Transition } from '@/components';
+import Link from '../Link';
+import Section from '../Section';
+import Transition from '../Transition';
 
-export default function Intro() {
+export default function IntroSection() {
     return (
         <Section title="Hi">
             <Transition component="p">
@@ -13,6 +15,9 @@ export default function Intro() {
                 processes and structure. I excel at communicating with both technical and non-technical teams, aligning
                 engineering decisions with business goals to drive meaningful results. My work is both creative and
                 methodical, showcasing my passion for programming.
+            </Transition>
+            <Transition component="p">
+                <Link href="/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
             </Transition>
         </Section>
     );

@@ -1,6 +1,8 @@
 'use client';
-import { Button, Section, Transition } from '@/components';
-import { IconName } from '@/components/Icon/types';
+import ConnectButton from '../ConnectButton';
+import { IconName } from '../Icon/types';
+import Section from '../Section';
+import Transition from '../Transition';
 import { Container } from './styled';
 
 const channels = [
@@ -36,7 +38,7 @@ const channels = [
     },
 ];
 
-export default function Connect() {
+export default function ConnectSection() {
     return (
         <Section title="Connect">
             <Transition component="p">
@@ -45,7 +47,7 @@ export default function Connect() {
             <Transition component={Container}>
                 {channels.map((channel, index) => (
                     <li key={index}>
-                        <Button icon={channel.icon as IconName} label={channel.label} url={channel.url} />
+                        <ConnectButton icon={channel.icon as IconName} label={channel.label} url={channel.url} />
                     </li>
                 ))}
             </Transition>

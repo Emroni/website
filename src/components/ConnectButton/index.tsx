@@ -3,9 +3,9 @@ import { useAnalytics } from '@/contexts/Analytics';
 import Icon from '../Icon';
 import Transition from '../Transition';
 import { Container } from './styled';
-import { ButtonProps } from './types';
+import { ConnectButtonProps } from './types';
 
-export default function Button({ children, icon, label, url }: ButtonProps) {
+export default function ConnectButton({ children, icon, label, url }: ConnectButtonProps) {
     const analytics = useAnalytics();
 
     function handleClick() {

@@ -1,8 +1,7 @@
 export interface ExperienceBlockProps {
-    company: string;
-    date: string;
+    children: React.ReactNode;
+    dateRange: DateRange;
     description: string;
-    items: string[];
-    link?: string;
     title: string;
+    titleLink?: string;
 }
