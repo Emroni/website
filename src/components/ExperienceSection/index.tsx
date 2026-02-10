@@ -61,10 +61,9 @@ export default function ExperienceSection() {
                     {/* Kromatic */}
                     <ExperienceGroup
                         title="Kromatic"
-                        titleLink="https://krobar.ai/"
+                        titleLink="https://kromatic.com/"
                         dateRange={['08/2021', '01/2022']}
                         highlights={[
-                            // 'Freelance before joining full-time',
                             'Built a single-page application in React for modeling and comparing experiment variants',
                             'Developed a dynamic form and responsive UI using Material UI',
                             'Implemented variant comparison and result visualization with a bar chart',
