@@ -1,3 +1,4 @@
+import Link from '../Link';
 import Section from '../Section';
 import Transition from '../Transition';
 
@@ -14,6 +15,9 @@ export default function IntroSection() {
                 processes and structure. I excel at communicating with both technical and non-technical teams, aligning
                 engineering decisions with business goals to drive meaningful results. My work is both creative and
                 methodical, showcasing my passion for programming.
+            </Transition>
+            <Transition component="p">
+                <Link href="/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
             </Transition>
         </Section>
     );

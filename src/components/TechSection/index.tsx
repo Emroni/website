@@ -1,7 +1,5 @@
 'use client';
-import Link from '../Link';
 import Section from '../Section';
-import SectionLinks from '../SectionLinks';
 import TechBlock from '../TechBlock';
 import Transition from '../Transition';
 import { Container } from './styled';
@@ -22,9 +20,6 @@ export default function TechSection() {
                 <TechBlock title="Deployment" items="Docker,Azure,Heroku,GitHub Actions" />
                 <TechBlock title="Tools" items="GitHub Copilot,Claude,OpenAI,SonarCube,Sentry,Swagger,Figma,Mural" />
             </Transition>
-            <SectionLinks>
-                <Link href="/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
-            </SectionLinks>
         </Section>
     );
 }

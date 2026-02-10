@@ -3,7 +3,6 @@ import ExperienceBlock from '../ExperienceBlock';
 import ExperienceGroup from '../ExperienceGroup';
 import Link from '../Link';
 import Section from '../Section';
-import SectionLinks from '../SectionLinks';
 import Transition from '../Transition';
 import { Container, Note } from './styled';
 
@@ -181,9 +180,6 @@ export default function ExperienceSection() {
                     />
                 </ExperienceBlock>
             </Container>
-            <SectionLinks>
-                <Link href="/Emre-Koc-Resume.pdf">Download Resume (PDF)</Link>
-            </SectionLinks>
         </Section>
     );
 }
