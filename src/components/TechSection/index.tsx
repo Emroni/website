@@ -19,7 +19,7 @@ export default function TechSection() {
                 <TechBlock title="Backend" items="Node.js,NestJS,Express,REST,GraphQL,WebSockets" />
                 <TechBlock title="Database" items="PostgreSQL,MySQL,TypeORM,Sequelize,Prisma,Firebase" />
                 <TechBlock title="Testing" items="Jest,React Testing Library,Playwright,Storybook,Chromatic" />
-                <TechBlock title="Deployment" items="Docker,Kubernetes,AWS,Azure,Heroku,GitHub Actions" />
+                <TechBlock title="Deployment" items="Docker,Azure,Heroku,GitHub Actions" />
                 <TechBlock title="Tools" items="GitHub Copilot,Claude,OpenAI,SonarCube,Sentry,Swagger,Figma,Mural" />
             </Transition>
             <SectionLinks>
