@@ -9,9 +9,11 @@ export default function ExperienceGroup({ dateRange, highlights, title, titleLin
     return (
         <div>
             <Heading>
-                <Transition component={Title} fade={false}>
-                    {title && titleLink ? <Link href={titleLink}>{title}</Link> : title}
-                </Transition>
+                {title && (
+                    <Transition component={Title} fade={false}>
+                        {titleLink ? <Link href={titleLink}>{title}</Link> : title}
+                    </Transition>
+                )}
                 {dateRange && (
                     <DateRange>
                         <ExperienceDates value={dateRange} />

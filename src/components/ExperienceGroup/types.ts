@@ -1,6 +1,6 @@
 export interface ExperienceGroupProps {
     dateRange?: DateRange;
     highlights: string[];
-    title: string;
+    title?: string;
     titleLink?: string;
 }

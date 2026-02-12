@@ -12,13 +12,13 @@ export default function ExperienceSection() {
             <Container>
                 {/* Krobar.ai */}
                 <ExperienceBlock
-                    title="Krobar.ai"
-                    titleLink="https://krobar.ai/"
+                    title="Lead Full Stack Engineer"
+                    companyName="Krobar.ai"
+                    companyLink="https://krobar.ai/"
                     dateRange={['03/2025', '10/2025']}
                     description="Technical Lead for frontend and backend architecture and development of an AI-native SaaS platform. Continued the Kromatic team into a new entity to develop AI-powered products."
                 >
                     <ExperienceGroup
-                        title="Lead Full Stack Engineer"
                         highlights={[
                             'Led development of AI-powered modeling and forecasting application in React',
                             'Integrated OpenAI assistants to help users build models, interpret results, and generate reports',
@@ -32,13 +32,13 @@ export default function ExperienceSection() {
 
                 {/* Kromatic */}
                 <ExperienceBlock
-                    title="Kromatic"
-                    titleLink="https://kromatic.com/"
+                    title="Lead Full Stack Engineer"
+                    companyName="Kromatic"
+                    companyLink="https://kromatic.com/"
                     dateRange={['06/2022', '03/2025']}
                     description="Technical Lead for small distributed frontend and backend teams, delivering multiple production React applications and a custom LMS platform. Started as a freelance Frontend Engineer and progressed to a full-time Technical Lead role."
                 >
                     <ExperienceGroup
-                        title="Lead Full Stack Engineer"
                         highlights={[
                             'Developed 6 interactive white-label business innovation training applications in React',
                             'Led contracted development teams building an enterprise-level learning management system',
@@ -59,7 +59,8 @@ export default function ExperienceSection() {
 
                 {/* Freelance */}
                 <ExperienceBlock
-                    title="Freelance"
+                    title="Senior Full Stack Engineer"
+                    companyName="Freelance"
                     dateRange={['04/2018', '06/2022']}
                     description="Independent contractor operating at senior and lead level for multiple clients in different countries and time zones, often in parallel. Led small frontend and backend development teams, owning architecture, implementation, and deployment of production applications."
                 >
@@ -127,8 +128,9 @@ export default function ExperienceSection() {
 
                 {/* Just */}
                 <ExperienceBlock
-                    title="JUST"
-                    titleLink="https://just.agency/en"
+                    title="Lead Full Stack Engineer"
+                    companyName="JUST"
+                    companyLink="https://just.agency/en"
                     dateRange={['06/2009', '04/2018']}
                     description="Started as freelance Flash Developer and progressed into a full-time lead role for the digital products department, leading frontend and backend teams and serving as the bridge between development, project management, and clients."
                 >
@@ -173,12 +175,12 @@ export default function ExperienceSection() {
 
                 {/* Freelance */}
                 <ExperienceBlock
-                    title="Freelance"
+                    title="Flash Developer"
+                    companyName="Freelance"
                     dateRange={['03/2008', '05/2010']}
                     description="Built and sold reusable Flash components via the Envato marketplace."
                 >
                     <ExperienceGroup
-                        title="Flash Developer"
                         highlights={[
                             'Designed and built reusable components to be sold through Envato (formerly FlashDen) marketplace',
                             'Implemented components in client projects and provided support',
