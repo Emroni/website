@@ -6,8 +6,8 @@ export default function Home() {
             <Header />
             <main>
                 <IntroSection />
-                <TechSection />
                 <ExperienceSection />
+                <TechSection />
                 <EducationSection />
                 <ConnectSection />
             </main>

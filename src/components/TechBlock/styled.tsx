@@ -1,22 +1,13 @@
 import _ from 'lodash';
 import styled, { css } from 'styled-components';
 
-export const Wrap = styled.div`
-    align-items: baseline;
-
-    @media (min-width: 1024px) {
-        display: flex;
-        gap: 8px;
-    }
-`;
-
 export const Heading = styled.h3`
     display: flex;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     letter-spacing: 2px;
     line-height: 1;
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
 `;
 
 export const List = styled.ul`
@@ -46,11 +37,13 @@ export const ListItem = styled.li`
 
     & span {
         display: inline-block;
-        transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+        transition:
+            opacity 0.25s var(--ease),
+            transform 0.25s var(--ease);
     }
 
     ${_.range(1, 40).map(
-        i => css`
+        (i) => css`
             &:nth-child(${i}) {
                 &:before {
                     transition-delay: ${0.025 * i + 0.3}s;
@@ -59,6 +52,6 @@ export const ListItem = styled.li`
                     transition-delay: ${0.025 * i + 0.35}s;
                 }
             }
-        `
+        `,
     )}
 `;
