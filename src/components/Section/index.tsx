@@ -1,20 +1,18 @@
 'use client';
-import { useAnalytics } from '@/contexts/Analytics';
+import { trackEvent } from '@/utils';
 import { useMemo } from 'react';
 import Transition from '../Transition';
 import { Container, Content, Heading, HeadingArrowLeft, HeadingArrowRight, HeadingContent } from './styled';
 import { SectionProps } from './types';
 
 export default function Section({ children, title }: SectionProps) {
-    const analytics = useAnalytics();
-
     const slug = useMemo(() => {
-        return title?.toLowerCase().replace(/\s/g, '-');
+        return title?.toLowerCase().replaceAll(/\s/g, '-');
     }, [title]);
 
     function handleActive() {
         if (title) {
-            analytics.trackEvent('section', title);
+            trackEvent('section', title);
         }
     }
 

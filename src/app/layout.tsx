@@ -1,4 +1,3 @@
-import { AnalyticsProvider } from '@/contexts/Analytics';
 import { TransitionsProvider } from '@/contexts/Transitions';
 import '@fontsource-variable/work-sans';
 import type { Metadata, Viewport } from 'next';
@@ -32,9 +31,7 @@ export default function RootLayout({ children }: LayoutProps) {
         <html lang="en">
             <body>
                 <Registry>
-                    <AnalyticsProvider>
-                        <TransitionsProvider>{children}</TransitionsProvider>
-                    </AnalyticsProvider>
+                    <TransitionsProvider>{children}</TransitionsProvider>
                 </Registry>
             </body>
         </html>
