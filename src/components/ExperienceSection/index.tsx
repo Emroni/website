@@ -24,7 +24,7 @@ export default function ExperienceSection() {
                             'Integrated OpenAI assistants to help users build models, interpret results, and generate reports',
                             'Architected and implemented backend services in Node.js for streaming AI interactions and data processing',
                             'Integrated sophisticated Monte Carlo simulation engine for accurate forecasting and scenario modeling',
-                            'Accelerated development by making implementation-level design decisions while staying consistent with design guidelines',
+                            'Accelerated development by making implementation-level decisions aligned with design guidelines',
                             'Collaborated closely with design, product, and client teams to align technical solutions with business needs',
                         ]}
                     />
@@ -43,11 +43,16 @@ export default function ExperienceSection() {
                             'Developed 6 interactive white-label business innovation training applications in React',
                             'Led contracted development teams building an enterprise-level learning management system',
                             'Conducted technical interviews, code reviews, and performance reviews for staffing decisions',
-                            'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
-                            'Architected content management system where database content could be extended and customized while preserving the original data',
-                            'Developed Monte Carlo simulation scripts in Node.js to calculate scenario-based predictions',
-                            'Packaged application deliverables in Docker, supporting both Heroku and complex client-specific on-premises deployments',
+                            'Standardized code style and architecture of contractor-built apps, improving maintainability and consistency',
+                            'Architected CMS enabling extensible, customizable database content while preserving originals',
+                            'Packaged applications in Docker, supporting Heroku and complex client-specific on-prem deployments',
                             'Implemented Playwright automated end-to-end tests, covering role-based access control',
+                            'Built responsive and accessibility friendly UI using Material UI and WCAG guidelines',
+                            'Created Monte Carlo simulation scripts in Node.js to calculate scenario-based predictions',
+                            'Developed 2 story driven interactive games with PixiJS',
+                            'Implemented over 20 interactive bar charts, histograms, and hurricane graphs with D3.js',
+                            'Implemented LaunchDarkly feature flags for A/B testing of new features',
+                            'Translated complex Excel-based calculation models into JavaScript logic',
                         ]}
                     />
                 </ExperienceBlock>
@@ -56,7 +61,7 @@ export default function ExperienceSection() {
                 <ExperienceBlock
                     title="Freelance"
                     dateRange={['04/2018', '06/2022']}
-                    description="Independent full stack contractor operating at senior and lead level for multiple clients in different countries and time zones, often in parallel. Led small frontend and backend development teams, owning architecture, implementation, and deployment of production applications."
+                    description="Independent contractor operating at senior and lead level for multiple clients in different countries and time zones, often in parallel. Led small frontend and backend development teams, owning architecture, implementation, and deployment of production applications."
                 >
                     {/* Kromatic */}
                     <ExperienceGroup
@@ -65,7 +70,7 @@ export default function ExperienceSection() {
                         dateRange={['08/2021', '01/2022']}
                         highlights={[
                             'Built a single-page application in React for modeling and comparing experiment variants',
-                            'Developed a dynamic form and responsive UI using Material UI',
+                            'Built a dynamic form and responsive UI using Material UI',
                             'Implemented variant comparison and result visualization with a bar chart',
                             'Added export functionality to save experiment results as PDF or text files',
                         ]}
@@ -78,10 +83,12 @@ export default function ExperienceSection() {
                         titleLink="https://noderelate.com"
                         highlights={[
                             'Led development of enterprise-level data governance platform in React and Node.js',
+                            'Conducted technical interviews and code reviews, contributing to hiring decisions',
                             'Created reusable UI React components with Tailwind, using Storybook and Chromatic for regression testing',
                             'Implemented interactive graph data visualizations with D3.js to represent complex workflows and actions',
+                            'Built performance optimized tables with virtualization to handle large datasets',
                             'Built backend services in Node.js for Azure AD authentication and Postgres database connection',
-                            'Built automation tools for generating API endpoints for Azure Functions based on routines exported from Postgres database',
+                            'Built automation tools for generating for Azure Functions API endpoints based on Postgres database routines',
                             'Set up CI/CD and automated deployments on Azure',
                         ]}
                     />
@@ -130,7 +137,7 @@ export default function ExperienceSection() {
                         dateRange={['10/2014', '04/2018']}
                         highlights={[
                             'Responsible for the architecture, development, and quality control of all deliverables',
-                            'Acted as bridge between project management and development team by handling all technical questions by project managers, clients and other agencies',
+                            'Bridged project management and development, resolving technical questions from managers, clients, and agencies',
                             'Conducted technical interviews, performance reviews, and advised management on staffing decisions',
                             'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
                             'Consulted clients on processes and architecture based on project requirements',
