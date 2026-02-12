@@ -1,11 +1,11 @@
 'use client';
 import Transition from '../Transition';
-import { Heading, List, ListItem, Wrap } from './styled';
+import { Heading, List, ListItem } from './styled';
 import { BlockProps } from './types';
 
 export default function TechBlock({ items, title }: BlockProps) {
     return (
-        <Transition component={Wrap}>
+        <Transition>
             <Heading>{title}</Heading>
             <List>
                 {items.split(',').map((item, key) => (

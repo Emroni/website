@@ -12,19 +12,19 @@ export default function ExperienceSection() {
             <Container>
                 {/* Krobar.ai */}
                 <ExperienceBlock
-                    title="Krobar.ai"
-                    titleLink="https://krobar.ai/"
+                    title="Lead Full Stack Engineer"
+                    companyName="Krobar.ai"
+                    companyLink="https://krobar.ai/"
                     dateRange={['03/2025', '10/2025']}
                     description="Technical Lead for frontend and backend architecture and development of an AI-native SaaS platform. Continued the Kromatic team into a new entity to develop AI-powered products."
                 >
                     <ExperienceGroup
-                        title="Lead Full Stack Engineer"
                         highlights={[
                             'Led development of AI-powered modeling and forecasting application in React',
                             'Integrated OpenAI assistants to help users build models, interpret results, and generate reports',
                             'Architected and implemented backend services in Node.js for streaming AI interactions and data processing',
                             'Integrated sophisticated Monte Carlo simulation engine for accurate forecasting and scenario modeling',
-                            'Accelerated development by making implementation-level design decisions while staying consistent with design guidelines',
+                            'Accelerated development by making implementation-level decisions aligned with design guidelines',
                             'Collaborated closely with design, product, and client teams to align technical solutions with business needs',
                         ]}
                     />
@@ -32,31 +32,37 @@ export default function ExperienceSection() {
 
                 {/* Kromatic */}
                 <ExperienceBlock
-                    title="Kromatic"
-                    titleLink="https://kromatic.com/"
+                    title="Lead Full Stack Engineer"
+                    companyName="Kromatic"
+                    companyLink="https://kromatic.com/"
                     dateRange={['06/2022', '03/2025']}
                     description="Technical Lead for small distributed frontend and backend teams, delivering multiple production React applications and a custom LMS platform. Started as a freelance Frontend Engineer and progressed to a full-time Technical Lead role."
                 >
                     <ExperienceGroup
-                        title="Lead Full Stack Engineer"
                         highlights={[
                             'Developed 6 interactive white-label business innovation training applications in React',
                             'Led contracted development teams building an enterprise-level learning management system',
                             'Conducted technical interviews, code reviews, and performance reviews for staffing decisions',
-                            'Standardized code style and architecture of contractor-built applications, improving maintainability and consistency across projects',
-                            'Architected content management system where database content could be extended and customized while preserving the original data',
-                            'Developed Monte Carlo simulation scripts in Node.js to calculate scenario-based predictions',
-                            'Packaged application deliverables in Docker, supporting both Heroku and complex client-specific on-premises deployments',
+                            'Standardized code style and architecture of contractor-built apps, improving maintainability and consistency',
+                            'Architected CMS enabling extensible, customizable database content while preserving originals',
+                            'Packaged applications in Docker, supporting Heroku and complex client-specific on-prem deployments',
                             'Implemented Playwright automated end-to-end tests, covering role-based access control',
+                            'Built responsive and accessibility friendly UI using Material UI and WCAG guidelines',
+                            'Created Monte Carlo simulation scripts in Node.js to calculate scenario-based predictions',
+                            'Developed 2 story driven interactive games with PixiJS',
+                            'Implemented over 20 interactive bar charts, histograms, and hurricane graphs with D3.js',
+                            'Implemented LaunchDarkly feature flags for A/B testing of new features',
+                            'Translated complex Excel-based calculation models into JavaScript logic',
                         ]}
                     />
                 </ExperienceBlock>
 
                 {/* Freelance */}
                 <ExperienceBlock
-                    title="Freelance"
+                    title="Senior Full Stack Engineer"
+                    companyName="Freelance"
                     dateRange={['04/2018', '06/2022']}
-                    description="Independent full stack contractor operating at senior and lead level for multiple clients in different countries and time zones, often in parallel. Led small frontend and backend development teams, owning architecture, implementation, and deployment of production applications."
+                    description="Independent contractor operating at senior and lead level for multiple clients in different countries and time zones, often in parallel. Led small frontend and backend development teams, owning architecture, implementation, and deployment of production applications."
                 >
                     {/* Kromatic */}
                     <ExperienceGroup
@@ -65,7 +71,7 @@ export default function ExperienceSection() {
                         dateRange={['08/2021', '01/2022']}
                         highlights={[
                             'Built a single-page application in React for modeling and comparing experiment variants',
-                            'Developed a dynamic form and responsive UI using Material UI',
+                            'Built a dynamic form and responsive UI using Material UI',
                             'Implemented variant comparison and result visualization with a bar chart',
                             'Added export functionality to save experiment results as PDF or text files',
                         ]}
@@ -78,10 +84,12 @@ export default function ExperienceSection() {
                         titleLink="https://noderelate.com"
                         highlights={[
                             'Led development of enterprise-level data governance platform in React and Node.js',
+                            'Conducted technical interviews and code reviews, contributing to hiring decisions',
                             'Created reusable UI React components with Tailwind, using Storybook and Chromatic for regression testing',
                             'Implemented interactive graph data visualizations with D3.js to represent complex workflows and actions',
+                            'Built performance optimized tables with virtualization to handle large datasets',
                             'Built backend services in Node.js for Azure AD authentication and Postgres database connection',
-                            'Built automation tools for generating API endpoints for Azure Functions based on routines exported from Postgres database',
+                            'Built automation tools for generating for Azure Functions API endpoints based on Postgres database routines',
                             'Set up CI/CD and automated deployments on Azure',
                         ]}
                     />
@@ -120,8 +128,9 @@ export default function ExperienceSection() {
 
                 {/* Just */}
                 <ExperienceBlock
-                    title="JUST"
-                    titleLink="https://just.agency/en"
+                    title="Lead Full Stack Engineer"
+                    companyName="JUST"
+                    companyLink="https://just.agency/en"
                     dateRange={['06/2009', '04/2018']}
                     description="Started as freelance Flash Developer and progressed into a full-time lead role for the digital products department, leading frontend and backend teams and serving as the bridge between development, project management, and clients."
                 >
@@ -130,7 +139,7 @@ export default function ExperienceSection() {
                         dateRange={['10/2014', '04/2018']}
                         highlights={[
                             'Responsible for the architecture, development, and quality control of all deliverables',
-                            'Acted as bridge between project management and development team by handling all technical questions by project managers, clients and other agencies',
+                            'Bridged project management and development, resolving technical questions from managers, clients, and agencies',
                             'Conducted technical interviews, performance reviews, and advised management on staffing decisions',
                             'Mentored interns, junior and senior developers in all in-house used programming languages, frameworks and tools',
                             'Consulted clients on processes and architecture based on project requirements',
@@ -166,12 +175,12 @@ export default function ExperienceSection() {
 
                 {/* Freelance */}
                 <ExperienceBlock
-                    title="Freelance"
+                    title="Flash Developer"
+                    companyName="Freelance"
                     dateRange={['03/2008', '05/2010']}
                     description="Built and sold reusable Flash components via the Envato marketplace."
                 >
                     <ExperienceGroup
-                        title="Flash Developer"
                         highlights={[
                             'Designed and built reusable components to be sold through Envato (formerly FlashDen) marketplace',
                             'Implemented components in client projects and provided support',
