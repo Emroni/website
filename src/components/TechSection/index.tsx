@@ -19,7 +19,7 @@ export default function TechSection() {
                 />
                 <TechBlock
                     title="Backend"
-                    items="Node.js,NestJS,Express,REST,GraphQL,WebSockets,Socket.io,Data Generation,OAuth,Zod,Nginx"
+                    items="Node.js,NestJS,Express,REST,GraphQL,WebSockets,Socket.io,Data Generation,JWT,OAuth,Zod,Nginx"
                 />
                 <TechBlock title="Database" items="PostgreSQL,MySQL,SQLite,Redis,TypeORM,Sequelize,Prisma,Firebase" />
                 <TechBlock title="Testing" items="Jest,React Testing Library,Playwright,Storybook,Chromatic" />
