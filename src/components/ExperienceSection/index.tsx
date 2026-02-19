@@ -23,6 +23,8 @@ export default function ExperienceSection() {
                             'Led development of AI-powered modeling and forecasting application in React',
                             'Integrated OpenAI assistants to help users build models, interpret results, and generate reports',
                             'Architected and implemented backend services in Node.js for streaming AI interactions and data processing',
+                            'Built interactive flowchart editor in D3.js enabling users to add, edit, and remove steps and links',
+                            'Built custom formula editor with Slate.js for defining and editing model calculations',
                             'Integrated sophisticated Monte Carlo simulation engine for accurate forecasting and scenario modeling',
                             'Accelerated development by making implementation-level decisions aligned with design guidelines',
                             'Collaborated closely with design, product, and client teams to align technical solutions with business needs',
